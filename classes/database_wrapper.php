@@ -26,8 +26,12 @@ class DatabaseWrapper {
             . "Winners INTEGER NOT NULL DEFAULT 1, "
             . "OpenTime TEXT, "
             . "CloseTime TEXT, "
+            . "DrawingTime TEXT, "
             . "State TEXT NOT NULL DEFAULT 'INVALID'"
             . ")");
+    }
+
+    function newEvent($name, $winners, $opentime, $closetime) {
     }
 
 }
