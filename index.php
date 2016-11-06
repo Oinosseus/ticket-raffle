@@ -40,7 +40,6 @@ $DB = new DatabaseWrapper(CONFIG_DATABASE_FILE);
                             <li><a href="?ADMIN_LOGOUT=TRUE">Logout</a></li>
                         <?php else : ?>
                             <li>
-                                Login<br>
                                 <form action="index.php" method="post">
                                     <input type="password" name="ADMIN_LOGIN">
                                     <button type="submit">Login</button>

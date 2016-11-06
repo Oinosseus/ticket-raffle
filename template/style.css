@@ -79,6 +79,33 @@ div#navigation ul li ul {
     padding-left: 0px;
 }
 
+div#navigation form input {
+    font-size: 8pt;
+    margin: 0px;
+    padding: 2px 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 70px;
+/*     height: 30px; */
+}
+
+div#navigation form button {
+    font-size: 8pt;
+    margin: 0px;
+    padding: 2px 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: #fcc300;
+    font-weight: bold;
+    background-image: linear-gradient(to top left, #000 50%, #888 100%);
+/*    width: 100px;
+    height: 30px;*/
+}
+
+div#navigation form button:hover {
+    background-image: linear-gradient(to top left, #888 0%, #000 50%);
+}
+
 
 
 /***************************
