@@ -6,6 +6,7 @@ body {
 }
 
 
+
 /***************************
  *          Header
  ***************************/
@@ -20,12 +21,14 @@ div#headerimage img {
 }
 
 
+
 /***************************
  *           Navigation
  * ************************/
 
 div#navigation {
-    float: left;
+    display: inline-block;
+    vertical-align: top;
     color: #000;
     font-weight: bold;
     margin-right: 20px;
@@ -83,4 +86,6 @@ div#navigation ul li ul {
  * ************************/
 
 div#content {
+    display: inline-block;
+    vertical-align: top;
 }
