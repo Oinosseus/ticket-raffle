@@ -22,6 +22,9 @@
         $event_winners   = (int) $_POST['EVENT_WINNERS'];
         $event_opentime  = new DateTime($_POST['EVENT_OPENTIME']);
         $event_closetime = new DateTime($_POST['EVENT_CLOSETIME']);
+
+        $id = $DB->newEvent($event_name, $event_winners, $event_opentime, $event_closetime);
+        echo "last insert ID=$id<br>";
     }
 
 

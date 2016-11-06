@@ -9,7 +9,11 @@ class DatabaseWrapper {
 
     function __construct($db_filename) {
 
-        $this->db = new SQLite3($db_filename);
+        $this->db = new SQLite3($db_filename, SQLITE3_OPEN_READWRITE | SQLITE3_OPEN_CREATE);
+
+        if ($this->db->lastErrorCode()) {
+            echo "[" . $this->db->lastErrorCode() . "] " . $this->db->lastErrorMsg() . "<br>";
+        }
     }
 
     function __destruct() {
@@ -31,7 +35,23 @@ class DatabaseWrapper {
             . ")");
     }
 
-    function newEvent($name, $winners, $opentime, $closetime) {
+    function newEvent(string $name, int $winners, DateTime $opentime, DateTime $closetime) {
+
+        // escape values
+        $name = $this->db->escapeString($name);
+        $winners = $this->db->escapeString($winners);
+        $opentime = $this->db->escapeString($opentime->format(DateTime::ATOM));
+        $closetime = $this->db->escapeString($closetime->format(DateTime::ATOM));
+
+        // enter values
+        $query = "INSERT INTO Events (Name, Winners, OpenTime, CloseTime, State) VALUES ('$name', '$winners', '$opentime', '$closetime', 'COMMITTED')";
+        if (!$this->db->exec($query)) {
+            echo "[" . $this->db->lastErrorCode() . "] " . $this->db->lastErrorMsg() . "<br>";
+            return 0;
+        }
+
+        return $this->db->lastInsertRowID();
+
     }
 
 }
