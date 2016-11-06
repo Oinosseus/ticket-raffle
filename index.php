@@ -37,6 +37,7 @@ $DB = new DatabaseWrapper(CONFIG_DATABASE_FILE);
                     <label>Administration</label>
                     <ul>
                         <?php if (USER_IS_ADMIN) : ?>
+                            <li><a href="index.php?USER_PAGE=NEW_EVENT">Neue Veranstaltung</a></li>
                             <li><a href="?ADMIN_LOGOUT=TRUE">Logout</a></li>
                         <?php else : ?>
                             <li>

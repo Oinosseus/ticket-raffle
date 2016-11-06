@@ -18,6 +18,16 @@ if (isset($_REQUEST['USER_PAGE'])) {
     // switch for requested page
     switch ($_REQUEST['USER_PAGE']) {
 
+
+        // admin only
+
+        case "NEW_EVENT":
+            $_SESSION['USER_PAGE'] = "new_event.php";
+            break;
+
+
+        // free for all
+
         case "LICENSE":
             $_SESSION['USER_PAGE'] = "license.php";
             break;
@@ -29,6 +39,7 @@ if (isset($_REQUEST['USER_PAGE'])) {
         case "HOME":
         default:
             $_SESSION['USER_PAGE'] = "home.php";
+
     }
 
 // set session variable if not set

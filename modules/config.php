@@ -6,4 +6,7 @@ define("CONFIG_ADMIN_PASSWORD", '$2y$10$S.orQl5AE5SYq6EwJnMEYu4ZWw6JHFADOwasDCci
 // database configuration
 define("CONFIG_DATABASE_FILE", "database.sqlite3");
 
+// local timezone
+define("CONFIG_TIMEZONE", "Europe/Berlin");
+
 ?>

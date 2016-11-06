@@ -5,6 +5,43 @@ body {
     background-position: fixed;
 }
 
+h1 {
+    display: block;
+    margin-top: 0px;
+    padding: 5px 10px;
+    text-align: center;
+    width: 100%;
+    color: #fdce2e;
+    background: #000;
+    background-image: linear-gradient(to top left, #000 50%, #888 100%);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: #000 0px 0px 5px;
+}
+
+button {
+    color: #fcc300;
+    border: 1px solid black;
+    background-image: linear-gradient(to top left, #000 60%, #888 100%);
+    border-radius: 5px;
+    margin: 0px;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-image: linear-gradient(to top left, #888 0%, #000 40%);
+}
+
+input {
+    text-align: center;
+    padding: 5px 10px;
+}
+
+input[type=datetime] {
+    width: 300px;
+}
+
 
 
 /***************************
@@ -93,18 +130,11 @@ div#navigation form button {
     font-size: 8pt;
     margin: 0px;
     padding: 2px 5px;
-    border: 1px solid black;
     border-radius: 5px;
-    color: #fcc300;
-    font-weight: bold;
-    background-image: linear-gradient(to top left, #000 50%, #888 100%);
 /*    width: 100px;
     height: 30px;*/
 }
 
-div#navigation form button:hover {
-    background-image: linear-gradient(to top left, #888 0%, #000 50%);
-}
 
 
 
