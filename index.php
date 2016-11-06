@@ -30,6 +30,7 @@ $DB = new DatabaseWrapper(CONFIG_DATABASE_FILE);
                     <ul>
                         <li><a href="index.php?USER_PAGE=HOME">Startseite</a></li>
                         <li><a href="index.php?USER_PAGE=EVENTS">Verlosungen</a></li>
+                        <li><a href="index.php?USER_PAGE=LICENSE">Lizenz</a></li>
                     </ul>
                 </li>
                 <li>
@@ -54,6 +55,6 @@ $DB = new DatabaseWrapper(CONFIG_DATABASE_FILE);
         <div id="content">
           <?php include("pages/" . USER_PAGE); ?>
         </div>
-        
+
     </body>
 <html>
