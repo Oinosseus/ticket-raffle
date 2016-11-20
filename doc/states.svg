@@ -11,13 +11,6 @@
   <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="220" y="140">
     <tspan x="220" y="140"></tspan>
   </text>
-  <g>
-    <path style="fill: #ffffff" d="M 420 200 C 520,200 520,240 420,240 C 320,240 320,200 420,200z"/>
-    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 420 200 C 520,200 520,240 420,240 C 320,240 320,200 420,200"/>
-  </g>
-  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="420" y="224.45">
-    <tspan x="420" y="224.45">ENTRY_ACCEPTED</tspan>
-  </text>
   <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="420" y="220">
     <tspan x="420" y="220"></tspan>
   </text>
@@ -33,13 +26,6 @@
   </text>
   <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="0" y="240">
     <tspan x="0" y="240"></tspan>
-  </text>
-  <g>
-    <path style="fill: #ffffff" d="M 220 200 C 320,200 320,240 220,240 C 120,240 120,200 220,200z"/>
-    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 220 200 C 320,200 320,240 220,240 C 120,240 120,200 220,200"/>
-  </g>
-  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="220" y="224.45">
-    <tspan x="220" y="224.45">FORBIDDEN</tspan>
   </text>
   <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="220" y="220">
     <tspan x="220" y="220"></tspan>
@@ -136,28 +122,24 @@
   <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="-240" y="280">
     <tspan x="-240" y="280"></tspan>
   </text>
-  <g>
-    <path style="fill: #ff5240" d="M -220 340 C -120,340 -120,380 -220,380 C -320,380 -320,340 -220,340z"/>
-    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M -220 340 C -120,340 -120,380 -220,380 C -320,380 -320,340 -220,340"/>
-  </g>
-  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="-220" y="364.45">
-    <tspan x="-220" y="364.45">CLOSED</tspan>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="-220" y="354.45">
+    <tspan x="-220" y="354.45">CLOSED</tspan>
   </text>
-  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="-220" y="360">
-    <tspan x="-220" y="360"></tspan>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="-220" y="350">
+    <tspan x="-220" y="350"></tspan>
   </text>
   <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="-240" y="400">
     <tspan x="-240" y="400"></tspan>
   </text>
   <g>
-    <line style="fill: none; fill-opacity:0; stroke-width: 4; stroke-dasharray: 4; stroke: #00ff00" x1="-219.202" y1="175.885" x2="-219.851" y2="228.029"/>
-    <polygon style="fill: #00ff00" points="-219.944,235.528 -224.82,225.467 -219.851,228.029 -214.82,225.591 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #00ff00" points="-219.944,235.528 -224.82,225.467 -219.851,228.029 -214.82,225.591 "/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 4; stroke-dasharray: 4; stroke: #000000" x1="-219.202" y1="175.885" x2="-219.851" y2="228.029"/>
+    <polygon style="fill: #000000" points="-219.944,235.528 -224.82,225.467 -219.851,228.029 -214.82,225.591 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #000000" points="-219.944,235.528 -224.82,225.467 -219.851,228.029 -214.82,225.591 "/>
   </g>
   <g>
-    <line style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #80bbff" x1="-220" y1="280" x2="-220" y2="328.028"/>
-    <polygon style="fill: #80bbff" points="-220,335.528 -225,325.528 -220,328.028 -215,325.528 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #80bbff" points="-220,335.528 -225,325.528 -220,328.028 -215,325.528 "/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 4; stroke-dasharray: 4; stroke: #000000" x1="-220" y1="280" x2="-220" y2="318.028"/>
+    <polygon style="fill: #000000" points="-220,325.528 -225,315.528 -220,318.028 -215,315.528 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #000000" points="-220,325.528 -225,315.528 -220,318.028 -215,315.528 "/>
   </g>
   <g>
     <line style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #80bbff" x1="-219.825" y1="60.9866" x2="-219.302" y2="123.913"/>
@@ -168,9 +150,9 @@
     <tspan x="-219.601" y="207.943">Servertime passes</tspan>
     <tspan x="-219.601" y="222.04">'OpenTime'</tspan>
   </text>
-  <text font-size="11.2776" style="fill: #7f7f7f;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="-220" y="310">
-    <tspan x="-220" y="310">Servertime passes</tspan>
-    <tspan x="-220" y="324.097">'CloseTime'</tspan>
+  <text font-size="11.2776" style="fill: #7f7f7f;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="-220" y="305">
+    <tspan x="-220" y="305">Servertime passes</tspan>
+    <tspan x="-220" y="319.097">'CloseTime'</tspan>
   </text>
   <g>
     <path style="fill: #ffffff" d="M -220 520 C -120,520 -120,560 -220,560 C -320,560 -320,520 -220,520z"/>
@@ -186,14 +168,14 @@
     <tspan x="-240" y="500"></tspan>
   </text>
   <g>
-    <path style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #80bbff" d="M -234.78,470.389 A 60.625,60.625 0 0 0 -238.498,508.411"/>
-    <polygon style="fill: #80bbff" points="-236.595,515.524 -245.224,508.415 -239.64,508.67 -236.085,504.355 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #80bbff" points="-236.595,515.524 -245.224,508.415 -239.64,508.67 -236.085,504.355 "/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #80bbff" d="M -227.97,370.675 A 235.625,235.625 0 0 0 -231.454,507.883"/>
+    <polygon style="fill: #80bbff" points="-229.381,515.082 -237.28,507.169 -231.747,507.965 -227.791,504.015 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #80bbff" points="-229.381,515.082 -237.28,507.169 -231.747,507.965 -227.791,504.015 "/>
   </g>
   <g>
-    <path style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #80bbff" d="M -205.22,519.611 A 60.625,60.625 0 0 0 -201.502,481.589"/>
-    <polygon style="fill: #80bbff" points="-203.405,474.476 -194.776,481.585 -200.36,481.33 -203.915,485.645 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #80bbff" points="-203.405,474.476 -194.776,481.585 -200.36,481.33 -203.915,485.645 "/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #80bbff" d="M -212.03,519.325 A 235.625,235.625 0 0 0 -208.546,382.117"/>
+    <polygon style="fill: #80bbff" points="-210.619,374.918 -202.72,382.831 -208.253,382.035 -212.209,385.985 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #80bbff" points="-210.619,374.918 -202.72,382.831 -208.253,382.035 -212.209,385.985 "/>
   </g>
   <g>
     <path style="fill: #bfbfbf" d="M -220 20 C -120,20 -120,60 -220,60 C -320,60 -320,20 -220,20z"/>
@@ -321,18 +303,6 @@
     <tspan x="410" y="548">blue    - only by administrator</tspan>
     <tspan x="410" y="564">dotted - transition id done by cronjob</tspan>
   </text>
-  <g>
-    <path style="fill: #ffffff" d="M -220 430 C -120,430 -120,470 -220,470 C -320,470 -320,430 -220,430z"/>
-    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M -220 430 C -120,430 -120,470 -220,470 C -320,470 -320,430 -220,430"/>
-  </g>
-  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="-220" y="454.45">
-    <tspan x="-220" y="454.45">VOTED</tspan>
-  </text>
-  <g>
-    <line style="fill: none; fill-opacity:0; stroke-width: 4; stroke-dasharray: 4; stroke: #ff5240" x1="-220" y1="380.006" x2="-220" y2="418.022"/>
-    <polygon style="fill: #ff5240" points="-220,425.522 -225,415.522 -220,418.022 -215,415.522 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #ff5240" points="-220,425.522 -225,415.522 -220,418.022 -215,415.522 "/>
-  </g>
   <text font-size="11.2776" style="fill: #7f7f7f;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="-219.514" y="98.4358">
     <tspan x="-219.514" y="98.4358">Admin enters a new raffle</tspan>
     <tspan x="-219.514" y="112.533">into the database</tspan>
@@ -342,4 +312,25 @@
     <polygon style="fill: #7ffc32" points="220,115.557 215,105.557 220,108.057 225,105.557 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #7ffc32" points="220,115.557 215,105.557 220,108.057 225,105.557 "/>
   </g>
+  <g>
+    <path style="fill: #ff5240" d="M -220 330 C -120,330 -120,370 -220,370 C -320,370 -320,330 -220,330z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M -220 330 C -120,330 -120,370 -220,370 C -320,370 -320,330 -220,330"/>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="-220" y="354.45">
+    <tspan x="-220" y="354.45">CLOSE</tspan>
+  </text>
+  <g>
+    <path style="fill: #ffffff" d="M 420 200 C 520,200 520,240 420,240 C 320,240 320,200 420,200z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 420 200 C 520,200 520,240 420,240 C 320,240 320,200 420,200"/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="420" y="224.45">
+    <tspan x="420" y="224.45">ENTRY_ACCEPTED</tspan>
+  </text>
+  <g>
+    <path style="fill: #ffffff" d="M 220 200 C 320,200 320,240 220,240 C 120,240 120,200 220,200z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 220 200 C 320,200 320,240 220,240 C 120,240 120,200 220,200"/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="220" y="224.45">
+    <tspan x="220" y="224.45">FORBIDDEN</tspan>
+  </text>
 </svg>
