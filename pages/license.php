@@ -1,3 +1,6 @@
+This project is hosted on <a href="https://github.com/Oinosseus/ticket-raffle">github</a><br>
+<br>
+
 <?php
 
 $license = file("LICENSE");

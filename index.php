@@ -30,15 +30,14 @@ $DB = new DatabaseWrapper(CONFIG_DATABASE_FILE);
                     <ul>
                         <li><a href="index.php?USER_PAGE=HOME">Startseite</a></li>
                         <li><a href="index.php?USER_PAGE=EVENTS">Verlosungen</a></li>
-                        <li><a href="index.php?USER_PAGE=STATE_CHART">Zustandsdiagramm</a></li>
-                        <li><a href="index.php?USER_PAGE=LICENSE">Lizenz</a></li>
                     </ul>
                 </li>
                 <li>
                     <label>Administration</label>
                     <ul>
+                        <li><a href="index.php?USER_PAGE=PASSWORD">Password-Gen</a></li>
                         <?php if (USER_IS_ADMIN) : ?>
-                            <li><a href="index.php?USER_PAGE=NEW_EVENT">Neue Veranstaltung</a></li>
+                            <li><a href="index.php?USER_PAGE=NEW_RAFFLE">Neue Verlosung</a></li>
                             <li><a href="?ADMIN_LOGOUT=TRUE">Logout</a></li>
                         <?php else : ?>
                             <li>
@@ -48,7 +47,14 @@ $DB = new DatabaseWrapper(CONFIG_DATABASE_FILE);
                                 </form>
                             </li>
                         <?php endif; ?>
-                        <li><a href="index.php?USER_PAGE=PASSWORD">Pass Gen</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <label>Hilfe</label>
+                    <ul>
+                        <li><a href="index.php?USER_PAGE=DATABSE_CHART">Datenbakstruktur</a></li>
+                        <li><a href="index.php?USER_PAGE=STATE_CHART">Zustandsdiagramm</a></li>
+                        <li><a href="index.php?USER_PAGE=LICENSE">Lizenz</a></li>
                     </ul>
                 </li>
         </div>

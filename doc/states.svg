@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
-<svg width="48cm" height="28cm" viewBox="-297 18 950 543" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="51cm" height="28cm" viewBox="-297 18 1007 543" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <g>
     <path style="fill: #ffffff" d="M 220 120 C 320,120 320,160 220,160 C 120,160 120,120 220,120z"/>
     <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 220 120 C 320,120 320,160 220,160 C 120,160 120,120 220,120"/>
@@ -79,11 +79,11 @@
     <polygon style="fill: #7ffc32" points="51.6485,244.507 60.9137,250.765 55.3304,251.041 52.2016,255.674 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #7ffc32" points="51.6485,244.507 60.9137,250.765 55.3304,251.041 52.2016,255.674 "/>
   </g>
-  <text font-size="11.2776" style="fill: #7f7f7f;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="20" y="90">
-    <tspan x="20" y="90">User can request to entry</tspan>
-    <tspan x="20" y="104.097">the lottery. Is done by</tspan>
-    <tspan x="20" y="118.194">entering Emailaddress</tspan>
-    <tspan x="20" y="132.291">to a webform.</tspan>
+  <text font-size="11.2776" style="fill: #7f7f7f;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="30" y="80">
+    <tspan x="30" y="80">User can request to entry</tspan>
+    <tspan x="30" y="94.097">a raffle. This is done by</tspan>
+    <tspan x="30" y="108.194">submitting with Emailaddress</tspan>
+    <tspan x="30" y="122.291">to a webform.</tspan>
   </text>
   <text font-size="11.2776" style="fill: #7f7f7f;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="350" y="120">
     <tspan x="350" y="120">Request is accepted by klicking</tspan>
@@ -91,7 +91,7 @@
     <tspan x="350" y="148.194">to the user.</tspan>
   </text>
   <text font-size="11.2776" style="fill: #7f7f7f;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="400" y="320">
-    <tspan x="400" y="320">When Election is closed,</tspan>
+    <tspan x="400" y="320">When raffle is closed,</tspan>
     <tspan x="400" y="334.097">'VOTED' state is</tspan>
     <tspan x="400" y="348.194">entered automatially.</tspan>
   </text>
@@ -159,10 +159,6 @@
     <polygon style="fill: #80bbff" points="-220,335.528 -225,325.528 -220,328.028 -215,325.528 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #80bbff" points="-220,335.528 -225,325.528 -220,328.028 -215,325.528 "/>
   </g>
-  <text font-size="11.2776" style="fill: #7f7f7f;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="-219.514" y="98.4359">
-    <tspan x="-219.514" y="98.4359">Admin enters a new event</tspan>
-    <tspan x="-219.514" y="112.533">into the database</tspan>
-  </text>
   <g>
     <line style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #80bbff" x1="-219.825" y1="60.9866" x2="-219.302" y2="123.913"/>
     <polygon style="fill: #80bbff" points="-219.239,131.413 -224.322,121.455 -219.302,123.913 -214.323,121.372 "/>
@@ -190,14 +186,14 @@
     <tspan x="-240" y="500"></tspan>
   </text>
   <g>
-    <path style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #80bbff" d="M -228.366,380.652 A 212.5,212.5 0 0 0 -231.949,507.94"/>
-    <polygon style="fill: #80bbff" points="-229.825,515.121 -237.815,507.3 -232.273,508.032 -228.362,504.037 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #80bbff" points="-229.825,515.121 -237.815,507.3 -232.273,508.032 -228.362,504.037 "/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #80bbff" d="M -234.78,470.389 A 60.625,60.625 0 0 0 -238.498,508.411"/>
+    <polygon style="fill: #80bbff" points="-236.595,515.524 -245.224,508.415 -239.64,508.67 -236.085,504.355 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #80bbff" points="-236.595,515.524 -245.224,508.415 -239.64,508.67 -236.085,504.355 "/>
   </g>
   <g>
-    <path style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #80bbff" d="M -211.634,519.348 A 212.5,212.5 0 0 0 -208.051,392.06"/>
-    <polygon style="fill: #80bbff" points="-210.175,384.879 -202.185,392.7 -207.727,391.968 -211.638,395.963 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #80bbff" points="-210.175,384.879 -202.185,392.7 -207.727,391.968 -211.638,395.963 "/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #80bbff" d="M -205.22,519.611 A 60.625,60.625 0 0 0 -201.502,481.589"/>
+    <polygon style="fill: #80bbff" points="-203.405,474.476 -194.776,481.585 -200.36,481.33 -203.915,485.645 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #80bbff" points="-203.405,474.476 -194.776,481.585 -200.36,481.33 -203.915,485.645 "/>
   </g>
   <g>
     <path style="fill: #bfbfbf" d="M -220 20 C -120,20 -120,60 -220,60 C -320,60 -320,20 -220,20z"/>
@@ -233,10 +229,10 @@
     <polygon style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #7ffc32" points="140.535,220 130.535,225 133.035,220 130.535,215 "/>
   </g>
   <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="-145" y="40">
-    <tspan x="-145" y="40">Events Table</tspan>
+    <tspan x="-145" y="40">Raffles Table</tspan>
   </text>
   <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="295" y="40">
-    <tspan x="295" y="40">Election Table</tspan>
+    <tspan x="295" y="40">Drawings Table</tspan>
   </text>
   <g>
     <path style="fill: #ffffff" d="M 220 360 C 320,360 320,400 220,400 C 120,400 120,360 220,360z"/>
@@ -283,11 +279,6 @@
   <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="320" y="540">
     <tspan x="320" y="540"></tspan>
   </text>
-  <g>
-    <path style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #7ffc32" d="M 208.494,60.4849 A 82.0294,82.0294 0 0 0 205.034,108.152"/>
-    <polygon style="fill: #7ffc32" points="206.885,115.342 198.622,107.811 204.186,108.345 207.952,104.213 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #7ffc32" points="206.885,115.342 198.622,107.811 204.186,108.345 207.952,104.213 "/>
-  </g>
   <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="220" y="540">
     <tspan x="220" y="540"></tspan>
   </text>
@@ -325,8 +316,29 @@
   </g>
   <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="420" y="510">
     <tspan x="420" y="510">state changes:</tspan>
-    <tspan x="420" y="526">green - only when event is 'OPEN'</tspan>
-    <tspan x="420" y="542">red     - only when event is 'CLOSED'</tspan>
+    <tspan x="420" y="526">green - only when raffle is 'OPEN'</tspan>
+    <tspan x="420" y="542">red     - automatically when raffle is 'CLOSED'</tspan>
     <tspan x="420" y="558">blue   - only by administrator</tspan>
   </text>
+  <g>
+    <path style="fill: #ffffff" d="M -220 430 C -120,430 -120,470 -220,470 C -320,470 -320,430 -220,430z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M -220 430 C -120,430 -120,470 -220,470 C -320,470 -320,430 -220,430"/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="-220" y="454.45">
+    <tspan x="-220" y="454.45">VOTED</tspan>
+  </text>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #ff5240" x1="-220" y1="380.006" x2="-220" y2="418.022"/>
+    <polygon style="fill: #ff5240" points="-220,425.522 -225,415.522 -220,418.022 -215,415.522 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #ff5240" points="-220,425.522 -225,415.522 -220,418.022 -215,415.522 "/>
+  </g>
+  <text font-size="11.2776" style="fill: #7f7f7f;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="-219.514" y="98.4359">
+    <tspan x="-219.514" y="98.4359">Admin enters a new raffle</tspan>
+    <tspan x="-219.514" y="112.533">into the database</tspan>
+  </text>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #7ffc32" x1="220" y1="59.9707" x2="220" y2="108.057"/>
+    <polygon style="fill: #7ffc32" points="220,115.557 215,105.557 220,108.057 225,105.557 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #7ffc32" points="220,115.557 215,105.557 220,108.057 225,105.557 "/>
+  </g>
 </svg>

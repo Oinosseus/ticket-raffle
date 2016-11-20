@@ -19,14 +19,22 @@ if (isset($_REQUEST['USER_PAGE'])) {
     switch ($_REQUEST['USER_PAGE']) {
 
 
-        // admin only
+        // admin
 
-        case "NEW_EVENT":
-            $_SESSION['USER_PAGE'] = "new_event.php";
+        case "NEW_RAFFLE":
+            $_SESSION['USER_PAGE'] = "new_raffle.php";
+            break;
+
+        case "PASSWORD":
+            $_SESSION['USER_PAGE'] = "password_gen.php";
             break;
 
 
-        // free for all
+        // help
+
+        case "DATABSE_CHART":
+            $_SESSION['USER_PAGE'] = "database_chart.php";
+            break;
 
         case "STATE_CHART":
             $_SESSION['USER_PAGE'] = "state_chart.php";
@@ -36,9 +44,8 @@ if (isset($_REQUEST['USER_PAGE'])) {
             $_SESSION['USER_PAGE'] = "license.php";
             break;
 
-        case "PASSWORD":
-            $_SESSION['USER_PAGE'] = "password_gen.php";
-            break;
+
+        // main nvaigation
 
         case "HOME":
         default:

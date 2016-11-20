@@ -23,8 +23,8 @@ class DatabaseWrapper {
     function checkStructure() {
         // creates tables and columns if not already existent
 
-        // Events table
-        $this->db->exec("CREATE TABLE IF NOT EXISTS Events ("
+        // Raffles table
+        $this->db->exec("CREATE TABLE IF NOT EXISTS Raffles ("
             . "Id INTEGER PRIMARY KEY AUTOINCREMENT,  "
             . "Name TEXT NOT NULL DEFAULT '', "
             . "Winners INTEGER NOT NULL DEFAULT 1, "
@@ -35,7 +35,7 @@ class DatabaseWrapper {
             . ")");
     }
 
-    function newEvent(string $name, int $winners, DateTime $opentime, DateTime $closetime) {
+    function newRaffle(string $name, int $winners, DateTime $opentime, DateTime $closetime) {
 
         // escape values
         $name = $this->db->escapeString($name);
@@ -44,7 +44,7 @@ class DatabaseWrapper {
         $closetime = $this->db->escapeString($closetime->format(DateTime::ATOM));
 
         // enter values
-        $query = "INSERT INTO Events (Name, Winners, OpenTime, CloseTime, State) VALUES ('$name', '$winners', '$opentime', '$closetime', 'COMMITTED')";
+        $query = "INSERT INTO Raffles (Name, Winners, OpenTime, CloseTime, State) VALUES ('$name', '$winners', '$opentime', '$closetime', 'COMMITTED')";
         if (!$this->db->exec($query)) {
             echo "[" . $this->db->lastErrorCode() . "] " . $this->db->lastErrorMsg() . "<br>";
             return 0;
