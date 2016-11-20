@@ -28,6 +28,10 @@ if (isset($_REQUEST['USER_PAGE'])) {
 
         // free for all
 
+        case "STATE_CHART":
+            $_SESSION['USER_PAGE'] = "state_chart.php";
+            break;
+
         case "LICENSE":
             $_SESSION['USER_PAGE'] = "license.php";
             break;

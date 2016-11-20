@@ -30,6 +30,7 @@ $DB = new DatabaseWrapper(CONFIG_DATABASE_FILE);
                     <ul>
                         <li><a href="index.php?USER_PAGE=HOME">Startseite</a></li>
                         <li><a href="index.php?USER_PAGE=EVENTS">Verlosungen</a></li>
+                        <li><a href="index.php?USER_PAGE=STATE_CHART">Zustandsdiagramm</a></li>
                         <li><a href="index.php?USER_PAGE=LICENSE">Lizenz</a></li>
                     </ul>
                 </li>
