@@ -147,6 +147,16 @@ div#content {
     vertical-align: top;
 }
 
+table#raffles th {
+    padding: 2px 15px;
+    background-color: #000;
+    color: #fff;
+}
+
+table#raffles td {
+    padding: 2px 15px;
+}
+
 
 
 /***************************

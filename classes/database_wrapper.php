@@ -44,7 +44,7 @@ class DatabaseWrapper {
         $closetime = $this->db->escapeString($closetime->format(DateTime::ATOM));
 
         // enter values
-        $query = "INSERT INTO Raffles (Name, Winners, OpenTime, CloseTime, State) VALUES ('$name', '$winners', '$opentime', '$closetime', 'COMMITTED')";
+        $query = "INSERT INTO Raffles (Name, Winners, OpenTime, CloseTime, DrawingTime, State) VALUES ('$name', '$winners', '$opentime', '$closetime', NULL, 'COMMITTED')";
         if (!$this->db->exec($query)) {
             echo "[" . $this->db->lastErrorCode() . "] " . $this->db->lastErrorMsg() . "<br>";
             return 0;
@@ -52,6 +52,29 @@ class DatabaseWrapper {
 
         return $this->db->lastInsertRowID();
 
+    }
+
+    function getRaffles() {
+        // returns array of Raffle objects
+
+        $ret = array();
+
+        $query = "SELECT Id, Name, Winners, OpenTime, CloseTime, DrawingTime, State FROM Raffles";
+        $results = $this->db->query($query);
+        while ($row = $results->fetchArray()) {
+            $raffle = new Raffle();
+            $raffle->Id          = $row['Id'];
+            $raffle->Name        = $row['Name'];
+            $raffle->Winners     = $row['Winners'];
+            $raffle->OpenTime    = new DateTime($row['OpenTime'], new DateTimeZone(CONFIG_TIMEZONE));
+            $raffle->CloseTime   = new DateTime($row['CloseTime'], new DateTimeZone(CONFIG_TIMEZONE));
+            if ($row['DrawingTime'] == NULL) $raffle->DrawingTime = NULL;
+            else $raffle->DrawingTime = new DateTime($row['DrawingTime'], new DateTimeZone(CONFIG_TIMEZONE));
+            $raffle->State       = $row['State'];
+            $ret[count($ret)] = $raffle;
+        }
+
+        return $ret;
     }
 
 }

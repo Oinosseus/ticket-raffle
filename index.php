@@ -1,5 +1,7 @@
 <?php
 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 session_start();
 
 // load modules
@@ -8,6 +10,7 @@ include("modules/login.php");
 include("modules/page.php");
 
 // load classes
+include("classes/raffle.php");
 include("classes/database_wrapper.php");
 
 // create a read-only database wrapper object
@@ -29,7 +32,7 @@ $DB = new DatabaseWrapper(CONFIG_DATABASE_FILE);
                     <label>Navigation</label>
                     <ul>
                         <li><a href="index.php?USER_PAGE=HOME">Startseite</a></li>
-                        <li><a href="index.php?USER_PAGE=EVENTS">Verlosungen</a></li>
+                        <li><a href="index.php?USER_PAGE=RAFFLES">Verlosungen</a></li>
                     </ul>
                 </li>
                 <li>
