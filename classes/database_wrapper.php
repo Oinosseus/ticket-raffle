@@ -11,10 +11,18 @@ class DatabaseWrapper {
 
     function __construct($db_filename) {
 
-        $this->db = new SQLite3($db_filename, SQLITE3_OPEN_READWRITE | SQLITE3_OPEN_CREATE);
+        // check if database file already exists
+        $database_exist = is_file($db_filename);
 
+        // open database
+        $this->db = new SQLite3($db_filename, SQLITE3_OPEN_READWRITE | SQLITE3_OPEN_CREATE);
         if ($this->db->lastErrorCode()) {
             echo "[" . $this->db->lastErrorCode() . "] " . $this->db->lastErrorMsg() . "<br>";
+        }
+
+        // create tables if database did not exist before
+        if (!$database_exist) {
+            $this->checkStructure();
         }
     }
 
@@ -37,8 +45,23 @@ class DatabaseWrapper {
             . "OpenTime TEXT, "
             . "CloseTime TEXT, "
             . "DrawingTime TEXT, "
-            . "State TEXT NOT NULL DEFAULT 'INVALID'"
+            . "State TEXT NOT NULL DEFAULT '" . Raffle::STATE_INVALID . "'"
             . ")");
+
+        // Participants table
+        $this->db->exec("CREATE TABLE IF NOT EXISTS Participants ("
+            . "Id INTEGER PRIMARY KEY AUTOINCREMENT,  "
+            . "Email TEXT NOT NULL DEFAULT ''"
+            . ")");
+
+        // Drawings table
+        $this->db->exec("CREATE TABLE IF NOT EXISTS Drawings ("
+            . "Id INTEGER PRIMARY KEY AUTOINCREMENT,  "
+            . "Raffle INTEGER NOT NULL DEFAULT 1, "
+            . "Participant INTEGER NOT NULL DEFAULT 1, "
+            . "State TEXT NOT NULL DEFAULT '" . Drawing::STATE_FORBIDDEN . "'"
+            . ")");
+
     }
 
 
