@@ -65,7 +65,7 @@ class DatabaseWrapper {
 
 
 
-    function updateTabeRow($table, $id, $column_value_array) {
+    function updateTableRow($table, $id, $column_value_array) {
 
         // escape values
         $table = $this->db->escapeString($table);
