@@ -2,11 +2,46 @@
 
 include("modules/config.php");
 include("classes/database_wrapper.php");
+include("classes/raffle.php");
 
 // create new database wrapper
 $DB = new DatabaseWrapper(CONFIG_DATABASE_FILE);
 
 // check tables
 $DB->checkStructure();
+
+// actual date
+$NOW = new DateTime();
+$NOW->setTimezone(new DateTimeZone(CONFIG_TIMEZONE));
+
+
+
+// ---------------------------------------------------------------------------
+//                               Opening Raffles
+// ---------------------------------------------------------------------------
+
+
+// check all raffles
+foreach ($DB->getRaffles() as $raffle) {
+
+    // only care for COMMITTED raffles
+    if ($raffle->getState() === Raffle::STATE_COMMITTED) {
+
+        // only care if OpenTime is passed
+        if ($raffle->getOpenTime() <= $NOW) {
+
+            // user info
+            echo "Opening raffle #" . $raffle->getId() . " '" . $raffle->getName() . "'\n";
+
+            // set state to open
+            $raffle->setState(Raffle::STATE_OPEN);
+            $raffle->save();
+        }
+
+    }
+
+}
+
+
 
 ?>
