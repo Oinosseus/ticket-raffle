@@ -1,12 +1,11 @@
 <?php
 
     function cmp($r1, $r2) {
-        return $r2->CloseTime->getTimeStamp() - $r1->CloseTime->getTimeStamp();
+        return $r2->getCloseTime() < $r1->getCloseTime();
     }
 
     $sorted_raffles = $DB->getRaffles();
     usort($sorted_raffles, "cmp");
-
 
 ?>
 
@@ -24,16 +23,13 @@
     <?php
         foreach ($sorted_raffles as $raffle) {
             echo '<tr>';
-            echo '    <td>' . $raffle->Id . '</td>';
-            echo '    <td>' . $raffle->Name . '</td>';
-            echo '    <td>' . $raffle->Winners . '</td>';
-            echo '    <td>' . $raffle->OpenTime->format('Y-m-d H:i:s') . '</td>';
-            echo '    <td>' . $raffle->CloseTime->format('Y-m-d H:i:s') . '</td>';
-            if ($raffle->DrawingTime)
-                echo '    <td>' . $raffle->DrawingTime->format('Y-m-d H:i:s') . '</td>';
-            else
-                echo '    <td></td>';
-            echo '    <td>' . $raffle->State . '</td>';
+            echo '    <td>' . $raffle->getId() . '</td>';
+            echo '    <td><a href="index.php?USER_PAGE=RAFFLE&RAFFLE_ID=' . $raffle->getId() . '">' . $raffle->getName() . '</a></td>';
+            echo '    <td>' . $raffle->getWinners() . '</td>';
+            echo '    <td>' . $raffle->getOpenTimeHuman() . '</td>';
+            echo '    <td>' . $raffle->getCloseTimeHuman() . '</td>';
+            echo '    <td>' . $raffle->getDrawingTimeHuman() . '</td>';
+            echo '    <td>' . $raffle->getState() . '</td>';
             echo '<tr>';
         }
     ?>

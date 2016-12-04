@@ -47,6 +47,10 @@ if (isset($_REQUEST['USER_PAGE'])) {
 
         // main nvaigation
 
+        case "RAFFLE":
+            $_SESSION['USER_PAGE'] = "raffle.php";
+            break;
+
         case "RAFFLES":
             $_SESSION['USER_PAGE'] = "raffles.php";
             break;
