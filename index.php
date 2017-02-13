@@ -58,6 +58,7 @@ $DB = new DatabaseWrapper(CONFIG_DATABASE_FILE);
                     <ul>
                         <li><a href="index.php?USER_PAGE=DATABSE_CHART">Datenbakstruktur</a></li>
                         <li><a href="index.php?USER_PAGE=STATE_CHART">Zustandsdiagramm</a></li>
+                        <li><a href="doc/doxy/html" target="_blank">Source Doku</a></li>
                         <li><a href="index.php?USER_PAGE=LICENSE">Lizenz</a></li>
                     </ul>
                 </li>
