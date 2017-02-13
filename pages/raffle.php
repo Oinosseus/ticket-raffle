@@ -41,3 +41,18 @@
         </tr>
 </table>
 
+<table id="raffle_participants">
+    <tr>
+        <th>Email</th>
+        <th>State</th>
+        <th title="Participations">P</th>
+        <th title="Wins">W</th>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <form action="?ACTION=PARTICIPATE" method="post">
+                <input type="email" name="PARTICIPANT_EMAIL"><button type="submit">Teilnehmen</button>
+            </form>
+        </td>
+    </tr>
+</table>

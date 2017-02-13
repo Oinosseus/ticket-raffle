@@ -51,7 +51,7 @@ class Raffle {
         return $this->_Name;
     }
 
-    function setName(string $name) {
+    function setName($name) {
         $this->_Name = "$name";
     }
 
@@ -60,7 +60,7 @@ class Raffle {
         return $this->_Winners;
     }
 
-    function setWinners(int $winners) {
+    function setWinners($winners) {
         $this->_Winners = intval($winners);
     }
 
@@ -131,7 +131,7 @@ class Raffle {
         return $this->_State;
     }
 
-    function setState(string $state) {
+    function setState($state) {
         if ($state == Raffle::STATE_COMMITTED or
             $state == Raffle::STATE_OPEN or
             $state == Raffle::STATE_CLOSED or
