@@ -1,14 +1,11 @@
 <?php
 
-//////////////////////////////////////////////////////////////////////////////
-//                            Database Wrapper
-//
-// This class wraps all database accesses.
-
+//! Database Wrapper
+//! This class wraps all database accesses.
 class DatabaseWrapper {
 
 
-
+    //! @param $db_filename The path to the SQLite3 database file.
     function __construct($db_filename) {
 
         // check if database file already exists
@@ -33,9 +30,14 @@ class DatabaseWrapper {
     }
 
 
+    // ------------------------------------------------------------------------
+    //                             Public Methods
+    // ------------------------------------------------------------------------
 
+
+
+    //! Creates tables and columns if not already existent.
     function checkStructure() {
-        // creates tables and columns if not already existent
 
         // Raffles table
         $this->db->exec("CREATE TABLE IF NOT EXISTS Raffles ("
@@ -66,8 +68,12 @@ class DatabaseWrapper {
 
 
 
+    //! A database request for a certain row.
+    // @return [string -> string] associative array
+    // @param $tbale string Name of the table
+    // @param $id int The row id number.
+    // @param $column_array [string] An array of column names that are in the keys in the returned array.
     function selectTableRow($table, $id, $column_array) {
-        // returns an accociative array
 
         // escape values
         $table = $this->db->escapeString($table);
@@ -88,6 +94,10 @@ class DatabaseWrapper {
 
 
 
+    //! An update request for an existing row.
+    // @param $tbale string Name of the table
+    // @param $id int The row id number.
+    // @param $column_value_array [string -> string] An associative array where the keys are table columns and the values are the updated column values.
     function updateTableRow($table, $id, $column_value_array) {
 
         // escape values
@@ -113,8 +123,11 @@ class DatabaseWrapper {
 
 
 
+    //! Adding a row into a table.
+    // @param $tbale string Name of the table
+    // @param $column_value_array [string -> string] An associative array where the keys are table columns and the values are the updated column values.
+    // @return int The row id of the newly added table row.
     function insertTableRow($table, $column_value_array) {
-        // returns Id of newly inserted row
 
         // escape values
         $table = $this->db->escapeString($table);
@@ -141,8 +154,9 @@ class DatabaseWrapper {
 
 
 
+    //! Request all existing raffles from the database.
+    // @return [Raffle] An array of Raffle objects
     function getRaffles() {
-        // returns array of Raffle objects
 
         $ret = array();
 

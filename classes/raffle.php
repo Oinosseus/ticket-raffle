@@ -1,11 +1,7 @@
 <?php
 
 
-//////////////////////////////////////////////////////////////////////////////
-//                            Data Storage Class
-//
-// This class stores information about a raffle.
-
+//! This class stores information about a raffle.
 class Raffle {
 
     // pseudo enums for state of a raffle
@@ -14,7 +10,13 @@ class Raffle {
     const STATE_CLOSED    = 'CLOSED';
     const STATE_INVALID   = 'INVALID';
 
-    // constructor
+    /** Initializing the raffle object
+     *
+     * If id is known (> 0) and a reference to the database is given,
+     * the constructer automatically calls load() to retrieve current data of the raffle.
+     * @param $id int Optional database row Id (0 if not in database)
+     * @param $db DatabaseWrapper A reference to the database wrapper.
+     */
     function __construct($id = 0, $db = Null) {
 
         // primary properties
@@ -40,39 +42,49 @@ class Raffle {
     // -----------------------------------------------------------------------
     //                            Getter / Setter
     // -----------------------------------------------------------------------
+    //! @name Public Properties
+    //! @{
 
 
+    //! @return int Row-Id of the raffle in the database
     function getId() {
         return $this->_Id;
     }
 
 
+    //! @return string The name oof the raffle
     function getName() {
         return $this->_Name;
     }
 
+    //! @param $name string Set new name for the raffle.
     function setName($name) {
         $this->_Name = "$name";
     }
 
 
+    //! @return int Amount of possible winners for the raffle
     function getWinners() {
         return $this->_Winners;
     }
 
+    //! @param int Set new amount of possible winners for the raffle
     function setWinners($winners) {
         $this->_Winners = intval($winners);
     }
 
 
+    //! @param DateTime The open time of the raffle
     function getOpenTime() {
         return $this->_OpenTime;
     }
 
+    //! @param string The open time of the raffle in human readable format
     function getOpenTimeHuman() {
         return $this->_OpenTime->format('Y-m-d H:i:s');
     }
 
+    //! @param $dateTime Setting a new open time for the raffle
     function setOpenTime($dateTime) {
 
         // get tim in string format
@@ -84,14 +96,17 @@ class Raffle {
     }
 
 
+    //! @return DateTime The close time for the raffle
     function getCloseTime() {
         return $this->_CloseTime;
     }
 
+    //! @return string Thge close time of the raffle in human readable format
     function getCloseTimeHuman() {
         return $this->_CloseTime->format('Y-m-d H:i:s');
     }
 
+    //! @param $dateTime DateTime Setting a new close time for the raffle.
     function setCloseTime($dateTime) {
 
         // get tim in string format
@@ -103,10 +118,12 @@ class Raffle {
     }
 
 
+    //! @return DateTime The drawing time of the raffle.
     function getDrawingTime() {
         return $this->_DrawingTime;
     }
 
+    //! @return string The drawing time of the raffle in human readable format.
     function getDrawingTimeHuman() {
         if ($this->_DrawingTime)
             return $this->_DrawingTime->format('Y-m-d H:i:s');
@@ -115,6 +132,7 @@ class Raffle {
 
     }
 
+    //! @param $dateTime DateTime Setting a new drawing time of the raffle.
     function setDrawingTime($dateTime) {
 
         // get tim in string format
@@ -126,11 +144,12 @@ class Raffle {
         else $this->_DrawingTime = new DateTime($string_time, new DateTimeZone(CONFIG_TIMEZONE));
     }
 
-
+    //! @return string The current state of the raffle.
     function getState() {
         return $this->_State;
     }
 
+    //! @param string setting a new state for the raffle.
     function setState($state) {
         if ($state == Raffle::STATE_COMMITTED or
             $state == Raffle::STATE_OPEN or
@@ -141,13 +160,22 @@ class Raffle {
         }
     }
 
+    // end of group public properties
+    //! @}
+
 
 
     // -----------------------------------------------------------------------
     //                            Methods
     // -----------------------------------------------------------------------
+    //! @name Public Methods
+    // @{
 
-    // load raffle object properties from database
+    /** Load the current settings from the database.
+     *
+     *  If $db was not set in the __construct() this will ignore the load (no error is returned).
+     *  If the database row id is unknown (not set in the constructor and raffle not saved) this will also do nothing.
+     */
     function load() {
 
         // check possibility
@@ -167,7 +195,13 @@ class Raffle {
         $this->setState($db_fields['State']);
     }
 
-    // save raffle object properties to database (update)
+    /** Saving the actual values to the database.
+     *
+     *  If no $db was given at __construct() this operation will fail.
+     *  If the database row id is already set (!=0) this operation will update the database row.
+     *  If the database row id is not set (==0) this will create a new database row and update the id.
+     *  @return bool True if raffle was saved successfully.
+     */
     function save() {
 
         // check possibility
@@ -196,6 +230,9 @@ class Raffle {
             $this->_Db->updateTableRow("Raffles", $this->_Id, $columns);
         }
     }
+
+    // end group Methods
+    //! q}
 
 
 

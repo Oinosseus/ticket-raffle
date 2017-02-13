@@ -1,11 +1,9 @@
 <?php
 
-
-//////////////////////////////////////////////////////////////////////////////
-//                            Data Storage Class
-//
-// This class stores information about raffle drawings.
-
+/** Data Storage Class
+ *
+ * This class stores information about raffle drawings.
+ */
 class Drawing {
 
     // pseudo enums for state of a drawing entry
