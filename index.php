@@ -23,6 +23,7 @@ $DB = new DatabaseWrapper(CONFIG_DATABASE_FILE);
     <head>
         <title>Ticket Raffle</title>
         <link rel="stylesheet" type="text/css" href="template/style.css">
+        <link rel="stylesheet" type="text/css" href="template/style_pages_raffles.css">
     </head>
     <body>
         <div id="headerimage"><img src="template/header.png"></div>

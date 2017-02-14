@@ -22,7 +22,7 @@
 
     <?php
         foreach ($sorted_raffles as $raffle) {
-            echo '<tr>';
+            echo '<tr class="' . $raffle->getState() . '">';
             echo '    <td>' . $raffle->getId() . '</td>';
             echo '    <td><a href="index.php?USER_PAGE=RAFFLE&RAFFLE_ID=' . $raffle->getId() . '">' . $raffle->getName() . '</a></td>';
             echo '    <td>' . $raffle->getWinners() . '</td>';

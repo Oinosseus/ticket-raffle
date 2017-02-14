@@ -1,0 +1,7 @@
+table#raffles tr.OPEN {
+    background-color: #7FFC32;
+}
+
+table#raffles tr.CLOSED {
+    background-color: #FF5240;
+}
