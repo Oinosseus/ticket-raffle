@@ -1,11 +1,33 @@
 <?php
 
-    if (isset($_REQUEST['RAFFLE_ID'])) {
+if (isset($_REQUEST['RAFFLE_ID'])) {
 
-        $raffle = new Raffle(intval($_REQUEST['RAFFLE_ID']), $DB);
-    } else {
-        $raffle = new Raffle();
+    $raffle = new Raffle(intval($_REQUEST['RAFFLE_ID']), $DB);
+} else {
+    $raffle = new Raffle();
+}
+
+
+
+// ----------------------------------------------------------------------------
+//                        Submit New Participation
+// ----------------------------------------------------------------------------
+
+if ($raffle->getState()=="OPEN" && isset($_REQUEST['ACTION']) && $_REQUEST['ACTION']=="PARTICIPATE") {
+
+    # get requested email address
+    $participant_email = "";
+    if (isset($_REQUEST['PARTICIPANT_EMAIL'])) {
+        $participant_email = trim($_REQUEST['PARTICIPANT_EMAIL']);
     }
+
+    # check for valid email address
+    if (preg_match(CONFIG_ALLOWEDEMAILREGEX, $participant_email)) {
+            echo '<div class="message success">Die Emailadresse "' . $participant_email . '" wurde eingetragen!</div>';
+    } else {
+            echo '<div class="message error">Die Emailadresse "' . $participant_email . '" ist nicht erlaubt!</div>';
+    }
+}
 
 ?>
 
@@ -49,10 +71,13 @@
         <th title="Wins">W</th>
     </tr>
     <tr>
+        <?php if ($raffle->getState() === "OPEN") : ?>
         <td colspan="4">
             <form action="?ACTION=PARTICIPATE" method="post">
-                <input type="email" name="PARTICIPANT_EMAIL"><button type="submit">Teilnehmen</button>
+                <input type="hidden" name="RAFFLE_ID" value="<?php echo $raffle->getId() ?>" />
+                <input type="text" name="PARTICIPANT_EMAIL"><button type="submit">Teilnehmen</button>
             </form>
         </td>
+        <?php endif; ?>
     </tr>
 </table>
