@@ -9,4 +9,7 @@ define("CONFIG_DATABASE_FILE", "database.sqlite3");
 // local timezone
 define("CONFIG_TIMEZONE", "Europe/Berlin");
 
+// maintenance logfile path
+define("CONFIG_MAINTENANCELOG", "maintenance.log");
+
 ?>

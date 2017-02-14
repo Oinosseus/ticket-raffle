@@ -18,9 +18,38 @@ $NOW->setTimezone(new DateTimeZone(CONFIG_TIMEZONE));
 
 
 // ---------------------------------------------------------------------------
-//                               Opening Raffles
+//                                 Enable Logging
 // ---------------------------------------------------------------------------
 
+# open and lock file
+$SOMETHING_WAS_WRIITEN = false;
+$FILE_HANDLE = fopen(CONFIG_MAINTENANCELOG, "a+");
+flock($FILE_HANDLE, LOCK_EX) or exit("Error: could not lock file '" . CONFIG_MAINTENANCELOG . "'!");
+
+function logaction($message) {
+    global $FILE_HANDLE;
+    global $SOMETHING_WAS_WRIITEN;
+    global $NOW;
+
+    # ensure newline at the end
+    if (substr($message, strlen($message), 1) != "\n") $message .= "\n";
+
+    # write log header
+    if ($SOMETHING_WAS_WRIITEN == false) {
+        fwrite($FILE_HANDLE, "\n\nMaintenance Did Something\n");
+        fwrite($FILE_HANDLE,     "=========================\n\n");
+        fwrite($FILE_HANDLE, $NOW->format('Y-m-d H:i:s') . "\n\n");
+    }
+
+    fwrite($FILE_HANDLE, $message . "\n");
+    echo $message;
+}
+
+
+
+// ---------------------------------------------------------------------------
+//                               Opening Raffles
+// ---------------------------------------------------------------------------
 
 // check all raffles
 foreach ($DB->getRaffles() as $raffle) {
@@ -32,7 +61,7 @@ foreach ($DB->getRaffles() as $raffle) {
         if ($raffle->getOpenTime() <= $NOW) {
 
             // user info
-            echo "Opening raffle #" . $raffle->getId() . " '" . $raffle->getName() . "'\n";
+            logaction("Opening raffle #" . $raffle->getId() . " '" . $raffle->getName() . "'\n");
 
             // set state to open
             $raffle->setState(Raffle::STATE_OPEN);
@@ -60,7 +89,7 @@ foreach ($DB->getRaffles() as $raffle) {
         if ($raffle->getCloseTime() <= $NOW) {
 
             // user info
-            echo "Closing raffle #" . $raffle->getId() . " '" . $raffle->getName() . "'\n";
+            logaction("Closing raffle #" . $raffle->getId() . " '" . $raffle->getName() . "'\n");
 
             // set state to open
             $raffle->setState(Raffle::STATE_CLOSED);
@@ -70,6 +99,14 @@ foreach ($DB->getRaffles() as $raffle) {
     }
 
 }
+
+
+
+// ---------------------------------------------------------------------------
+//                                 Close Log
+// ---------------------------------------------------------------------------
+
+fclose($FILE_HANDLE);
 
 
 ?>

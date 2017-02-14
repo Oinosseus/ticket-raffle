@@ -4,3 +4,5 @@
 modules/config\.php
 
 database\.sqlite3
+
+maintenance\.log
