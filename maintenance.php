@@ -45,4 +45,31 @@ foreach ($DB->getRaffles() as $raffle) {
 
 
 
+// ---------------------------------------------------------------------------
+//                               Closing Raffles
+// ---------------------------------------------------------------------------
+
+
+// check all raffles
+foreach ($DB->getRaffles() as $raffle) {
+
+    // only care for OPEN raffles
+    if ($raffle->getState() === Raffle::STATE_OPEN) {
+
+        // only care if OpenTime is passed
+        if ($raffle->getCloseTime() <= $NOW) {
+
+            // user info
+            echo "Closing raffle #" . $raffle->getId() . " '" . $raffle->getName() . "'\n";
+
+            // set state to open
+            $raffle->setState(Raffle::STATE_CLOSED);
+            $raffle->save();
+        }
+
+    }
+
+}
+
+
 ?>
