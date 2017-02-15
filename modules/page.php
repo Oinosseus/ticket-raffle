@@ -55,6 +55,10 @@ if (isset($_REQUEST['USER_PAGE'])) {
             $_SESSION['USER_PAGE'] = "raffles.php";
             break;
 
+        case "PARTICIPANTS":
+            $_SESSION['USER_PAGE'] = "participants.php";
+            break;
+
         case "HOME":
         default:
             $_SESSION['USER_PAGE'] = "home.php";

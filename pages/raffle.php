@@ -22,10 +22,32 @@ if ($raffle->getState()=="OPEN" && isset($_REQUEST['ACTION']) && $_REQUEST['ACTI
     }
 
     # check for valid email address
-    if (preg_match(CONFIG_ALLOWEDEMAILREGEX, $participant_email)) {
-            echo '<div class="message success">Die Emailadresse "' . $participant_email . '" wurde eingetragen!</div>';
-    } else {
+    if (!preg_match(CONFIG_ALLOWEDEMAILREGEX, $participant_email)) {
             echo '<div class="message error">Die Emailadresse "' . $participant_email . '" ist nicht erlaubt!</div>';
+
+    } else {
+
+
+        $participant = Null;
+
+        // try to find existing participant
+        foreach ($DB->getParticipants() as $p) {
+            if ($p->getEmail() == $participant_email) {
+                $participant = $p;
+                break;
+            }
+        }
+
+        // create new participant
+        if ($participant == Null) {
+            $participant = new Participant(0, $DB);
+            $participant->setEmail($participant_email);
+            $participant->save();
+        }
+
+
+        if ($participant->getId() > 0)
+            echo '<div class="message success">Die Emailadresse "' . $participant->getEmail() . '" wurde eingetragen!</div>';
     }
 }
 
