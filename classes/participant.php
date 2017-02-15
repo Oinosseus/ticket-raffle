@@ -11,7 +11,7 @@ class Participant {
      * @param $id int Optional database row Id (0 if not in database)
      * @param $db DatabaseWrapper A reference to the database wrapper.
      */
-    function __construct($id = 0, $db = Null) {
+    function __construct($id = 0, DatabaseWrapper $db = Null) {
 
         // primary properties
         $this->_Db          = $db;
