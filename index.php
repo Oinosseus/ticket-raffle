@@ -12,6 +12,7 @@ include("modules/page.php");
 // load classes
 include("classes/raffle.php");
 include("classes/drawing.php");
+include("classes/participant.php");
 include("classes/database_wrapper.php");
 
 // create a read-only database wrapper object
