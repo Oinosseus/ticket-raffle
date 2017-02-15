@@ -172,6 +172,25 @@ class DatabaseWrapper {
         return $ret;
     }
 
+
+
+    //! Request all existing participants from the database
+    // @return [Participant] An array of Participant objects
+    function getParticipants() {
+        $ret = array();
+
+        $query = "SELECT Id FROM Participants";
+        $results = $this->db->query($query);
+        while ($row = $results->fetchArray()) {
+            $ret[count($ret)] = new Participant($row['Id'], $this);
+        }
+
+        return $ret;
+    }
+
+    // end of group methods
+    //! @}
+
 }
 
 ?>
