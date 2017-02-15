@@ -1,6 +1,6 @@
 var classRaffle =
 [
-    [ "__construct", "d6/daf/classRaffle.html#a76d2164e5b087d6753a03c2bbb70ac55", null ],
+    [ "__construct", "d6/daf/classRaffle.html#a243272172685049c12f7df66416c3d5c", null ],
     [ "getCloseTime", "d6/daf/classRaffle.html#a5ac407ef3a76843e1097ca6f84c90c5f", null ],
     [ "getCloseTimeHuman", "d6/daf/classRaffle.html#af4b5c66b148478a09e983548447024f9", null ],
     [ "getDrawingTime", "d6/daf/classRaffle.html#a06d92dd8efe7e8f90627f66258e2befd", null ],

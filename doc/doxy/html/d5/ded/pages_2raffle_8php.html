@@ -90,8 +90,10 @@ $(document).ready(function(){initNavTree('d5/ded/pages_2raffle_8php.html','../..
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:aeb3f3a9a39d6cf979624abf781a8afc6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d20/index_8php.html#a0b7c8542c5b9d471aac8abdc181295f1">if</a>(isset($_REQUEST['RAFFLE_ID']))&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ded/pages_2raffle_8php.html#aeb3f3a9a39d6cf979624abf781a8afc6">else</a></td></tr>
+<tr class="memitem:aeb3f3a9a39d6cf979624abf781a8afc6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/ded/pages_2raffle_8php.html#a72bb07fcae8a156eba6b2595a6d5da7d">if</a>(isset($_REQUEST['RAFFLE_ID']))&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ded/pages_2raffle_8php.html#aeb3f3a9a39d6cf979624abf781a8afc6">else</a></td></tr>
 <tr class="separator:aeb3f3a9a39d6cf979624abf781a8afc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72bb07fcae8a156eba6b2595a6d5da7d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ded/pages_2raffle_8php.html#a72bb07fcae8a156eba6b2595a6d5da7d">if</a> ( $raffle-&gt;getState()==&quot;OPEN&quot; &amp;&amp;isset( $_REQUEST[ 'ACTION']) &amp;&amp;$_REQUEST[ 'ACTION']==&quot;PARTICIPATE&quot;)</td></tr>
+<tr class="separator:a72bb07fcae8a156eba6b2595a6d5da7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Variable Documentation</h2>
 <a id="aeb3f3a9a39d6cf979624abf781a8afc6"></a>
@@ -101,14 +103,30 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../de/d20/index_8php.html#a0b7c8542c5b9d471aac8abdc181295f1">if</a> (isset( $_REQUEST[ 'RAFFLE_ID'])) else</td>
+          <td class="memname"><a class="el" href="../../d5/ded/pages_2raffle_8php.html#a72bb07fcae8a156eba6b2595a6d5da7d">if</a> (isset( $_REQUEST[ 'RAFFLE_ID'])) else</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">{</div><div class="line">        <a class="code" href="../../d3/d0e/new__raffle_8php.html#a5b90312878ec9c7264072e2b7cfda47f">$raffle</a> = <span class="keyword">new</span> <a class="code" href="../../d6/daf/classRaffle.html">Raffle</a>()</div><div class="ttc" id="new__raffle_8php_html_a5b90312878ec9c7264072e2b7cfda47f"><div class="ttname"><a href="../../d3/d0e/new__raffle_8php.html#a5b90312878ec9c7264072e2b7cfda47f">$raffle</a></div><div class="ttdeci">$raffle</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d0e/new__raffle_8php_source.html#l00011">new_raffle.php:11</a></div></div>
+<b>Initial value:</b><div class="fragment"><div class="line">{</div><div class="line">    <a class="code" href="../../d3/d0e/new__raffle_8php.html#a5b90312878ec9c7264072e2b7cfda47f">$raffle</a> = <span class="keyword">new</span> <a class="code" href="../../d6/daf/classRaffle.html">Raffle</a>()</div><div class="ttc" id="new__raffle_8php_html_a5b90312878ec9c7264072e2b7cfda47f"><div class="ttname"><a href="../../d3/d0e/new__raffle_8php.html#a5b90312878ec9c7264072e2b7cfda47f">$raffle</a></div><div class="ttdeci">$raffle</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d0e/new__raffle_8php_source.html#l00011">new_raffle.php:11</a></div></div>
 <div class="ttc" id="classRaffle_html"><div class="ttname"><a href="../../d6/daf/classRaffle.html">Raffle</a></div><div class="ttdoc">This class stores information about a raffle. </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dab/classes_2raffle_8php_source.html#l00005">raffle.php:5</a></div></div>
 </div><!-- fragment -->
 <p>Definition at line <a class="el" href="../../d5/ded/pages_2raffle_8php_source.html#l00006">6</a> of file <a class="el" href="../../d5/ded/pages_2raffle_8php_source.html">raffle.php</a>.</p>
+
+</div>
+</div>
+<a id="a72bb07fcae8a156eba6b2595a6d5da7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72bb07fcae8a156eba6b2595a6d5da7d">&sect;&nbsp;</a></span>if</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">if($raffle-&gt;getState()==&quot;OPEN&quot; &amp;&amp;isset($_REQUEST['ACTION']) &amp;&amp; $_REQUEST['ACTION']==&quot;PARTICIPATE&quot;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="../../d5/ded/pages_2raffle_8php_source.html#l00016">16</a> of file <a class="el" href="../../d5/ded/pages_2raffle_8php_source.html">raffle.php</a>.</p>
 
 </div>
 </div>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['raffle',['Raffle',['../d6/daf/classRaffle.html',1,'']]]
+  ['participant',['Participant',['../d5/d0a/classParticipant.html',1,'']]]
 ];
