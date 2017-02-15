@@ -41,12 +41,12 @@ class Participant {
 
     //! @return string The email address of the participant
     function getEmail() {
-        return $this->_Name;
+        return $this->_Email;
     }
 
     //! @param $email string Set new email address of the participant
     function setEmail($email) {
-        $this->_Name = "$email";
+        $this->_Email = trim("$email");
     }
 
 
@@ -94,7 +94,7 @@ class Participant {
 
         // create columns array
         $columns = array();
-        $columns['Email']        = $this->_Email;
+        $columns['Email'] = $this->_Email;
 
         // insert new database row
         if ($this->_Id <= 0) {
