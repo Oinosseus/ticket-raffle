@@ -1,12 +1,11 @@
 <?php
 
-/** Data Storage Class
- *
- * This class stores information about raffle drawings.
- */
+
+//! This class stores information about a drawing.
 class Drawing {
 
     // pseudo enums for state of a drawing entry
+    const STATE_NOT_IN_DB         = 'NOT_IN_DB';
     const STATE_ENTRY_REQUESTED   = 'ENTRY_REQUESTED';
     const STATE_ENTRY_ACCEPTED    = 'ENTRY_ACCEPTED';
     const STATE_DECLINE_REQUESTED = 'DECLINE_REQUESTED';
