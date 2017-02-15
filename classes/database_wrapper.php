@@ -193,6 +193,27 @@ class DatabaseWrapper {
         return $ret;
     }
 
+    //! Request all existing drawings from the database
+    // @param $raffle Drawing|Null If set, only the drawings for a certain raffle are returned.
+    // @return [Drawings] An array of Drawing objects
+    function getDrawings($raffle = Null) {
+        $ret = array();
+
+        # setup the query
+        if ($raffle == Null)
+            $query = "SELECT Id FROM Drawings";
+        else
+            $query = "SELECT Id FROM Drawings WHERE Raffle = '" . $raffle->getId() . "'";
+
+        # db request
+        $results = $this->db->query($query);
+        while ($row = $results->fetchArray()) {
+            $ret[count($ret)] = new Drawing($row['Id'], $this);
+        }
+
+        return $ret;
+    }
+
     // end of group methods
     //! @}
 
