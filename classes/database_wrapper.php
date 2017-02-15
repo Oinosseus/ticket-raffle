@@ -1,7 +1,7 @@
 <?php
 
 //! Database Wrapper
-//! This class wraps all database accesses.
+// This class wraps all database accesses.
 class DatabaseWrapper {
 
 
@@ -33,6 +33,9 @@ class DatabaseWrapper {
     // ------------------------------------------------------------------------
     //                             Public Methods
     // ------------------------------------------------------------------------
+
+    //! @name Public Methods
+    // @{
 
 
 
