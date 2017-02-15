@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
-<svg width="48cm" height="28cm" viewBox="-297 18 946 549" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="46cm" height="28cm" viewBox="-297 18 914 549" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <g>
     <path style="fill: #ffffff" d="M 220 120 C 320,120 320,160 220,160 C 120,160 120,120 220,120z"/>
     <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 220 120 C 320,120 320,160 220,160 C 120,160 120,120 220,120"/>
   </g>
-  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="220" y="144.45">
-    <tspan x="220" y="144.45">ENTRY_REQUESTED</tspan>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="220" y="144.4">
+    <tspan x="220" y="144.4">ENTRY_REQUESTED</tspan>
   </text>
   <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="220" y="140">
     <tspan x="220" y="140"></tspan>
@@ -18,8 +18,8 @@
     <path style="fill: #ffffff" d="M 220 280 C 320,280 320,320 220,320 C 120,320 120,280 220,280z"/>
     <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 220 280 C 320,280 320,320 220,320 C 120,320 120,280 220,280"/>
   </g>
-  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="220" y="304.45">
-    <tspan x="220" y="304.45">DECLINE_REQUESTED</tspan>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="220" y="304.4">
+    <tspan x="220" y="304.4">DECLINE_REQUESTED</tspan>
   </text>
   <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="220" y="300">
     <tspan x="220" y="300"></tspan>
@@ -85,8 +85,8 @@
     <path style="fill: #ffffff" d="M 40 200 C 140,200 140,240 40,240 C -60,240 -60,200 40,200z"/>
     <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 40 200 C 140,200 140,240 40,240 C -60,240 -60,200 40,200"/>
   </g>
-  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="40" y="224.45">
-    <tspan x="40" y="224.45">DECLINE_ACCEPTED</tspan>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="40" y="224.4">
+    <tspan x="40" y="224.4">DECLINE_ACCEPTED</tspan>
   </text>
   <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="40" y="220">
     <tspan x="40" y="220"></tspan>
@@ -100,8 +100,8 @@
     <path style="fill: #ffffff" d="M -219.202 135.885 C -119.201,135.885 -119.201,175.885 -219.202,175.885 C -319.202,175.885 -319.202,135.885 -219.202,135.885z"/>
     <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M -219.202 135.885 C -119.201,135.885 -119.201,175.885 -219.202,175.885 C -319.202,175.885 -319.202,135.885 -219.202,135.885"/>
   </g>
-  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="-219.202" y="160.335">
-    <tspan x="-219.202" y="160.335">COMMITTED</tspan>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="-219.202" y="160.285">
+    <tspan x="-219.202" y="160.285">COMMITTED</tspan>
   </text>
   <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="-219.202" y="155.885">
     <tspan x="-219.202" y="155.885"></tspan>
@@ -113,8 +113,8 @@
     <path style="fill: #7ffc32" d="M -220 240 C -120,240 -120,280 -220,280 C -320,280 -320,240 -220,240z"/>
     <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M -220 240 C -120,240 -120,280 -220,280 C -320,280 -320,240 -220,240"/>
   </g>
-  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="-220" y="264.45">
-    <tspan x="-220" y="264.45">OPEN</tspan>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="-220" y="264.4">
+    <tspan x="-220" y="264.4">OPEN</tspan>
   </text>
   <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="-220" y="260">
     <tspan x="-220" y="260"></tspan>
@@ -122,8 +122,8 @@
   <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="-240" y="280">
     <tspan x="-240" y="280"></tspan>
   </text>
-  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="-220" y="354.45">
-    <tspan x="-220" y="354.45">CLOSED</tspan>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="-220" y="354.4">
+    <tspan x="-220" y="354.4">CLOSED</tspan>
   </text>
   <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="-220" y="350">
     <tspan x="-220" y="350"></tspan>
@@ -146,9 +146,9 @@
     <polygon style="fill: #80bbff" points="-219.239,131.413 -224.322,121.455 -219.302,123.913 -214.323,121.372 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #80bbff" points="-219.239,131.413 -224.322,121.455 -219.302,123.913 -214.323,121.372 "/>
   </g>
-  <text font-size="11.2776" style="fill: #7f7f7f;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="-219.601" y="207.943">
-    <tspan x="-219.601" y="207.943">Servertime passes</tspan>
-    <tspan x="-219.601" y="222.04">'OpenTime'</tspan>
+  <text font-size="11.2776" style="fill: #7f7f7f;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="-219.602" y="207.942">
+    <tspan x="-219.602" y="207.942">Servertime passes</tspan>
+    <tspan x="-219.602" y="222.039">'OpenTime'</tspan>
   </text>
   <text font-size="11.2776" style="fill: #7f7f7f;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="-220" y="305">
     <tspan x="-220" y="305">Servertime passes</tspan>
@@ -158,8 +158,8 @@
     <path style="fill: #ffffff" d="M -220 520 C -120,520 -120,560 -220,560 C -320,560 -320,520 -220,520z"/>
     <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M -220 520 C -120,520 -120,560 -220,560 C -320,560 -320,520 -220,520"/>
   </g>
-  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="-220" y="544.45">
-    <tspan x="-220" y="544.45">INVALID</tspan>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="-220" y="544.4">
+    <tspan x="-220" y="544.4">INVALID</tspan>
   </text>
   <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="-220" y="540">
     <tspan x="-220" y="540"></tspan>
@@ -181,8 +181,8 @@
     <path style="fill: #bfbfbf" d="M -220 20 C -120,20 -120,60 -220,60 C -320,60 -320,20 -220,20z"/>
     <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M -220 20 C -120,20 -120,60 -220,60 C -320,60 -320,20 -220,20"/>
   </g>
-  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="-220" y="44.45">
-    <tspan x="-220" y="44.45">no db entry</tspan>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="-220" y="44.4">
+    <tspan x="-220" y="44.4">no db entry</tspan>
   </text>
   <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="-220" y="40">
     <tspan x="-220" y="40"></tspan>
@@ -199,8 +199,8 @@
     <path style="fill: #bfbfbf" d="M 220 20 C 320,20 320,60 220,60 C 120,60 120,20 220,20z"/>
     <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 220 20 C 320,20 320,60 220,60 C 120,60 120,20 220,20"/>
   </g>
-  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="220" y="44.45">
-    <tspan x="220" y="44.45">no db entry</tspan>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="220" y="44.2125">
+    <tspan x="220" y="44.2125">NOT_IN_DB</tspan>
   </text>
   <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="220" y="40">
     <tspan x="220" y="40"></tspan>
@@ -220,8 +220,8 @@
     <path style="fill: #ffffff" d="M 220 360 C 320,360 320,400 220,400 C 120,400 120,360 220,360z"/>
     <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 220 360 C 320,360 320,400 220,400 C 120,400 120,360 220,360"/>
   </g>
-  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="220" y="384.45">
-    <tspan x="220" y="384.45">VOTED</tspan>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="220" y="384.4">
+    <tspan x="220" y="384.4">VOTED</tspan>
   </text>
   <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="220" y="380">
     <tspan x="220" y="380"></tspan>
@@ -240,8 +240,8 @@
     <path style="fill: #ffffff" d="M 280 440 C 380,440 380,480 280,480 C 180,480 180,440 280,440z"/>
     <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 280 440 C 380,440 380,480 280,480 C 180,480 180,440 280,440"/>
   </g>
-  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="280" y="464.45">
-    <tspan x="280" y="464.45">NOTIFICATION_SENT</tspan>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="280" y="464.4">
+    <tspan x="280" y="464.4">NOTIFICATION_SENT</tspan>
   </text>
   <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="280" y="460">
     <tspan x="280" y="460"></tspan>
@@ -255,8 +255,8 @@
     <path style="fill: #ffffff" d="M 320 520 C 420,520 420,560 320,560 C 220,560 220,520 320,520z"/>
     <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 320 520 C 420,520 420,560 320,560 C 220,560 220,520 320,520"/>
   </g>
-  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="320" y="544.45">
-    <tspan x="320" y="544.45">WIN_REJECTED</tspan>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="320" y="544.4">
+    <tspan x="320" y="544.4">WIN_REJECTED</tspan>
   </text>
   <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="320" y="540">
     <tspan x="320" y="540"></tspan>
@@ -279,8 +279,8 @@
     <path style="fill: #ffffff" d="M 120 520 C 220,520 220,560 120,560 C 20,560 20,520 120,520z"/>
     <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 120 520 C 220,520 220,560 120,560 C 20,560 20,520 120,520"/>
   </g>
-  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="120" y="544.45">
-    <tspan x="120" y="544.45">WIN_GRANTED</tspan>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="120" y="544.4">
+    <tspan x="120" y="544.4">WIN_GRANTED</tspan>
   </text>
   <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="120" y="540">
     <tspan x="120" y="540"></tspan>
@@ -316,21 +316,21 @@
     <path style="fill: #ff5240" d="M -220 330 C -120,330 -120,370 -220,370 C -320,370 -320,330 -220,330z"/>
     <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M -220 330 C -120,330 -120,370 -220,370 C -320,370 -320,330 -220,330"/>
   </g>
-  <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="-220" y="354.45">
-    <tspan x="-220" y="354.45">CLOSE</tspan>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="-220" y="354.4">
+    <tspan x="-220" y="354.4">CLOSE</tspan>
   </text>
   <g>
     <path style="fill: #ffffff" d="M 420 200 C 520,200 520,240 420,240 C 320,240 320,200 420,200z"/>
     <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 420 200 C 520,200 520,240 420,240 C 320,240 320,200 420,200"/>
   </g>
-  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="420" y="224.45">
-    <tspan x="420" y="224.45">ENTRY_ACCEPTED</tspan>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="420" y="224.4">
+    <tspan x="420" y="224.4">ENTRY_ACCEPTED</tspan>
   </text>
   <g>
     <path style="fill: #ffffff" d="M 220 200 C 320,200 320,240 220,240 C 120,240 120,200 220,200z"/>
     <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 220 200 C 320,200 320,240 220,240 C 120,240 120,200 220,200"/>
   </g>
-  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="220" y="224.45">
-    <tspan x="220" y="224.45">FORBIDDEN</tspan>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="220" y="224.4">
+    <tspan x="220" y="224.4">FORBIDDEN</tspan>
   </text>
 </svg>

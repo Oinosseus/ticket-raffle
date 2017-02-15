@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
-<svg width="28cm" height="14cm" viewBox="20 -20 554 274" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="28cm" height="15cm" viewBox="20 -20 545 300" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <g>
     <rect style="fill: #ffffff" x="100" y="200" width="149.2" height="18"/>
     <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="100" y="200" width="149.2" height="18"/>
@@ -12,15 +12,15 @@
     <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="157.5" y="234">UINT</text>
     <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="109" y1="235.6" x2="188.3" y2="235.6"/>
     <ellipse style="fill: #000000" cx="105" cy="244" rx="2" ry="2"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="109" y="250">email</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="109" y="250">Email</text>
     <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="157.5" y="250">VARCHAR(80)</text>
   </g>
   <g>
-    <rect style="fill: #ffffff" x="20" y="-20" width="228.7" height="18"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="20" y="-20" width="228.7" height="18"/>
-    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="134.35" y="-6">Raffles</text>
-    <rect style="fill: #ffffff" x="20" y="-2" width="228.7" height="186"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="20" y="-2" width="228.7" height="186"/>
+    <rect style="fill: #ffffff" x="20" y="-20" width="203.1" height="18"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="20" y="-20" width="203.1" height="18"/>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="121.55" y="-6">Raffles</text>
+    <rect style="fill: #ffffff" x="20" y="-2" width="203.1" height="186"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="20" y="-2" width="203.1" height="186"/>
     <polygon style="fill: #000000" points="23,8 25,11 27,8 25,5 "/>
     <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="29" y="14">Id</text>
     <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="123.7" y="14">UINT</text>
@@ -49,31 +49,40 @@
     <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="34" y="173">"VOTED", "INVALID"</text>
   </g>
   <g>
-    <rect style="fill: #ffffff" x="308" y="52" width="265.65" height="18"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="308" y="52" width="265.65" height="18"/>
-    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="440.825" y="66">Drawings</text>
-    <rect style="fill: #ffffff" x="308" y="70" width="265.65" height="161"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="308" y="70" width="265.65" height="161"/>
+    <rect style="fill: #ffffff" x="308" y="52" width="257" height="18"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="308" y="52" width="257" height="18"/>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="436.5" y="66">Drawings</text>
+    <rect style="fill: #ffffff" x="308" y="70" width="257" height="209"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="308" y="70" width="257" height="209"/>
     <ellipse style="fill: #000000" cx="313" cy="80" rx="2" ry="2"/>
     <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="317" y="86">Raffle</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="473.3" y="86">UINT</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="504.1" y="86">UINT</text>
     <ellipse style="fill: #000000" cx="313" cy="96" rx="2" ry="2"/>
     <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="317" y="102">Participant</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="473.3" y="102">UINT</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="504.1" y="102">UINT</text>
     <ellipse style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000" cx="313" cy="112" rx="2" ry="2"/>
     <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="317" y="118">UserVerificationKey</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="473.3" y="118">VARCHAR</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="504.1" y="118">VARCHAR</text>
     <ellipse style="fill: #000000" cx="313" cy="128" rx="2" ry="2"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="317" y="134">STATE</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="473.3" y="134">ENUM</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="317" y="134">State</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="504.1" y="134">ENUM</text>
     <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="322" y="148">"ENTRY_REQUESTED", "ENTRY_ACCEPTED",</text>
     <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="322" y="162">"REJECT_REQUESTED", "REJECT_ACCEPTED",</text>
     <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="322" y="176">"FORBIDDEN", "VOTED",</text>
     <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="322" y="190">"NOTOFICATION_SENT",</text>
     <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:normal" x="322" y="204">"WIN_GRANTED", "WIN_REJECTED"</text>
     <ellipse style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000" cx="313" cy="221" rx="2" ry="2"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="317" y="227">Result</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="473.3" y="227">UINT</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="317" y="227">ResultingParticipations</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="504.1" y="227">UINT</text>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000" cx="313" cy="237" rx="2" ry="2"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="317" y="243">ResultingWins</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="504.1" y="243">UINT</text>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000" cx="313" cy="253" rx="2" ry="2"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="317" y="259">ResultingRandom</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="504.1" y="259">UINT</text>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000" cx="313" cy="269" rx="2" ry="2"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="317" y="275">ResultingScore</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="504.1" y="275">UINT</text>
   </g>
   <g>
     <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="249.2,228 278.6,228 278.6,96 298.264,96 "/>
@@ -83,10 +92,10 @@
     <text font-size="9.6" style="fill: #000000;text-anchor:end;font-family:monospace;font-style:normal;font-weight:normal" x="304" y="92">n</text>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="248.7,8 278.35,8 278.35,80 298.264,80 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="223.1,8 265.55,8 265.55,80 298.264,80 "/>
     <polygon style="fill: #000000" points="305.764,80 295.764,85 298.264,80 295.764,75 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="305.764,80 295.764,85 298.264,80 295.764,75 "/>
-    <text font-size="9.6" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="252.7" y="4">1</text>
+    <text font-size="9.6" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="227.1" y="4">1</text>
     <text font-size="9.6" style="fill: #000000;text-anchor:end;font-family:monospace;font-style:normal;font-weight:normal" x="304" y="76">n</text>
   </g>
 </svg>

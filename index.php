@@ -12,6 +12,7 @@ include("modules/page.php");
 // load classes
 include("classes/raffle.php");
 include("classes/drawing.php");
+include("classes/participant.php");
 include("classes/database_wrapper.php");
 
 // create a read-only database wrapper object
@@ -35,6 +36,7 @@ $DB = new DatabaseWrapper(CONFIG_DATABASE_FILE);
                     <ul>
                         <li><a href="index.php?USER_PAGE=HOME">Startseite</a></li>
                         <li><a href="index.php?USER_PAGE=RAFFLES">Verlosungen</a></li>
+                        <li><a href="index.php?USER_PAGE=PARTICIPANTS">Teilnehmerliste</a></li>
                     </ul>
                 </li>
                 <li>

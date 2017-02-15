@@ -1,7 +1,7 @@
 <?php
 
 //! Database Wrapper
-//! This class wraps all database accesses.
+// This class wraps all database accesses.
 class DatabaseWrapper {
 
 
@@ -34,6 +34,9 @@ class DatabaseWrapper {
     //                             Public Methods
     // ------------------------------------------------------------------------
 
+    //! @name Public Methods
+    // @{
+
 
 
     //! Creates tables and columns if not already existent.
@@ -61,7 +64,12 @@ class DatabaseWrapper {
             . "Id INTEGER PRIMARY KEY AUTOINCREMENT,  "
             . "Raffle INTEGER NOT NULL DEFAULT 1, "
             . "Participant INTEGER NOT NULL DEFAULT 1, "
-            . "State TEXT NOT NULL DEFAULT '" . Drawing::STATE_FORBIDDEN . "'"
+            . "UserVerificationKey TEXT NOT NULL DEFAULT '',"
+            . "State TEXT NOT NULL DEFAULT '" . Drawing::STATE_FORBIDDEN . "',"
+            . "ResultingParticipations INTEGER,"
+            . "ResultingWins INTEGER,"
+            . "ResultingRandom INTEGER,"
+            . "ResultingScore INTEGER"
             . ")");
 
     }
@@ -168,6 +176,46 @@ class DatabaseWrapper {
 
         return $ret;
     }
+
+
+
+    //! Request all existing participants from the database
+    // @return [Participant] An array of Participant objects
+    function getParticipants() {
+        $ret = array();
+
+        $query = "SELECT Id FROM Participants";
+        $results = $this->db->query($query);
+        while ($row = $results->fetchArray()) {
+            $ret[count($ret)] = new Participant($row['Id'], $this);
+        }
+
+        return $ret;
+    }
+
+    //! Request all existing drawings from the database
+    // @param $raffle Drawing|Null If set, only the drawings for a certain raffle are returned.
+    // @return [Drawings] An array of Drawing objects
+    function getDrawings($raffle = Null) {
+        $ret = array();
+
+        # setup the query
+        if ($raffle == Null)
+            $query = "SELECT Id FROM Drawings";
+        else
+            $query = "SELECT Id FROM Drawings WHERE Raffle = '" . $raffle->getId() . "'";
+
+        # db request
+        $results = $this->db->query($query);
+        while ($row = $results->fetchArray()) {
+            $ret[count($ret)] = new Drawing($row['Id'], $this);
+        }
+
+        return $ret;
+    }
+
+    // end of group methods
+    //! @}
 
 }
 
