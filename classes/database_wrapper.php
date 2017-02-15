@@ -64,7 +64,12 @@ class DatabaseWrapper {
             . "Id INTEGER PRIMARY KEY AUTOINCREMENT,  "
             . "Raffle INTEGER NOT NULL DEFAULT 1, "
             . "Participant INTEGER NOT NULL DEFAULT 1, "
-            . "State TEXT NOT NULL DEFAULT '" . Drawing::STATE_FORBIDDEN . "'"
+            . "UserVerificationKey TEXT NOT NULL DEFAULT '',"
+            . "State TEXT NOT NULL DEFAULT '" . Drawing::STATE_FORBIDDEN . "',"
+            . "ResultingParticipations INTEGER,"
+            . "ResultingWins INTEGER,"
+            . "ResultingRandom INTEGER,"
+            . "ResultingScore INTEGER"
             . ")");
 
     }
