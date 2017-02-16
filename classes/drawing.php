@@ -240,6 +240,24 @@ class Drawing {
         }
     }
 
+
+    /** Sending email notification to participant.
+     *
+     * The notification content depends of the current state.
+     * It is recommended to call createUserVerificationKey() and save() before calling this function.
+     *
+     * @return bool True if notification could be sent.
+     */
+    function sendNotification() {
+
+        $mail_to      = $this->_Participant->getEmail();
+        $mail_subject = "Raffle Test";
+        $mail_message = "Foo Baz";
+
+        return mail($mail_to, $mail_subject, $mail_message);
+    }
+
+
     // end group Methods
     //! q}
 

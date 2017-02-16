@@ -75,7 +75,12 @@ if ($raffle->getState()=="OPEN" && isset($_REQUEST['ACTION']) && $_REQUEST['ACTI
             $newkey = $drawing->createUserVerificationKey();
             $drawing->save();
 
-            echo '<div class="message success">Die Emailadresse "' . $participant->getEmail()  .  "|" . $newkey . '" wurde eingetragen!</div>';
+            if ($drawing->sendNotification()) {
+                echo '<div class="message success">Eine Best&auml;tigungsanfrage wurde an &quot;' . $participant->getEmail()  .  '&quot; gesendet!</div>';
+            } else {
+                echo '<div class="message error">Es konnte keine Best&auml;tigungsanfrage an &quot;' . $participant->getEmail()  .  '&quot; gesendet werden!</div>';
+            }
+
         }
 
     }
