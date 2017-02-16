@@ -13,7 +13,6 @@ class Drawing {
     const STATE_FORBIDDEN         = 'FORBIDDEN';
     const STATE_VOTED             = 'VOTED';
     const STATE_WIN_GRANTED       = 'WIN_GRANTED';
-    const STATE_NOTIFICATION_SENT = 'NOTIFICATION_SENT';
     const STATE_WIN_REJECTED      = 'WIN_REJECTED';
 
 

@@ -5,6 +5,7 @@
 class Raffle {
 
     // pseudo enums for state of a raffle
+    const STATE_NOT_IN_DB = 'NOT_IN_DB';
     const STATE_COMMITTED = 'COMMITTED';
     const STATE_OPEN      = 'OPEN';
     const STATE_CLOSED    = 'CLOSED';
@@ -31,7 +32,7 @@ class Raffle {
         $this->_CloseTime   = new DateTime();
         $this->_CloseTime->setTimezone(new DateTimeZone(CONFIG_TIMEZONE));
         $this->_DrawingTime = Null;
-        $this->_State       = Raffle::STATE_INVALID;
+        $this->_State       = Raffle::STATE_NOT_IN_DB;
 
         // update from database
         if ($this->_Id > 0 && $this->_Db) $this->load();
