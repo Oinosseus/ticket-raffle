@@ -1,0 +1,20 @@
+table#raffle_participants tr.FORBIDDEN {
+    background-color: #f66;
+}
+
+table#raffle_participants tr.ENTRY_ACCEPTED,
+table#raffle_participants tr.DECLINE_REQUESTED {
+    background-color: #ff6;
+}
+
+table#raffle_participants tr.VOTED {
+    background-color: #666;
+}
+
+table#raffle_participants tr.WIN_GRANTED {
+    background-color: #6f6;
+}
+
+table#raffle_participants tr.WIN_REJECTED {
+    background-color: #f6f;
+}
