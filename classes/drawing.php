@@ -250,11 +250,37 @@ class Drawing {
      */
     function sendNotification() {
 
-        $mail_to      = $this->_Participant->getEmail();
-        $mail_subject = "Raffle Test";
-        $mail_message = "Foo Baz";
+        // get email submit url
+        $submit_url  = "";
+        $submit_url .= $_SERVER["REQUEST_SCHEME"] . "://";
+        $submit_url .= $_SERVER["SERVER_NAME"];
+        $submit_url .= $_SERVER["PHP_SELF"];
+        $submit_url .= "?USER_PAGE=EMAIL_SUBMISSION&UserVerificationKey=" . $this->_UserVerifKey;
 
-        return mail($mail_to, $mail_subject, $mail_message);
+        // mail parameters
+        $mail_to       = $this->_Participant->getEmail();
+        $mail_subject  = "Ticket Raffle";
+        $mail_header   = "MIME-Version: 1.0\n";
+        $mail_header  .= "Content-type: text/html; charset=iso-8859-1\n";
+        $mail_header  .= "X-Mailer: PHP ". phpversion() . "\n";
+
+        // send entry request message
+        if ($this->_State == Drawing::STATE_ENTRY_REQUESTED) {
+            $mail_message  = "<html><body>";
+            $mail_message .= "Hallo,<br><br>";
+            $mail_message .= "Sie wurden f&uuml;r die Verlosung \"" . $this->_Raffle->getName() . "\" eingetragen.<br>";
+            $mail_message .= "Die Ziehung findet am " . $this->_Raffle->getCloseTimeHuman() . " statt.<br><br>";
+            $mail_message .= "<a href=\"" . $submit_url . "\">";
+            $mail_message .= "Bitte klicken Sie diesen Link um die Teilnahme zu best&auml;tigen.</a><br><br>";
+            $mail_message .= "MfG<br>";
+            $mail_message .= "</body></html>";
+
+        // state does not allow to send a message
+        } else {
+            return False;
+        }
+
+        return mail($mail_to, $mail_subject, $mail_message, $mail_header);
     }
 
 

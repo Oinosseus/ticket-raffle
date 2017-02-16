@@ -18,6 +18,12 @@ if (isset($_REQUEST['USER_PAGE'])) {
     // switch for requested page
     switch ($_REQUEST['USER_PAGE']) {
 
+        // misc
+        case "EMAIL_SUBMISSION":
+            $_SESSION['USER_PAGE'] = "email_submission.php";
+            break;
+
+
 
         // admin
 
