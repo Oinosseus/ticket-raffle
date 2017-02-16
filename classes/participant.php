@@ -44,6 +44,7 @@ class Participant {
         return $this->_Email;
     }
 
+
     //! @param $email string Set new email address of the participant
     function setEmail($email) {
         $this->_Email = trim("$email");
@@ -60,6 +61,7 @@ class Participant {
     // -----------------------------------------------------------------------
     //! @name Public Methods
     // @{
+
 
     /** Load the current settings from the database.
      *
@@ -79,6 +81,7 @@ class Participant {
         // set properties
         $this->setEmail($db_fields['Email']);
     }
+
 
     /** Saving the actual values to the database.
      *
@@ -106,6 +109,7 @@ class Participant {
             $this->_Db->updateTableRow("Participants", $this->_Id, $columns);
         }
     }
+
 
     // end group Methods
     //! q}
