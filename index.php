@@ -4,10 +4,8 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 session_start();
 
-// load modules
-include("modules/config.php");
-include("modules/login.php");
-include("modules/page.php");
+// load config
+include("config.php");
 
 // load classes
 include("classes/raffle.php");
@@ -17,6 +15,10 @@ include("classes/database_wrapper.php");
 
 // create a read-only database wrapper object
 $DB = new DatabaseWrapper(CONFIG_DATABASE_FILE);
+
+// load modules
+include("modules/login.php");
+include("modules/page.php");
 
 ?>
 <!DOCTYPE HTML>
