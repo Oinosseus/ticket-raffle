@@ -19,6 +19,7 @@ $DB = new DatabaseWrapper(CONFIG_DATABASE_FILE);
 // load modules
 include("modules/login.php");
 include("modules/page.php");
+include("modules/maintenance.php");
 
 ?>
 <!DOCTYPE HTML>

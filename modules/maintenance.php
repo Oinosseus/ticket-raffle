@@ -1,19 +1,8 @@
 <?php
 
-include("modules/config.php");
-include("classes/raffle.php");
-include("classes/drawing.php");
-include("classes/database_wrapper.php");
-
-// create new database wrapper
-$DB = new DatabaseWrapper(CONFIG_DATABASE_FILE);
-
-// check tables
-$DB->checkStructure();
-
 // actual date
-$NOW = new DateTime();
-$NOW->setTimezone(new DateTimeZone(CONFIG_TIMEZONE));
+$now = new DateTime();
+$now->setTimezone(new DateTimeZone(CONFIG_TIMEZONE));
 
 
 
@@ -22,27 +11,26 @@ $NOW->setTimezone(new DateTimeZone(CONFIG_TIMEZONE));
 // ---------------------------------------------------------------------------
 
 # open and lock file
-$SOMETHING_WAS_WRIITEN = false;
-$FILE_HANDLE = fopen(CONFIG_MAINTENANCELOG, "a+");
-flock($FILE_HANDLE, LOCK_EX) or exit("Error: could not lock file '" . CONFIG_MAINTENANCELOG . "'!");
+$something_was_written = false;
+$file_handle = fopen(CONFIG_MAINTENANCELOG, "a+");
+flock($file_handle, LOCK_EX) or exit("Error: could not lock file '" . CONFIG_MAINTENANCELOG . "'!");
 
 function logaction($message) {
-    global $FILE_HANDLE;
-    global $SOMETHING_WAS_WRIITEN;
-    global $NOW;
+    global $file_handle;
+    global $something_was_written;
+    global $now;
 
     # ensure newline at the end
     if (substr($message, strlen($message), 1) != "\n") $message .= "\n";
 
     # write log header
-    if ($SOMETHING_WAS_WRIITEN == false) {
-        fwrite($FILE_HANDLE, "\n\nMaintenance Did Something\n");
-        fwrite($FILE_HANDLE,     "=========================\n\n");
-        fwrite($FILE_HANDLE, $NOW->format('Y-m-d H:i:s') . "\n\n");
+    if ($something_was_written == false) {
+        fwrite($file_handle, "\n\nMaintenance Did Something\n");
+        fwrite($file_handle,     "=========================\n\n");
+        fwrite($file_handle, $now->format('Y-m-d H:i:s') . "\n\n");
     }
 
-    fwrite($FILE_HANDLE, $message . "\n");
-    echo $message;
+    fwrite($file_handle, $message . "\n");
 }
 
 
@@ -58,7 +46,7 @@ foreach ($DB->getRaffles() as $raffle) {
     if ($raffle->getState() === Raffle::STATE_COMMITTED) {
 
         // only care if OpenTime is passed
-        if ($raffle->getOpenTime() <= $NOW) {
+        if ($raffle->getOpenTime() <= $now) {
 
             // user info
             logaction("Opening raffle #" . $raffle->getId() . " '" . $raffle->getName() . "'\n");
@@ -86,7 +74,7 @@ foreach ($DB->getRaffles() as $raffle) {
     if ($raffle->getState() === Raffle::STATE_OPEN) {
 
         // only care if OpenTime is passed
-        if ($raffle->getCloseTime() <= $NOW) {
+        if ($raffle->getCloseTime() <= $now) {
 
             // user info
             logaction("Closing raffle #" . $raffle->getId() . " '" . $raffle->getName() . "'\n");
@@ -106,7 +94,7 @@ foreach ($DB->getRaffles() as $raffle) {
 //                                 Close Log
 // ---------------------------------------------------------------------------
 
-fclose($FILE_HANDLE);
+fclose($file_handle);
 
 
 ?>
