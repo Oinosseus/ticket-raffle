@@ -138,6 +138,7 @@ if ($raffle->getState()=="OPEN" && isset($_REQUEST['ACTION']) && $_REQUEST['ACTI
             <td><?php $d->getResultingWins() ?></td>
             <td><?php $d->getResultingRandom() ?></td>
             <td><?php $d->getResultingScore() ?></td>
+            <td><a href=""><img src="template/primary-delete.svg" width="16"></a></td>
         </tr>
     <?php endforeach; ?>
     <tr>
