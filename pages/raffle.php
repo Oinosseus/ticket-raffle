@@ -130,7 +130,7 @@ if ($raffle->getState()=="OPEN" && isset($_REQUEST['ACTION']) && $_REQUEST['ACTI
         <th>Score</th>
     </tr>
     <?php foreach ($DB->getDrawings($raffle) as $d) : ?>
-        <tr class="<?php $d->getState() ?>">
+        <tr class="<?php echo $d->getState() ?>">
             <th><?php echo $d->getParticipant()->getEmail() ?></th>
             <th><?php echo $d->getState() ?></th>
             <th><?php $d->getResultingParticipations() ?></th>
@@ -140,7 +140,7 @@ if ($raffle->getState()=="OPEN" && isset($_REQUEST['ACTION']) && $_REQUEST['ACTI
         </tr>
     <?php endforeach; ?>
     <tr>
-        <?php if ($raffle->getState() === "OPEN") : ?>
+        <?php if ($raffle->getState() == Raffle::STATE_OPEN) : ?>
         <td colspan="4">
             <form action="?ACTION=PARTICIPATE" method="post">
                 <input type="hidden" name="RAFFLE_ID" value="<?php echo $raffle->getId() ?>" />
