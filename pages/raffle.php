@@ -63,7 +63,6 @@ if ($raffle->getState()=="OPEN" && isset($_REQUEST['ACTION']) && $_REQUEST['ACTI
             $drawing = new Drawing(0, $DB);
             $drawing->setRaffle($raffle);
             $drawing->setParticipant($participant);
-//             $drawing->setState(Drawing::STATE_ENTRY_REQUESTED);
         }
 
         // set request entry state and send email
@@ -119,6 +118,8 @@ if ($raffle->getState()=="OPEN" && isset($_REQUEST['ACTION']) && $_REQUEST['ACTI
             <td><?php echo $raffle->getState() ?></td>
         </tr>
 </table>
+
+<br><br>
 
 <table id="raffle_participants">
     <tr>
