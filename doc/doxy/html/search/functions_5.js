@@ -2,6 +2,7 @@ var searchData=
 [
   ['save',['save',['../dd/df8/classDrawing.html#afc8a3c62679cf00ade9f15fb2a6d6132',1,'Drawing\save()'],['../d5/d0a/classParticipant.html#afc8a3c62679cf00ade9f15fb2a6d6132',1,'Participant\save()'],['../d6/daf/classRaffle.html#afc8a3c62679cf00ade9f15fb2a6d6132',1,'Raffle\save()']]],
   ['selecttablerow',['selectTableRow',['../d2/d82/classDatabaseWrapper.html#aa90e562f652ec96854a7d539f2976b35',1,'DatabaseWrapper']]],
+  ['sendnotification',['sendNotification',['../dd/df8/classDrawing.html#a9cf3a655861ad4b52feb5e69692066f3',1,'Drawing']]],
   ['setclosetime',['setCloseTime',['../d6/daf/classRaffle.html#a2492e1ae538cc537cbb38546a11fecfc',1,'Raffle']]],
   ['setdrawingtime',['setDrawingTime',['../d6/daf/classRaffle.html#a1f194d7422e0faf7fbf765291f8e08df',1,'Raffle']]],
   ['setemail',['setEmail',['../d5/d0a/classParticipant.html#a5ef76eef42d2624386442eeb636d338c',1,'Participant']]],

@@ -22,5 +22,6 @@ var classRaffle =
     [ "STATE_CLOSED", "d6/daf/classRaffle.html#a61d716333933342f909ecc0129cc1065", null ],
     [ "STATE_COMMITTED", "d6/daf/classRaffle.html#a75de717ca9cfdb9b2a1852693f2f3059", null ],
     [ "STATE_INVALID", "d6/daf/classRaffle.html#ad6f2573b780a05af2f71d7d3ec5bbd84", null ],
+    [ "STATE_NOT_IN_DB", "d6/daf/classRaffle.html#a788101cd4f919a7bf2dda2997c55a7a3", null ],
     [ "STATE_OPEN", "d6/daf/classRaffle.html#acf1cd595cc0363976fc23fac514fcc58", null ]
 ];

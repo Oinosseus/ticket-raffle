@@ -13,6 +13,7 @@ var classDrawing =
     [ "getUserVerificationKey", "dd/df8/classDrawing.html#ade59a1d85cf35a2a295a4ff70305c89e", null ],
     [ "load", "dd/df8/classDrawing.html#a4dcaa8f72c8423d4de25a9e87fa6f3e4", null ],
     [ "save", "dd/df8/classDrawing.html#afc8a3c62679cf00ade9f15fb2a6d6132", null ],
+    [ "sendNotification", "dd/df8/classDrawing.html#a9cf3a655861ad4b52feb5e69692066f3", null ],
     [ "setParticipant", "dd/df8/classDrawing.html#a7fc05128dde33342f6d4c257a692918c", null ],
     [ "setRaffle", "dd/df8/classDrawing.html#a2fba7205d3668ea14af65935321f8624", null ],
     [ "setResultingParticipations", "dd/df8/classDrawing.html#ada5ae8da0a9b9edc7c66cc052ba4f2ae", null ],
@@ -26,7 +27,6 @@ var classDrawing =
     [ "STATE_ENTRY_REQUESTED", "dd/df8/classDrawing.html#a1f88bbd7dc938d689ef2985055f559f2", null ],
     [ "STATE_FORBIDDEN", "dd/df8/classDrawing.html#abbd2152293649dc13176648b3f102fe3", null ],
     [ "STATE_NOT_IN_DB", "dd/df8/classDrawing.html#a788101cd4f919a7bf2dda2997c55a7a3", null ],
-    [ "STATE_NOTIFICATION_SENT", "dd/df8/classDrawing.html#ab7c0ac7c265bc79970ea6186a14673fd", null ],
     [ "STATE_VOTED", "dd/df8/classDrawing.html#a16d531d1d03333b25411a892ff7b54ce", null ],
     [ "STATE_WIN_GRANTED", "dd/df8/classDrawing.html#ae0958bddb7e4319ea55264089c627f73", null ],
     [ "STATE_WIN_REJECTED", "dd/df8/classDrawing.html#a2c78c5bf955f0514fedb2d77ce9cf2b6", null ]

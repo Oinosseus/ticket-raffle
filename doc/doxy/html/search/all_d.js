@@ -2,6 +2,7 @@ var searchData=
 [
   ['save',['save',['../dd/df8/classDrawing.html#afc8a3c62679cf00ade9f15fb2a6d6132',1,'Drawing\save()'],['../d5/d0a/classParticipant.html#afc8a3c62679cf00ade9f15fb2a6d6132',1,'Participant\save()'],['../d6/daf/classRaffle.html#afc8a3c62679cf00ade9f15fb2a6d6132',1,'Raffle\save()']]],
   ['selecttablerow',['selectTableRow',['../d2/d82/classDatabaseWrapper.html#aa90e562f652ec96854a7d539f2976b35',1,'DatabaseWrapper']]],
+  ['sendnotification',['sendNotification',['../dd/df8/classDrawing.html#a9cf3a655861ad4b52feb5e69692066f3',1,'Drawing']]],
   ['setclosetime',['setCloseTime',['../d6/daf/classRaffle.html#a2492e1ae538cc537cbb38546a11fecfc',1,'Raffle']]],
   ['setdrawingtime',['setDrawingTime',['../d6/daf/classRaffle.html#a1f194d7422e0faf7fbf765291f8e08df',1,'Raffle']]],
   ['setemail',['setEmail',['../d5/d0a/classParticipant.html#a5ef76eef42d2624386442eeb636d338c',1,'Participant']]],
@@ -24,8 +25,7 @@ var searchData=
   ['state_5fentry_5frequested',['STATE_ENTRY_REQUESTED',['../dd/df8/classDrawing.html#a1f88bbd7dc938d689ef2985055f559f2',1,'Drawing']]],
   ['state_5fforbidden',['STATE_FORBIDDEN',['../dd/df8/classDrawing.html#abbd2152293649dc13176648b3f102fe3',1,'Drawing']]],
   ['state_5finvalid',['STATE_INVALID',['../d6/daf/classRaffle.html#ad6f2573b780a05af2f71d7d3ec5bbd84',1,'Raffle']]],
-  ['state_5fnot_5fin_5fdb',['STATE_NOT_IN_DB',['../dd/df8/classDrawing.html#a788101cd4f919a7bf2dda2997c55a7a3',1,'Drawing']]],
-  ['state_5fnotification_5fsent',['STATE_NOTIFICATION_SENT',['../dd/df8/classDrawing.html#ab7c0ac7c265bc79970ea6186a14673fd',1,'Drawing']]],
+  ['state_5fnot_5fin_5fdb',['STATE_NOT_IN_DB',['../dd/df8/classDrawing.html#a788101cd4f919a7bf2dda2997c55a7a3',1,'Drawing\STATE_NOT_IN_DB()'],['../d6/daf/classRaffle.html#a788101cd4f919a7bf2dda2997c55a7a3',1,'Raffle\STATE_NOT_IN_DB()']]],
   ['state_5fopen',['STATE_OPEN',['../d6/daf/classRaffle.html#acf1cd595cc0363976fc23fac514fcc58',1,'Raffle']]],
   ['state_5fvoted',['STATE_VOTED',['../dd/df8/classDrawing.html#a16d531d1d03333b25411a892ff7b54ce',1,'Drawing']]],
   ['state_5fwin_5fgranted',['STATE_WIN_GRANTED',['../dd/df8/classDrawing.html#ae0958bddb7e4319ea55264089c627f73',1,'Drawing']]],

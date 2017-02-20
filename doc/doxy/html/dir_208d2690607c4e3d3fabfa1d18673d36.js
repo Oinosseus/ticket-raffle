@@ -1,6 +1,7 @@
 var dir_208d2690607c4e3d3fabfa1d18673d36 =
 [
     [ "database_chart.php", "d2/d67/database__chart_8php.html", null ],
+    [ "email_submission.php", "d7/d3b/email__submission_8php.html", null ],
     [ "home.php", "d0/d5b/home_8php.html", null ],
     [ "license.php", "da/dea/license_8php.html", "da/dea/license_8php" ],
     [ "new_raffle.php", "d3/d0e/new__raffle_8php.html", "d3/d0e/new__raffle_8php" ],

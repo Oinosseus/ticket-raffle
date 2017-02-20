@@ -1,8 +1,7 @@
 var maintenance_8php =
 [
-    [ "logaction", "d0/d27/maintenance_8php.html#a3efd0489d07c37fcb1add0067826399f", null ],
-    [ "$DB", "d0/d27/maintenance_8php.html#a7dc56dc8b18ad37272b56fa7395bedef", null ],
-    [ "$FILE_HANDLE", "d0/d27/maintenance_8php.html#ad6e454d28127609f8252415c17b15dc2", null ],
-    [ "$NOW", "d0/d27/maintenance_8php.html#a0bbac0785f098bc63db2c3ea1b68fbaa", null ],
-    [ "$SOMETHING_WAS_WRIITEN", "d0/d27/maintenance_8php.html#ac586ebf371a70dcf223d828f3f3e83c4", null ]
+    [ "logaction", "d0/d27/maintenance_8php.html#a9597b4720008e1e85a00c20a6db34331", null ],
+    [ "$file_handle", "d0/d27/maintenance_8php.html#a50db7169c8e339f6dd1db1c4384fe53c", null ],
+    [ "$now", "d0/d27/maintenance_8php.html#af1d5ccdee975b8f4d20aaffc5b28557c", null ],
+    [ "$something_was_written", "d0/d27/maintenance_8php.html#a056ee68bccb02893275c1b126d4886c3", null ]
 ];
