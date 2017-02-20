@@ -147,13 +147,13 @@ div#content {
     vertical-align: top;
 }
 
-table#raffles th {
+table th {
     padding: 2px 15px;
     background-color: #000;
     color: #fff;
 }
 
-table#raffles td {
+table td {
     padding: 2px 15px;
 }
 

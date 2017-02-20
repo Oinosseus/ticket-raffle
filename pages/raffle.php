@@ -131,12 +131,12 @@ if ($raffle->getState()=="OPEN" && isset($_REQUEST['ACTION']) && $_REQUEST['ACTI
     </tr>
     <?php foreach ($DB->getDrawings($raffle) as $d) : ?>
         <tr class="<?php echo $d->getState() ?>">
-            <th><?php echo $d->getParticipant()->getEmail() ?></th>
-            <th><?php echo $d->getState() ?></th>
-            <th><?php $d->getResultingParticipations() ?></th>
-            <th><?php $d->getResultingWins() ?></th>
-            <th><?php $d->getResultingRandom() ?></th>
-            <th><?php $d->getResultingScore() ?></th>
+            <td><?php echo $d->getParticipant()->getEmail() ?></td>
+            <td><?php echo $d->getState() ?></td>
+            <td><?php $d->getResultingParticipations() ?></td>
+            <td><?php $d->getResultingWins() ?></td>
+            <td><?php $d->getResultingRandom() ?></td>
+            <td><?php $d->getResultingScore() ?></td>
         </tr>
     <?php endforeach; ?>
     <tr>
