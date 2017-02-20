@@ -191,12 +191,13 @@ class Drawing {
         if (!$this->_Db)     return False;
 
         // access database
-        $columns = ['Raffle', 'Participant', 'State', 'ResultingParticipations', 'ResultingWins', 'ResultingRandom', 'ResultingScore'];
+        $columns = ['Raffle', 'Participant', 'State', 'UserVerificationKey', 'ResultingParticipations', 'ResultingWins', 'ResultingRandom', 'ResultingScore'];
         $db_fields = $this->_Db->selectTableRow("Drawings", $this->_Id, $columns);
 
         // set properties
         $this->setRaffle(new Raffle($db_fields['Raffle'], $this->_Db));
         $this->setParticipant(new Participant($db_fields['Participant'], $this->_Db));
+        $this->_UserVerifKey = $db_fields['UserVerificationKey'];
         $this->setState($db_fields['State']);
         $this->setResultingParticipations($db_fields['ResultingParticipations']);
         $this->setResultingWins($db_fields['ResultingWins']);
@@ -223,6 +224,7 @@ class Drawing {
         $columns = array();
         $columns['Raffle'] = $this->_Raffle->getId();
         $columns['Participant'] = $this->_Participant->getId();
+        $columns['UserVerificationKey'] = $this->_UserVerifKey;
         $columns['State'] = $this->_State;
         $columns['ResultingParticipations'] = $this->_ResultingParticipations;
         $columns['ResultingWins'] = $this->_ResultingWins;
@@ -255,7 +257,9 @@ class Drawing {
         $submit_url .= $_SERVER["REQUEST_SCHEME"] . "://";
         $submit_url .= $_SERVER["SERVER_NAME"];
         $submit_url .= $_SERVER["PHP_SELF"];
-        $submit_url .= "?USER_PAGE=EMAIL_SUBMISSION&UserVerificationKey=" . $this->_UserVerifKey;
+        $submit_url .= "?USER_PAGE=EMAIL_SUBMISSION";
+        $submit_url .= "&UserVerificationKey=" . $this->_UserVerifKey;
+        $submit_url .= "&DrawingId=" . $this->_Id;
 
         // mail parameters
         $mail_to       = $this->_Participant->getEmail();
