@@ -27,8 +27,8 @@ if (isset($_REQUEST['USER_PAGE'])) {
 
         // admin
 
-        case "NEW_RAFFLE":
-            $_SESSION['USER_PAGE'] = "new_raffle.php";
+        case "EDIT_RAFFLE":
+            $_SESSION['USER_PAGE'] = "edit_raffle.php";
             break;
 
         case "PASSWORD":

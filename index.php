@@ -48,7 +48,7 @@ include("modules/maintenance.php");
                     <ul>
                         <li><a href="index.php?USER_PAGE=PASSWORD">Password-Gen</a></li>
                         <?php if (USER_IS_ADMIN) : ?>
-                            <li><a href="index.php?USER_PAGE=NEW_RAFFLE">Neue Verlosung</a></li>
+                            <li><a href="index.php?USER_PAGE=EDIT_RAFFLE">Neue Verlosung</a></li>
                             <li><a href="?ADMIN_LOGOUT=TRUE">Logout</a></li>
                         <?php else : ?>
                             <li>
