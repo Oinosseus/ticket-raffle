@@ -1,7 +1,7 @@
 <?php
 
     function cmp($r1, $r2) {
-        return $r2->getCloseTime() < $r1->getCloseTime();
+        return $r2->getCloseTime() > $r1->getCloseTime();
     }
 
     $sorted_raffles = $DB->getRaffles();
