@@ -24,7 +24,6 @@ if ($raffle->getState()=="OPEN" && isset($_REQUEST['ACTION']) && $_REQUEST['ACTI
     // set raffle for a new drawing
     if ($drawing->getRaffle() == Null) {
         $drawing->setRaffle($raffle);
-        $drawing->save();
     }
 
     // get participant
@@ -59,9 +58,11 @@ if ($raffle->getState()=="OPEN" && isset($_REQUEST['ACTION']) && $_REQUEST['ACTI
                 $participant = new Participant(0, $DB);
                 $participant->setEmail($participant_email);
                 $participant->save();
-                $drawing->setParticipant($participant);
-                $drawing->save();
             }
+
+            // save participant to drawing
+            $drawing->setParticipant($participant);
+            $drawing->save();
         }
     }
 
