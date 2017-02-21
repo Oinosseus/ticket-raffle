@@ -46,6 +46,20 @@ if ($drawing == Null) {
             $drawing->save();
             echo '<div class="message success">Sie sind der Ziehung ' . $drawing->getRaffle()->getName() . ' beigetreten.</div>';
         }
+
+    // decline drawing
+    } else if ($drawing->getState() == Drawing::STATE_DECLINE_REQUESTED) {
+
+        // raffle is not in committed state
+        if ($drawing->getRaffle()->getState() != Raffle::STATE_OPEN) {
+            echo '<div class="message error">Aus der Ziehung kann nicht mehr ausgetreten werden!</div>';
+
+        // raffle is in committed state
+        } else {
+            $drawing->setState(Drawing::STATE_DECLINE_ACCEPTED);
+            $drawing->save();
+            echo '<div class="message success">Sie sind aus der Ziehung ' . $drawing->getRaffle()->getName() . ' ausgetreten.</div>';
+        }
     }
 }
 

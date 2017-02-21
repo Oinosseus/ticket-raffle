@@ -279,6 +279,16 @@ class Drawing {
             $mail_message .= "MfG<br>";
             $mail_message .= "</body></html>";
 
+        // send decline request message
+        } else if ($this->_State == Drawing::STATE_DECLINE_REQUESTED) {
+            $mail_message  = "<html><body>";
+            $mail_message .= "Hallo,<br><br>";
+            $mail_message .= "Sie haben beantragt an der Verlosung \"" . $this->_Raffle->getName() . "\" nicht mehr teilzunehmen.<br>";
+            $mail_message .= "<a href=\"" . $submit_url . "\">";
+            $mail_message .= "Bitte klicken Sie diesen Link um den Ausschluss zu best&auml;tigen.</a><br><br>";
+            $mail_message .= "MfG<br>";
+            $mail_message .= "</body></html>";
+
         // state does not allow to send a message
         } else {
             return False;
