@@ -30,6 +30,29 @@
             echo '    <td>' . $raffle->getCloseTimeHuman() . '</td>';
             echo '    <td>' . $raffle->getDrawingTimeHuman() . '</td>';
             echo '    <td>' . $raffle->getState() . '</td>';
+
+            // admin actions
+            if (USER_IS_ADMIN) {
+                echo '    <td>';
+
+                // edit
+                if ($raffle->getState() == Raffle::STATE_COMMITTED) {
+                    echo '<a href="" ><img src="template/icon_edit.svg" title="edit raffle" width="16"></a>';
+                }
+
+                // invalidate
+                if ($raffle->getState() == Raffle::STATE_CLOSED) {
+                    echo '<a href="" ><img src="template/icon_raffle_invalid.svg" title="invalidate raffle" width="16"></a>';
+                }
+
+                // validate
+                if ($raffle->getState() == Raffle::STATE_INVALID) {
+                    echo '<a href="" ><img src="template/icon_raffle_valid.svg" title="validate raffle" width="16"></a>';
+                }
+
+                echo '</td>';
+            }
+
             echo '<tr>';
         }
     ?>
