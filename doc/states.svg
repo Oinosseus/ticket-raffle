@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
 <svg width="46cm" height="25cm" viewBox="-297 18 904 489" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <g>
-    <path style="fill: #ffffff" d="M 220 120 C 320,120 320,160 220,160 C 120,160 120,120 220,120z"/>
+    <path style="fill: #ffff00" d="M 220 120 C 320,120 320,160 220,160 C 120,160 120,120 220,120z"/>
     <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 220 120 C 320,120 320,160 220,160 C 120,160 120,120 220,120"/>
   </g>
   <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="220" y="144.4">
@@ -15,7 +15,7 @@
     <tspan x="420" y="220"></tspan>
   </text>
   <g>
-    <path style="fill: #ffff00" d="M 220 280 C 320,280 320,320 220,320 C 120,320 120,280 220,280z"/>
+    <path style="fill: #7ffc32" d="M 220 280 C 320,280 320,320 220,320 C 120,320 120,280 220,280z"/>
     <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 220 280 C 320,280 320,320 220,320 C 120,320 120,280 220,280"/>
   </g>
   <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="220" y="304.4">
@@ -82,7 +82,7 @@
     <tspan x="400" y="348.194">entered automatially.</tspan>
   </text>
   <g>
-    <path style="fill: #ffffff" d="M 40 200 C 140,200 140,240 40,240 C -60,240 -60,200 40,200z"/>
+    <path style="fill: #ffff00" d="M 40 200 C 140,200 140,240 40,240 C -60,240 -60,200 40,200z"/>
     <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 40 200 C 140,200 140,240 40,240 C -60,240 -60,200 40,200"/>
   </g>
   <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="40" y="224.4">
@@ -264,7 +264,7 @@
     <tspan x="-220" y="460"></tspan>
   </text>
   <g>
-    <path style="fill: #00ff00" d="M 120 460 C 220,460 220,500 120,500 C 20,500 20,460 120,460z"/>
+    <path style="fill: #7ffc32" d="M 120 460 C 220,460 220,500 120,500 C 20,500 20,460 120,460z"/>
     <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 120 460 C 220,460 220,500 120,500 C 20,500 20,460 120,460"/>
   </g>
   <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="120" y="484.4">
@@ -304,11 +304,11 @@
     <path style="fill: #bfbfbf" d="M -220 330 C -120,330 -120,370 -220,370 C -320,370 -320,330 -220,330z"/>
     <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M -220 330 C -120,330 -120,370 -220,370 C -320,370 -320,330 -220,330"/>
   </g>
-  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="-220" y="354.4">
-    <tspan x="-220" y="354.4">CLOSE</tspan>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="-220" y="354.212">
+    <tspan x="-220" y="354.212">CLOSED</tspan>
   </text>
   <g>
-    <path style="fill: #ffff00" d="M 420 200 C 520,200 520,240 420,240 C 320,240 320,200 420,200z"/>
+    <path style="fill: #7ffc32" d="M 420 200 C 520,200 520,240 420,240 C 320,240 320,200 420,200z"/>
     <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 420 200 C 520,200 520,240 420,240 C 320,240 320,200 420,200"/>
   </g>
   <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="420" y="224.4">

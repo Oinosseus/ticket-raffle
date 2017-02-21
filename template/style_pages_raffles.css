@@ -1,15 +1,15 @@
 table#raffles tr.OPEN {
-    background-color: #66ff66;
+    background-color: #7ffc32;
 }
 
 table#raffles tr.COMMITTED {
-    background-color: #ffff66;
+    background-color: #ffff00;
 }
 
 table#raffles tr.CLOSED {
-    background-color: #666666;
+    background-color: #bfbfbf;
 }
 
 table#raffles tr.INVALID {
-    background-color: #ff6666;
+    background-color: #ff0000;
 }

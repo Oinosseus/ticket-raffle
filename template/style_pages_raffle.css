@@ -1,20 +1,22 @@
 table#raffle_participants tr.FORBIDDEN {
-    background-color: #f66;
+    background-color: #ff0000;
 }
 
 table#raffle_participants tr.ENTRY_ACCEPTED,
-table#raffle_participants tr.DECLINE_REQUESTED {
-    background-color: #ff6;
+table#raffle_participants tr.DECLINE_REQUESTED,
+table#raffle_participants tr.WIN_GRANTED {
+    background-color: #7ffc32;
+}
+
+table#raffle_participants tr.ENTRY_REQUESTED,
+table#raffle_participants tr.DECLINE_ACCEPTED {
+    background-color: #ffff00;
 }
 
 table#raffle_participants tr.VOTED {
-    background-color: #666;
-}
-
-table#raffle_participants tr.WIN_GRANTED {
-    background-color: #6f6;
+    background-color: #bfbfbf;
 }
 
 table#raffle_participants tr.WIN_REJECTED {
-    background-color: #f6f;
+    background-color: #ef00ff;
 }
