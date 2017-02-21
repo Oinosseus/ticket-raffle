@@ -191,7 +191,7 @@ class Drawing {
         if (!$this->_Db)     return False;
 
         // access database
-        $columns = ['Raffle', 'Participant', 'State', 'UserVerificationKey', 'ResultingParticipations', 'ResultingWins', 'ResultingRandom', 'ResultingScore'];
+        $columns = array('Raffle', 'Participant', 'State', 'UserVerificationKey', 'ResultingParticipations', 'ResultingWins', 'ResultingRandom', 'ResultingScore');
         $db_fields = $this->_Db->selectTableRow("Drawings", $this->_Id, $columns);
 
         // set properties

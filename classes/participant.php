@@ -75,7 +75,7 @@ class Participant {
         if (!$this->_Db)     return False;
 
         // access database
-        $columns = ['Email'];
+        $columns = array('Email');
         $db_fields = $this->_Db->selectTableRow("Participants", $this->_Id, $columns);
 
         // set properties

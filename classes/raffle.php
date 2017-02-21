@@ -184,7 +184,7 @@ class Raffle {
         if (!$this->_Db)     return False;
 
         // access database
-        $columns = ['Name', 'Winners', 'OpenTime' ,'CloseTime' ,'DrawingTime', 'State'];
+        $columns = array('Name', 'Winners', 'OpenTime' ,'CloseTime' ,'DrawingTime', 'State');
         $db_fields = $this->_Db->selectTableRow("Raffles", $this->_Id, $columns);
 
         // set properties
