@@ -37,7 +37,7 @@
 
                 // edit
                 if ($raffle->getState() == Raffle::STATE_COMMITTED) {
-                    echo '<a href="" ><img src="template/icon_edit.svg" title="edit raffle" width="16"></a>';
+                    echo '<a href="?USER_PAGE=EDIT_RAFFLE&RAFFLE_ID=' . $raffle->getId() . '" ><img src="template/icon_edit.svg" title="edit raffle" width="16"></a>';
                 }
 
                 // invalidate
