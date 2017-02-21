@@ -4,11 +4,17 @@
         die("ERROR!: Admin rights required!");
     }
 
+    // some example dates
+    $example_date_1week = new DateTime('tomorrow + 6days', new DateTimeZone(CONFIG_TIMEZONE));
+    $example_date_2week = new DateTime('tomorrow + 13days', new DateTimeZone(CONFIG_TIMEZONE));
+
     // get raffle object
     if (isset($_REQUEST['RAFFLE_ID'])) {
         $raffle = new Raffle(intval($_REQUEST['RAFFLE_ID']), $DB);
     } else {
         $raffle = new Raffle(0, $DB);
+        $raffle->setOpenTime($example_date_1week);
+        $raffle->setCloseTime($example_date_2week);
     }
 
 
@@ -58,11 +64,11 @@ if ($raffle->getId() == 0) {
     <input type="number" name="RAFFLE_WINNERS" min="1" value="<?php echo $raffle->getWinners() ?>"><br>
     <br>
 
-    Zeitpunkt der Er&ouml;ffnung der Eintragungen (z.B. morgen: <?php echo $raffle->getOpenTimeHuman(); ?>)<br>
+    Zeitpunkt der Er&ouml;ffnung der Eintragungen (z.B. in einer Woche: <?php echo $example_date_1week->format('Y-m-d H:i:s'); ?>)<br>
     <input type="datetime" name="RAFFLE_OPENTIME" value="<?php echo $raffle->getOpenTimeHuman(); ?>"><br>
     <br>
 
-    Zeitpunkt der Verlosung (z.B. morgen: <?php echo $raffle->getCloseTimeHuman(); ?>)<br>
+    Zeitpunkt der Verlosung (z.B. in zwei Wochen: <?php echo $example_date_2week->format('Y-m-d H:i:s'); ?>)<br>
     <input type="datetime" name="RAFFLE_CLOSETIME" value="<?php echo $raffle->getCloseTimeHuman(); ?>"><br>
     <br>
 
