@@ -103,21 +103,13 @@ class DatabaseWrapper {
 
 
     //! Queries the database for all rows that matches the search values.
-    // @return [string -> string] associative array
+    // @return [integer] an array of all matching row Ids
     // @param $tbale string Name of the table
-    // @param $colum_requests [sring] Requested column names that shall be in the return array
     // @param $column_search_array [string -> string] Associative array where column names are mapped to their requested content values
-    function findTableRows($table, $colum_requests, $column_search_array) {
+    function findTableRows($table, $column_search_array) {
 
         // escape table
         $table = $this->db->escapeString($table);
-
-        // column name string
-        $column_string = "";
-        foreach ($colum_requests as $column) {
-            if (strlen($column_string) > 0) $column_string .= ", ";
-            $column_string .= $this->db->escapeString($column);
-        }
 
         // where clause string
         $where_string = "";
@@ -128,15 +120,20 @@ class DatabaseWrapper {
         }
 
         // check for valid inputs
-        if (strlen($column_string) == 0 || strlen($where_string) == 0)
+        if (strlen($where_string) == 0)
             return array();
 
         // db request
-        $query = "SELECT $column_string FROM $table WHERE $where_string";
+        $query = "SELECT Id FROM $table WHERE $where_string";
         $results = $this->db->query($query);
 
-        // return result
-        return $results->fetchArray();
+        // extract matches
+        $ret = array();
+        while ($row = $results->fetchArray()) {
+            $ret[] = $row['Id'];
+        }
+
+        return $ret;
     }
 
 
