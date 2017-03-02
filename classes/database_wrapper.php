@@ -65,7 +65,7 @@ class DatabaseWrapper {
             . "Raffle INTEGER NOT NULL DEFAULT 1, "
             . "Participant INTEGER NOT NULL DEFAULT 1, "
             . "UserVerificationKey TEXT NOT NULL DEFAULT '',"
-            . "State TEXT NOT NULL DEFAULT '" . Drawing::STATE_FORBIDDEN . "',"
+            . "State TEXT NOT NULL DEFAULT '" . Participation::STATE_FORBIDDEN . "',"
             . "ResultingParticipations INTEGER,"
             . "ResultingWins INTEGER,"
             . "ResultingRandom INTEGER,"
