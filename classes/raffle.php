@@ -243,7 +243,7 @@ class Raffle {
 
         // get all participations from database where the raffle matches
         $ret = array();
-        foreach ($this->_Db->findTableRows('Participations'. $columns, $where) as $p) {
+        foreach ($this->_Db->findTableRows('Participations', $columns, $where) as $p) {
             $ret[] = new Participation($p['Id'], $this->_Db);
         }
 
