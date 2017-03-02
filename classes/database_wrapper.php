@@ -124,7 +124,7 @@ class DatabaseWrapper {
         $array_keys = array_keys($column_search_array);
         foreach ($column_search_array as $key => $value) {
              if (strlen($where_string) > 0) $where_string .= " AND ";
-            $where_string .= $this->db->escapeString($key) . "='" . $this->db->escapeString($value) ."'"
+            $where_string .= $this->db->escapeString($key) . "='" . $this->db->escapeString($value) ."'";
         }
 
         // check for valid inputs
