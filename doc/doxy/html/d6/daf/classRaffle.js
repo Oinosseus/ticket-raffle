@@ -9,6 +9,7 @@ var classRaffle =
     [ "getName", "d6/daf/classRaffle.html#a3d0963e68bb313b163a73f2803c64600", null ],
     [ "getOpenTime", "d6/daf/classRaffle.html#a76b122e7e6a9d75ef2fef21d2368b019", null ],
     [ "getOpenTimeHuman", "d6/daf/classRaffle.html#a64683f004d03b00d67462daee5ae866c", null ],
+    [ "getParticipations", "d6/daf/classRaffle.html#a25adbb9bdaac690feb1c5e5e68ae4b1f", null ],
     [ "getState", "d6/daf/classRaffle.html#afbf787ced76807989fb3093e1772c5a1", null ],
     [ "getWinners", "d6/daf/classRaffle.html#a61a3e1832e7bb3d9251cdd4f55660129", null ],
     [ "load", "d6/daf/classRaffle.html#a4dcaa8f72c8423d4de25a9e87fa6f3e4", null ],

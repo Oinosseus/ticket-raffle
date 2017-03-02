@@ -1,9 +1,0 @@
-<map id="load" name="load">
-<area shape="rect" id="node2" href="$dd/df8/classDrawing.html#a2fba7205d3668ea14af65935321f8624" title="setRaffle" alt="" coords="153,5,227,32"/>
-<area shape="rect" id="node3" href="$dd/df8/classDrawing.html#a7fc05128dde33342f6d4c257a692918c" title="setParticipant" alt="" coords="139,56,241,83"/>
-<area shape="rect" id="node4" href="$dd/df8/classDrawing.html#a94042b70768a686decc42594ef36bbd6" title="setState" alt="" coords="155,107,225,133"/>
-<area shape="rect" id="node5" href="$dd/df8/classDrawing.html#ada5ae8da0a9b9edc7c66cc052ba4f2ae" title="setResultingParticipations" alt="" coords="103,157,277,184"/>
-<area shape="rect" id="node6" href="$dd/df8/classDrawing.html#a5e1bd24bcf32db4180cea6ee96a5d8e9" title="setResultingWins" alt="" coords="127,208,253,235"/>
-<area shape="rect" id="node7" href="$dd/df8/classDrawing.html#a625f620ed4323ba2e5c688c2daee905c" title="setResultingRandom" alt="" coords="117,259,263,285"/>
-<area shape="rect" id="node8" href="$dd/df8/classDrawing.html#a6825c579ea9e46a394ab2d6890fae8bf" title="setResultingScore" alt="" coords="125,309,255,336"/>
-</map>

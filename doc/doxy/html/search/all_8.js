@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['license_2ephp',['license.php',['../da/dea/license_8php.html',1,'']]],
-  ['load',['load',['../dd/df8/classDrawing.html#a4dcaa8f72c8423d4de25a9e87fa6f3e4',1,'Drawing\load()'],['../d5/d0a/classParticipant.html#a4dcaa8f72c8423d4de25a9e87fa6f3e4',1,'Participant\load()'],['../d6/daf/classRaffle.html#a4dcaa8f72c8423d4de25a9e87fa6f3e4',1,'Raffle\load()']]],
-  ['logaction',['logaction',['../d0/d27/maintenance_8php.html#a9597b4720008e1e85a00c20a6db34331',1,'maintenance.php']]],
-  ['login_2ephp',['login.php',['../d3/d1a/login_8php.html',1,'']]]
+  ['if',['if',['../de/d20/index_8php.html#a8d07b8fda434af5967b0a64090f55728',1,'if():&#160;index.php'],['../d5/ded/pages_2raffle_8php.html#a53ec3c77118fe3d39b7301dd8fac6127',1,'if():&#160;raffle.php']]],
+  ['index_2ephp',['index.php',['../de/d20/index_8php.html',1,'']]],
+  ['inserttablerow',['insertTableRow',['../d2/d82/classDatabaseWrapper.html#a41a23a1500c64de3a6fcc556dc92efb8',1,'DatabaseWrapper']]]
 ];

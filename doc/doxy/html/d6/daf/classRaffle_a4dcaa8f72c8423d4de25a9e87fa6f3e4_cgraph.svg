@@ -9,86 +9,86 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 214)">
 <title>load</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-214 169,-214 169,4 -4,4"/>
-<!-- Node29 -->
-<g id="node1" class="node"><title>Node29</title>
+<!-- Node31 -->
+<g id="node1" class="node"><title>Node31</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-95.5 0,-114.5 37,-114.5 37,-95.5 0,-95.5"/>
 <text text-anchor="middle" x="18.5" y="-102.5" font-family="Helvetica,sans-Serif" font-size="10.00">load</text>
 </g>
-<!-- Node30 -->
-<g id="node2" class="node"><title>Node30</title>
+<!-- Node32 -->
+<g id="node2" class="node"><title>Node32</title>
 <g id="a_node2"><a xlink:href="../../d6/daf/classRaffle.html#a2fe666694997d047711d7653eca2f132" target="_top" xlink:title="setName">
 <polygon fill="white" stroke="black" points="90.5,-190.5 90.5,-209.5 147.5,-209.5 147.5,-190.5 90.5,-190.5"/>
 <text text-anchor="middle" x="119" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00">setName</text>
 </a>
 </g>
 </g>
-<!-- Node29&#45;&gt;Node30 -->
-<g id="edge1" class="edge"><title>Node29&#45;&gt;Node30</title>
+<!-- Node31&#45;&gt;Node32 -->
+<g id="edge1" class="edge"><title>Node31&#45;&gt;Node32</title>
 <path fill="none" stroke="midnightblue" d="M24.0717,-114.715C31.9796,-130.579 49.6342,-162.164 73,-181 75.5749,-183.076 78.4096,-184.96 81.3652,-186.663"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="79.95,-189.869 90.456,-191.238 83.0968,-183.616 79.95,-189.869"/>
 </g>
-<!-- Node31 -->
-<g id="node3" class="node"><title>Node31</title>
+<!-- Node33 -->
+<g id="node3" class="node"><title>Node33</title>
 <g id="a_node3"><a xlink:href="../../d6/daf/classRaffle.html#ad0468ee3d5131b4b9d2fa64f604a22c4" target="_top" xlink:title="setWinners">
 <polygon fill="white" stroke="black" points="85.5,-152.5 85.5,-171.5 152.5,-171.5 152.5,-152.5 85.5,-152.5"/>
 <text text-anchor="middle" x="119" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00">setWinners</text>
 </a>
 </g>
 </g>
-<!-- Node29&#45;&gt;Node31 -->
-<g id="edge2" class="edge"><title>Node29&#45;&gt;Node31</title>
+<!-- Node31&#45;&gt;Node33 -->
+<g id="edge2" class="edge"><title>Node31&#45;&gt;Node33</title>
 <path fill="none" stroke="midnightblue" d="M31.3259,-114.544C41.8497,-122.753 57.8745,-134.568 73,-143 76.3054,-144.843 79.8259,-146.62 83.3859,-148.299"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="82.2232,-151.613 92.7815,-152.492 85.0755,-145.221 82.2232,-151.613"/>
 </g>
-<!-- Node32 -->
-<g id="node4" class="node"><title>Node32</title>
+<!-- Node34 -->
+<g id="node4" class="node"><title>Node34</title>
 <g id="a_node4"><a xlink:href="../../d6/daf/classRaffle.html#a4a6777a4a96add41f7762bafcf42ed30" target="_top" xlink:title="setOpenTime">
 <polygon fill="white" stroke="black" points="80,-114.5 80,-133.5 158,-133.5 158,-114.5 80,-114.5"/>
 <text text-anchor="middle" x="119" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">setOpenTime</text>
 </a>
 </g>
 </g>
-<!-- Node29&#45;&gt;Node32 -->
-<g id="edge3" class="edge"><title>Node29&#45;&gt;Node32</title>
+<!-- Node31&#45;&gt;Node34 -->
+<g id="edge3" class="edge"><title>Node31&#45;&gt;Node34</title>
 <path fill="none" stroke="midnightblue" d="M37.1098,-108.397C46.2688,-110.164 57.9596,-112.419 69.588,-114.662"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="69.2437,-118.16 79.7257,-116.617 70.5696,-111.286 69.2437,-118.16"/>
 </g>
-<!-- Node33 -->
-<g id="node5" class="node"><title>Node33</title>
+<!-- Node35 -->
+<g id="node5" class="node"><title>Node35</title>
 <g id="a_node5"><a xlink:href="../../d6/daf/classRaffle.html#a2492e1ae538cc537cbb38546a11fecfc" target="_top" xlink:title="setCloseTime">
 <polygon fill="white" stroke="black" points="78.5,-76.5 78.5,-95.5 159.5,-95.5 159.5,-76.5 78.5,-76.5"/>
 <text text-anchor="middle" x="119" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">setCloseTime</text>
 </a>
 </g>
 </g>
-<!-- Node29&#45;&gt;Node33 -->
-<g id="edge4" class="edge"><title>Node29&#45;&gt;Node33</title>
+<!-- Node31&#45;&gt;Node35 -->
+<g id="edge4" class="edge"><title>Node31&#45;&gt;Node35</title>
 <path fill="none" stroke="midnightblue" d="M37.1098,-101.603C46.012,-99.886 57.306,-97.7075 68.6098,-95.527"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="69.3301,-98.9527 78.4861,-93.622 68.0042,-92.0794 69.3301,-98.9527"/>
 </g>
-<!-- Node34 -->
-<g id="node6" class="node"><title>Node34</title>
+<!-- Node36 -->
+<g id="node6" class="node"><title>Node36</title>
 <g id="a_node6"><a xlink:href="../../d6/daf/classRaffle.html#a1f194d7422e0faf7fbf765291f8e08df" target="_top" xlink:title="setDrawingTime">
 <polygon fill="white" stroke="black" points="73,-38.5 73,-57.5 165,-57.5 165,-38.5 73,-38.5"/>
 <text text-anchor="middle" x="119" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">setDrawingTime</text>
 </a>
 </g>
 </g>
-<!-- Node29&#45;&gt;Node34 -->
-<g id="edge5" class="edge"><title>Node29&#45;&gt;Node34</title>
+<!-- Node31&#45;&gt;Node36 -->
+<g id="edge5" class="edge"><title>Node31&#45;&gt;Node36</title>
 <path fill="none" stroke="midnightblue" d="M31.3259,-95.4559C41.8497,-87.2474 57.8745,-75.4319 73,-67 76.3054,-65.1573 79.8259,-63.3798 83.3859,-61.7006"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="85.0755,-64.7793 92.7815,-57.5083 82.2232,-58.3868 85.0755,-64.7793"/>
 </g>
-<!-- Node35 -->
-<g id="node7" class="node"><title>Node35</title>
+<!-- Node37 -->
+<g id="node7" class="node"><title>Node37</title>
 <g id="a_node7"><a xlink:href="../../d6/daf/classRaffle.html#a94042b70768a686decc42594ef36bbd6" target="_top" xlink:title="setState">
 <polygon fill="white" stroke="black" points="92.5,-0.5 92.5,-19.5 145.5,-19.5 145.5,-0.5 92.5,-0.5"/>
 <text text-anchor="middle" x="119" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">setState</text>
 </a>
 </g>
 </g>
-<!-- Node29&#45;&gt;Node35 -->
-<g id="edge6" class="edge"><title>Node29&#45;&gt;Node35</title>
+<!-- Node31&#45;&gt;Node37 -->
+<g id="edge6" class="edge"><title>Node31&#45;&gt;Node37</title>
 <path fill="none" stroke="midnightblue" d="M24.0717,-95.2854C31.9796,-79.4208 49.6342,-47.836 73,-29 76.1051,-26.4969 79.5881,-24.2722 83.2054,-22.3081"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="84.8163,-25.4175 92.3347,-17.9527 81.8022,-19.0997 84.8163,-25.4175"/>
 </g>

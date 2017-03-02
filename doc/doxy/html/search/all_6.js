@@ -1,4 +1,24 @@
 var searchData=
 [
-  ['home_2ephp',['home.php',['../d0/d5b/home_8php.html',1,'']]]
+  ['getclosetime',['getCloseTime',['../d6/daf/classRaffle.html#a5ac407ef3a76843e1097ca6f84c90c5f',1,'Raffle']]],
+  ['getclosetimehuman',['getCloseTimeHuman',['../d6/daf/classRaffle.html#af4b5c66b148478a09e983548447024f9',1,'Raffle']]],
+  ['getdrawingtime',['getDrawingTime',['../d6/daf/classRaffle.html#a06d92dd8efe7e8f90627f66258e2befd',1,'Raffle']]],
+  ['getdrawingtimehuman',['getDrawingTimeHuman',['../d6/daf/classRaffle.html#a469fd89211ba3d6c43dd4d376fd6a3b2',1,'Raffle']]],
+  ['getemail',['getEmail',['../d5/d0a/classParticipant.html#a02a01849f28e2535e888ae4ec87b20f2',1,'Participant']]],
+  ['getid',['getId',['../d5/d0a/classParticipant.html#a12251d0c022e9e21c137a105ff683f13',1,'Participant\getId()'],['../db/d42/classParticipation.html#a12251d0c022e9e21c137a105ff683f13',1,'Participation\getId()'],['../d6/daf/classRaffle.html#a12251d0c022e9e21c137a105ff683f13',1,'Raffle\getId()']]],
+  ['getname',['getName',['../d6/daf/classRaffle.html#a3d0963e68bb313b163a73f2803c64600',1,'Raffle']]],
+  ['getopentime',['getOpenTime',['../d6/daf/classRaffle.html#a76b122e7e6a9d75ef2fef21d2368b019',1,'Raffle']]],
+  ['getopentimehuman',['getOpenTimeHuman',['../d6/daf/classRaffle.html#a64683f004d03b00d67462daee5ae866c',1,'Raffle']]],
+  ['getparticipant',['getParticipant',['../d2/d82/classDatabaseWrapper.html#ac8e4dc1b6f6d7ebb9b620c1c218fbf74',1,'DatabaseWrapper\getParticipant()'],['../db/d42/classParticipation.html#a8f672cb7238e87240a5d6b8e7ca4c6eb',1,'Participation\getParticipant()']]],
+  ['getparticipants',['getParticipants',['../d2/d82/classDatabaseWrapper.html#ae6148d07b08e1a1d5f6b58d561ac7bd1',1,'DatabaseWrapper']]],
+  ['getparticipations',['getParticipations',['../d2/d82/classDatabaseWrapper.html#a8a695f040cebff136e20e69300d09630',1,'DatabaseWrapper\getParticipations()'],['../d6/daf/classRaffle.html#a25adbb9bdaac690feb1c5e5e68ae4b1f',1,'Raffle\getParticipations()']]],
+  ['getraffle',['getRaffle',['../db/d42/classParticipation.html#a10a2cd2a022e399c19710a18148ca608',1,'Participation']]],
+  ['getraffles',['getRaffles',['../d2/d82/classDatabaseWrapper.html#a50d8b51abafc47ecae5385c3b79dc6e2',1,'DatabaseWrapper']]],
+  ['getresultingparticipations',['getResultingParticipations',['../db/d42/classParticipation.html#ab7fd81eea259b7d501d8cc8b9c5b80e4',1,'Participation']]],
+  ['getresultingrandom',['getResultingRandom',['../db/d42/classParticipation.html#a3dbd100ca11d7f25775598a26a109243',1,'Participation']]],
+  ['getresultingscore',['getResultingScore',['../db/d42/classParticipation.html#a5fed5838c84c5ba480cd58f189dd1ac2',1,'Participation']]],
+  ['getresultingwins',['getResultingWins',['../db/d42/classParticipation.html#a5fa894e394a91457d2ac1ff9d513e331',1,'Participation']]],
+  ['getstate',['getState',['../db/d42/classParticipation.html#afbf787ced76807989fb3093e1772c5a1',1,'Participation\getState()'],['../d6/daf/classRaffle.html#afbf787ced76807989fb3093e1772c5a1',1,'Raffle\getState()']]],
+  ['getuserverificationkey',['getUserVerificationKey',['../db/d42/classParticipation.html#ade59a1d85cf35a2a295a4ff70305c89e',1,'Participation']]],
+  ['getwinners',['getWinners',['../d6/daf/classRaffle.html#a61a3e1832e7bb3d9251cdd4f55660129',1,'Raffle']]]
 ];
