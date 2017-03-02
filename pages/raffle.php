@@ -13,91 +13,88 @@ if (isset($_REQUEST['RAFFLE_ID'])) {
 //                        Submit New Participation
 // ----------------------------------------------------------------------------
 
-// when user is not in drawing yet
 if ($raffle->getState()=="OPEN" && isset($_REQUEST['ACTION']) && $_REQUEST['ACTION']=="PARTICIPATE") {
 
-    // get drawing
-    $drawing_id = 0;
-    if (isset($_REQUEST['DRAWING_ID'])) $drawing_id = intval($_REQUEST['DRAWING_ID']);
-    $drawing = new Drawing($drawing_id, $DB);
-
-    // set raffle for a new drawing
-    if ($drawing->getRaffle() == Null) {
-        $drawing->setRaffle($raffle);
-    }
+    $participant   = Null;
+    $participation = Null;
 
     // get participant
-    $participant = $drawing->getParticipant();
+    if ($participant == Null && isset($_REQUEST['PARTICIPANT_EMAIL'])) {
 
-    // create new participant if not existent yet
-    if ($participant == Null) {
-
-        // retrieve email from http request
-        $participant_email = "";
-        if (isset($_REQUEST['PARTICIPANT_EMAIL'])) {
-            $participant_email = trim($_REQUEST['PARTICIPANT_EMAIL']);
-        }
+        // get email
+        $participant_email = trim($_REQUEST['PARTICIPANT_EMAIL']);
 
         // check for valid email address
-        if (!preg_match(CONFIG_ALLOWEDEMAILREGEX, $participant_email)) {
-            echo '<div class="message error">Die Emailadresse "' . $participant_email . '" ist nicht erlaubt!</div>';
+        if (preg_match(CONFIG_ALLOWEDEMAILREGEX, $participant_email)) {
+            $participant_email = trim($_REQUEST['PARTICIPANT_EMAIL']);
+            $participant = $DB->getParticipant($participant_email);
 
-        // email address is valid
-        } else {
-
-            // try to find existing participant
-            foreach ($DB->getParticipants() as $p) {
-                if ($p->getEmail() == $participant_email) {
-                    $participant = $p;
-                    break;
-                }
-            }
-
-            // create new participant
+            // submit a new participant
             if ($participant == Null) {
                 $participant = new Participant(0, $DB);
                 $participant->setEmail($participant_email);
                 $participant->save();
             }
 
-            // save participant to drawing
-            $drawing->setParticipant($participant);
-            $drawing->save();
+        // no valid email address
+        } else {
+            echo '<div class="message error">Die Emailadresse "' . $participant_email . '" ist nicht erlaubt!</div>';
         }
     }
 
-    // if participant and drawing is known
-    if ($drawing != Null && $participant != Null) {
+    // try to find participation by existing participant
+    if ($participant != Null && $participation == Null) {
+        foreach ($raffle->getParticipations() as $p) {
+            if ($p->getParticipant() == $participant) {
+                $participation = $p;
+                break;
+            }
+        }
+    }
 
-        // if raffle is in open state
-        if ($raffle->getState() == Raffle::STATE_OPEN) {
+    // get participation by Id
+    if ($participant != Null && $participation == Null && isset($_REQUEST['PARTICIPATION_ID'])) {
+        $id = intval($_REQUEST['PARTICIPATION_ID']);
+        $participation = new Participation($id, $DB);
+        if ($participation->getId() <= 0) $participation = Null;
+    }
+
+    // create new participation if not existent
+    if ($participation == Null && $participant != Null && $raffle->getState() == Raffle::STATE_OPEN) {
+        $participation = new Participation(0, $DB);
+        $participation->setParticipant($participant);
+        $participation->setRaffle($raffle);
+        $participation->save();
+    }
+
+    // in regular case participant and participation have to be known now
+    if ($participation != Null && $participation->getParticipant() != Null && $raffle->getState() == Raffle::STATE_OPEN) {
 
             // immediate entry if admin is logged in
             if (USER_IS_ADMIN) {
-                $drawing->setState(Drawing::STATE_ENTRY_ACCEPTED);
-                $drawing->save();
+                $participation->setState(Participation::STATE_ENTRY_ACCEPTED);
+                $participation->save();
                 echo '<div class="message success">Teilnehmer ' . $participant->getEmail()  .  ' wurde eingetragen.</div>';
 
             // send email submission
             } else {
 
                 // set request entry state and send email
-                if ($drawing->getState() == Drawing::STATE_NOT_IN_DB or
-                    $drawing->getState() == Drawing::STATE_ENTRY_REQUESTED or
-                    $drawing->getState() == Drawing::STATE_DECLINE_ACCEPTED) {
+                if ($participation->getState() == Participation::STATE_NOT_IN_DB or
+                    $participation->getState() == Participation::STATE_ENTRY_REQUESTED or
+                    $participation->getState() == Participation::STATE_DECLINE_ACCEPTED) {
 
-                    $drawing->setState(Drawing::STATE_ENTRY_REQUESTED);
-                    $newkey = $drawing->createUserVerificationKey();
-                    $drawing->save();
+                    $participation->setState(Participation::STATE_ENTRY_REQUESTED);
+                    $newkey = $participation->createUserVerificationKey();
+                    $participation->save();
 
-                    if ($drawing->sendNotification()) {
+                    if ($participation->sendNotification()) {
                         echo '<div class="message success">Eine Best&auml;tigungsanfrage wurde an &quot;' . $participant->getEmail()  .  '&quot; gesendet!</div>';
                     } else {
                         echo '<div class="message error">Es konnte keine Best&auml;tigungsanfrage an &quot;' . $participant->getEmail()  .  '&quot; gesendet werden!</div>';
                     }
                 }
             }
-        }
     }
 }
 
@@ -112,7 +109,7 @@ if ($raffle->getState()=="OPEN" && isset($_REQUEST['ACTION']) && $_REQUEST['ACTI
 
     // get requested drawing id
     $drawing_id = 0;
-    if (isset($_REQUEST['DRAWING_ID'])) $drawing_id = intval($_REQUEST['DRAWING_ID']);
+    if (isset($_REQUEST['PARTICIPATION_ID'])) $drawing_id = intval($_REQUEST['PARTICIPATION_ID']);
 
     // get drawing
     $drawing = new Drawing($drawing_id, $DB);
@@ -126,15 +123,15 @@ if ($raffle->getState()=="OPEN" && isset($_REQUEST['ACTION']) && $_REQUEST['ACTI
 
         // set user as forbidden if admin
         if (USER_IS_ADMIN) {
-            $drawing->setState(Drawing::STATE_FORBIDDEN);
+            $drawing->setState(Participation::STATE_FORBIDDEN);
             $drawing->save();
             echo '<div class="message success">Teilnehmer wurde ausgeschlossen.</div>';
 
         // sign out request
-        } else if (in_array($drawing->getState(), array(Drawing::STATE_ENTRY_ACCEPTED, Drawing::STATE_DECLINE_REQUESTED))) {
+        } else if (in_array($drawing->getState(), array(Participation::STATE_ENTRY_ACCEPTED, Participation::STATE_DECLINE_REQUESTED))) {
 
             // generate new sign out request
-            $drawing->setState(Drawing::STATE_DECLINE_REQUESTED);
+            $drawing->setState(Participation::STATE_DECLINE_REQUESTED);
             $newkey = $drawing->createUserVerificationKey();
             $drawing->save();
 
@@ -194,7 +191,7 @@ if ($raffle->getState()=="OPEN" && isset($_REQUEST['ACTION']) && $_REQUEST['ACTI
         <th>Random</th>
         <th>Score</th>
     </tr>
-    <?php foreach ($DB->getDrawings($raffle) as $d) : ?>
+    <?php foreach ($raffle->getParticipations() as $d) : ?>
         <tr class="<?php echo $d->getState() ?>">
             <td><?php echo $d->getParticipant()->getEmail() ?></td>
             <td><?php echo $d->getState() ?></td>
@@ -206,18 +203,18 @@ if ($raffle->getState()=="OPEN" && isset($_REQUEST['ACTION']) && $_REQUEST['ACTI
 
                 // admin can directly allow or forbid user
                 if (USER_IS_ADMIN) {
-                    if (in_array($d->getState(), array(Drawing::STATE_FORBIDDEN, Drawing::STATE_ENTRY_REQUESTED, Drawing::STATE_DECLINE_ACCEPTED))) {
-                        echo '<td><a href="?ACTION=PARTICIPATE&DRAWING_ID=' . $d->getId() . '&RAFFLE_ID=' . $raffle->getId() . '"><img src="template/icon_user_allow.svg" width="16" title="Teilnehmer Erlauben"></a></td>';
+                    if (in_array($d->getState(), array(Participation::STATE_FORBIDDEN, Participation::STATE_ENTRY_REQUESTED, Participation::STATE_DECLINE_ACCEPTED))) {
+                        echo '<td><a href="?ACTION=PARTICIPATE&PARTICIPATION_ID=' . $d->getId() . '&RAFFLE_ID=' . $raffle->getId() . '"><img src="template/icon_user_allow.svg" width="16" title="Teilnehmer Erlauben"></a></td>';
                     } else {
-                        echo '<td><a href="?ACTION=SIGNOUT&DRAWING_ID=' . $d->getId() . '&RAFFLE_ID=' . $raffle->getId() . '"><img src="template/icon_user_forbid.svg" width="16" title="Teilnehmer Ausschlie&szlig;en"></a></td>';
+                        echo '<td><a href="?ACTION=SIGNOUT&PARTICIPATION_ID=' . $d->getId() . '&RAFFLE_ID=' . $raffle->getId() . '"><img src="template/icon_user_forbid.svg" width="16" title="Teilnehmer Ausschlie&szlig;en"></a></td>';
                     }
 
                 // user can sign in or sign out
                 } else if ($raffle->getState() == Raffle::STATE_OPEN) {
-                    if (in_array($d->getState(), array(Drawing::STATE_ENTRY_ACCEPTED, Drawing::STATE_DECLINE_REQUESTED))) {
-                        echo '<td><a href="?ACTION=SIGNOUT&DRAWING_ID=' . $d->getId() . '&RAFFLE_ID=' . $raffle->getId() . '"><img src="template/icon_user_forbid.svg" width="16" title="Austritt beantragen."></a></td>';
-                    } else if (in_array($d->getState(), array(Drawing::STATE_DECLINE_ACCEPTED, Drawing::STATE_ENTRY_REQUESTED))) {
-                        echo '<td><a href="?ACTION=PARTICIPATE&DRAWING_ID=' . $d->getId() . '&RAFFLE_ID=' . $raffle->getId() . '"><img src="template/icon_user_allow.svg" width="16" title="Wiedereintrit beantragen."></a></td>';
+                    if (in_array($d->getState(), array(Participation::STATE_ENTRY_ACCEPTED, Participation::STATE_DECLINE_REQUESTED))) {
+                        echo '<td><a href="?ACTION=SIGNOUT&PARTICIPATION_ID=' . $d->getId() . '&RAFFLE_ID=' . $raffle->getId() . '"><img src="template/icon_user_forbid.svg" width="16" title="Austritt beantragen."></a></td>';
+                    } else if (in_array($d->getState(), array(Participation::STATE_DECLINE_ACCEPTED, Participation::STATE_ENTRY_REQUESTED))) {
+                        echo '<td><a href="?ACTION=PARTICIPATE&PARTICIPATION_ID=' . $d->getId() . '&RAFFLE_ID=' . $raffle->getId() . '"><img src="template/icon_user_allow.svg" width="16" title="Wiedereintrit beantragen."></a></td>';
                     } else {
                         echo '<td></td>';
                     }
