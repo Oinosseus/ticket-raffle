@@ -9,7 +9,7 @@ include("config.php");
 
 // load classes
 include("classes/raffle.php");
-include("classes/drawing.php");
+include("classes/participation.php");
 include("classes/participant.php");
 include("classes/database_wrapper.php");
 

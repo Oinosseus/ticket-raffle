@@ -1,8 +1,8 @@
 <?php
 
 
-//! This class stores information about a drawing.
-class Drawing {
+//! This class stores information about a participation.
+class Participation {
 
     // pseudo enums for state of a drawing entry
     const STATE_NOT_IN_DB         = 'NOT_IN_DB';
@@ -17,7 +17,7 @@ class Drawing {
 
 
 
-    /** Initializing the drawing object
+    /** Initializing the Participation object
      *
      * If id is known (> 0) and a reference to the database is given,
      * the constructer automatically calls load() to retrieve current data of the participant.
@@ -58,12 +58,12 @@ class Drawing {
         return $this->_Id;
     }
 
-    //! @return Raffle|Null the corresponding raffle for this drawing
+    //! @return Raffle|Null the corresponding raffle for this Participation
     function getRaffle() {
         return $this->_Raffle;
     }
 
-    //! @param Raffle Setting the raffle of this drawing
+    //! @param Raffle Setting the raffle of this Participation
     // @warning This must be made with care! Can only be set if not set before.
     function setRaffle(Raffle $raffle) {
         if ($this->_Raffle == Null) {
@@ -71,12 +71,12 @@ class Drawing {
         }
     }
 
-    //! @return Participant|Null The participant of this drawing
+    //! @return Participant|Null The Participant of this Participation
     function getParticipant() {
         return $this->_Participant;
     }
 
-    //! @param $participant Participant Setting the participant of this drawing.
+    //! @param $participant Participant Setting the Participant of this Participation.
     //! @warning This must be made with care! Can only be set if not set before.
     function setParticipant(Participant $participant) {
         if ($this->_Participant == Null) {
@@ -89,12 +89,12 @@ class Drawing {
         return $this->_UserVerifKey;
     }
 
-    //! @return string The current state of the drawing
+    //! @return string The current state of the Participation
     function getState() {
         return $this->_State;
     }
 
-    //! @param state string The new state for the drawing
+    //! @param state string The new state for the Participation
     function setState($state) {
         if ($state == Drawing::STATE_ENTRY_REQUESTED or
             $state == Drawing::STATE_ENTRY_ACCEPTED or
@@ -110,7 +110,7 @@ class Drawing {
         }
     }
 
-    //! @return int The number of participations that were determined at a drawing
+    //! @return int The number of all participations of a Participant that were determined at a Participation
     function getResultingParticipations () {
         return $this->_ResultingParticipations;
     }
@@ -243,7 +243,7 @@ class Drawing {
     }
 
 
-    /** Sending email notification to participant.
+    /** Sending email notification to Participant.
      *
      * The notification content depends of the current state.
      * It is recommended to call createUserVerificationKey() and save() before calling this function.
