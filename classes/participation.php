@@ -4,7 +4,7 @@
 //! This class stores information about a participation.
 class Participation {
 
-    // pseudo enums for state of a drawing entry
+    // pseudo enums for state of a Participation entry
     const STATE_NOT_IN_DB         = 'NOT_IN_DB';
     const STATE_ENTRY_REQUESTED   = 'ENTRY_REQUESTED';
     const STATE_ENTRY_ACCEPTED    = 'ENTRY_ACCEPTED';
@@ -34,7 +34,7 @@ class Participation {
         $this->_Raffle       = Null; // Raffle object
         $this->_Participant  = Null; // Participant object
         $this->_UserVerifKey = "";
-        $this->_State        = Drawing::STATE_NOT_IN_DB;
+        $this->_State        = Participation::STATE_NOT_IN_DB;
         $this->_ResultingParticipations = 0;
         $this->_ResultingWins           = 0;
         $this->_ResultingRandom         = 0;
@@ -96,15 +96,14 @@ class Participation {
 
     //! @param state string The new state for the Participation
     function setState($state) {
-        if ($state == Drawing::STATE_ENTRY_REQUESTED or
-            $state == Drawing::STATE_ENTRY_ACCEPTED or
-            $state == Drawing::STATE_DECLINE_REQUESTED or
-            $state == Drawing::STATE_DECLINE_ACCEPTED or
-            $state == Drawing::STATE_FORBIDDEN or
-            $state == Drawing::STATE_VOTED or
-            $state == Drawing::STATE_WIN_GRANTED or
-            $state == Drawing::STATE_NOTIFICATION_SENT or
-            $state == Drawing::STATE_WIN_REJECTED ) {
+        if ($state == Participation::STATE_ENTRY_REQUESTED or
+            $state == Participation::STATE_ENTRY_ACCEPTED or
+            $state == Participation::STATE_DECLINE_REQUESTED or
+            $state == Participation::STATE_DECLINE_ACCEPTED or
+            $state == Participation::STATE_FORBIDDEN or
+            $state == Participation::STATE_VOTED or
+            $state == Participation::STATE_WIN_GRANTED or
+            $state == Participation::STATE_WIN_REJECTED ) {
 
             $this->_State = $state;
         }
@@ -192,7 +191,7 @@ class Participation {
 
         // access database
         $columns = array('Raffle', 'Participant', 'State', 'UserVerificationKey', 'ResultingParticipations', 'ResultingWins', 'ResultingRandom', 'ResultingScore');
-        $db_fields = $this->_Db->selectTableRow("Drawings", $this->_Id, $columns);
+        $db_fields = $this->_Db->selectTableRow("Participations", $this->_Id, $columns);
 
         // set properties
         $this->setRaffle(new Raffle($db_fields['Raffle'], $this->_Db));
@@ -233,12 +232,12 @@ class Participation {
 
         // insert new database row
         if ($this->_Id <= 0) {
-            $new_id = $this->_Db->insertTableRow("Drawings", $columns);
+            $new_id = $this->_Db->insertTableRow("Participations", $columns);
             $this->_Id = $new_id;
 
         // update existing database row
         } else {
-            $this->_Db->updateTableRow("Drawings", $this->_Id, $columns);
+            $this->_Db->updateTableRow("Participations", $this->_Id, $columns);
         }
     }
 
@@ -259,7 +258,7 @@ class Participation {
         $submit_url .= $_SERVER["PHP_SELF"];
         $submit_url .= "?USER_PAGE=EMAIL_SUBMISSION";
         $submit_url .= "&UserVerificationKey=" . $this->_UserVerifKey;
-        $submit_url .= "&DrawingId=" . $this->_Id;
+        $submit_url .= "&ParticipationId=" . $this->_Id;
 
         // mail parameters
         $mail_to       = $this->_Participant->getEmail();
@@ -269,7 +268,7 @@ class Participation {
         $mail_header  .= "X-Mailer: PHP ". phpversion() . "\n";
 
         // send entry request message
-        if ($this->_State == Drawing::STATE_ENTRY_REQUESTED) {
+        if ($this->_State == Participation::STATE_ENTRY_REQUESTED) {
             $mail_message  = "<html><body>";
             $mail_message .= "Hallo,<br><br>";
             $mail_message .= "Sie wurden f&uuml;r die Verlosung \"" . $this->_Raffle->getName() . "\" eingetragen.<br>";
@@ -280,7 +279,7 @@ class Participation {
             $mail_message .= "</body></html>";
 
         // send decline request message
-        } else if ($this->_State == Drawing::STATE_DECLINE_REQUESTED) {
+        } else if ($this->_State == Participation::STATE_DECLINE_REQUESTED) {
             $mail_message  = "<html><body>";
             $mail_message .= "Hallo,<br><br>";
             $mail_message .= "Sie haben beantragt an der Verlosung \"" . $this->_Raffle->getName() . "\" nicht mehr teilzunehmen.<br>";
