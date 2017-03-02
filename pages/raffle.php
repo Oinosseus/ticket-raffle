@@ -213,7 +213,7 @@ if ($raffle->getState()=="OPEN" && isset($_REQUEST['ACTION']) && $_REQUEST['ACTI
                     }
 
                 // user can sign in or sign out
-                } else {
+                } else if ($raffle->getState() == Raffle::STATE_OPEN) {
                     if (in_array($d->getState(), array(Drawing::STATE_ENTRY_ACCEPTED, Drawing::STATE_DECLINE_REQUESTED))) {
                         echo '<td><a href="?ACTION=SIGNOUT&DRAWING_ID=' . $d->getId() . '&RAFFLE_ID=' . $raffle->getId() . '"><img src="template/icon_user_forbid.svg" width="16" title="Austritt beantragen."></a></td>';
                     } else if (in_array($d->getState(), array(Drawing::STATE_DECLINE_ACCEPTED, Drawing::STATE_ENTRY_REQUESTED))) {
