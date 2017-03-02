@@ -232,6 +232,24 @@ class Raffle {
         }
     }
 
+
+    /** Get all participations for this raffle
+     *
+     * @return [Participation] An array of Participation objects
+     */
+    function getParticipations() {
+        $columns = array('Id');
+        $where   = array('Raffle' => $this->_Id);
+
+        // get all participations from database where the raffle matches
+        $ret = array();
+        foreach ($this->_Db->findTableRows('Participations'. $columns, $where) as $p) {
+            $ret[] = new Participation($p['Id'], $this->_Db);
+        }
+
+        return $ret;
+    }
+
     // end group Methods
     //! q}
 
