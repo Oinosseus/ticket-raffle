@@ -1,9 +1,16 @@
 <?php
 
+// error_reporting(E_ALL);
+// ini_set('display_errors', 1);
+// session_start();
+
+// load config
+include("config.php");
+
 // load classes
-include("modules/config.php");
 include("classes/raffle.php");
-include("classes/drawing.php");
+include("classes/participation.php");
+include("classes/participant.php");
 include("classes/database_wrapper.php");
 
 // create new database wrapper
