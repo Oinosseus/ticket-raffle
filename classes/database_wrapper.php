@@ -59,8 +59,8 @@ class DatabaseWrapper {
             . "Email TEXT NOT NULL DEFAULT ''"
             . ")");
 
-        // Drawings table
-        $this->db->exec("CREATE TABLE IF NOT EXISTS Drawings ("
+        // Participations table
+        $this->db->exec("CREATE TABLE IF NOT EXISTS Participations ("
             . "Id INTEGER PRIMARY KEY AUTOINCREMENT,  "
             . "Raffle INTEGER NOT NULL DEFAULT 1, "
             . "Participant INTEGER NOT NULL DEFAULT 1, "
@@ -212,22 +212,22 @@ class DatabaseWrapper {
     }
 
 
-    //! Request all existing drawings from the database
-    // @param $raffle Drawing|Null If set, only the drawings for a certain raffle are returned.
-    // @return [Drawings] An array of Drawing objects
-    function getDrawings($raffle = Null) {
+    //! Request all existing participations from the database
+    // @param $raffle Raffle|Null If set, only the participation for a certain raffle are returned.
+    // @return [Participation] An array of Participation objects
+    function getParticipations($raffle = Null) {
         $ret = array();
 
         # setup the query
         if ($raffle == Null)
-            $query = "SELECT Id FROM Drawings";
+            $query = "SELECT Id FROM Participations";
         else
-            $query = "SELECT Id FROM Drawings WHERE Raffle = '" . $raffle->getId() . "'";
+            $query = "SELECT Id FROM Participations WHERE Raffle = '" . $raffle->getId() . "'";
 
         # db request
         $results = $this->db->query($query);
         while ($row = $results->fetchArray()) {
-            $ret[count($ret)] = new Drawing($row['Id'], $this);
+            $ret[count($ret)] = new Participation($row['Id'], $this);
         }
 
         return $ret;
