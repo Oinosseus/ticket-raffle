@@ -193,6 +193,26 @@ class DatabaseWrapper {
         return $ret;
     }
 
+
+    //! Get a Participant object identified by email.
+    // This functions returns the first Participant in the database with matching email.
+    // If no matching email excist, Null is returned.
+    // @return Participant|Null The requested Participant or Null.
+    function getParticipant($email) {
+
+        $email = $this->db->escapeString($email);
+
+        $query = "SELECT Id FROM Participants WHERE Email = '$email'";
+        $results = $this->db->query($query);
+        $row = $results->fetchArray();
+        while ($row = $results->fetchArray()) {
+            return new Participant($row['Id'], $this);
+        }
+
+        return Null;
+    }
+
+
     //! Request all existing drawings from the database
     // @param $raffle Drawing|Null If set, only the drawings for a certain raffle are returned.
     // @return [Drawings] An array of Drawing objects
