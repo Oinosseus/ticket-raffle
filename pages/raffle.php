@@ -107,42 +107,42 @@ if ($raffle->getState()=="OPEN" && isset($_REQUEST['ACTION']) && $_REQUEST['ACTI
 //                                    Sign Out
 // ----------------------------------------------------------------------------
 
-// signout from a drawing
+// signout from a participation
 if ($raffle->getState()=="OPEN" && isset($_REQUEST['ACTION']) && $_REQUEST['ACTION']=="SIGNOUT") {
 
-    // get requested drawing id
-    $drawing_id = 0;
-    if (isset($_REQUEST['PARTICIPATION_ID'])) $drawing_id = intval($_REQUEST['PARTICIPATION_ID']);
+    // get requested participation id
+    $participation_id = 0;
+    if (isset($_REQUEST['PARTICIPATION_ID'])) $participation_id = intval($_REQUEST['PARTICIPATION_ID']);
 
-    // get drawing
-    $drawing = new Drawing($drawing_id, $DB);
+    // get participation
+    $participation = new Participation($participation_id, $DB);
 
-    // invalid drawing
-    if ($drawing->getId() == 0) {
+    // invalid participation
+    if ($participation->getId() == 0) {
         echo '<div class="message error">Ung&uuml;ltige Ziehung!</div>';
 
-    // valid drawing
+    // valid participation
     } else {
 
         // set user as forbidden if admin
         if (USER_IS_ADMIN) {
-            $drawing->setState(Participation::STATE_FORBIDDEN);
-            $drawing->save();
+            $participation->setState(Participation::STATE_FORBIDDEN);
+            $participation->save();
             echo '<div class="message success">Teilnehmer wurde ausgeschlossen.</div>';
 
         // sign out request
-        } else if (in_array($drawing->getState(), array(Participation::STATE_ENTRY_ACCEPTED, Participation::STATE_DECLINE_REQUESTED))) {
+        } else if (in_array($participation->getState(), array(Participation::STATE_ENTRY_ACCEPTED, Participation::STATE_DECLINE_REQUESTED))) {
 
             // generate new sign out request
-            $drawing->setState(Participation::STATE_DECLINE_REQUESTED);
-            $newkey = $drawing->createUserVerificationKey();
-            $drawing->save();
+            $participation->setState(Participation::STATE_DECLINE_REQUESTED);
+            $newkey = $participation->createUserVerificationKey();
+            $participation->save();
 
             // send email notification
-            if ($drawing->sendNotification()) {
-                echo '<div class="message success">Eine Best&auml;tigungsanfrage wurde an &quot;' . $drawing->getParticipant()->getEmail()  .  '&quot; gesendet!</div>';
+            if ($participation->sendNotification()) {
+                echo '<div class="message success">Eine Best&auml;tigungsanfrage wurde an &quot;' . $participation->getParticipant()->getEmail()  .  '&quot; gesendet!</div>';
             } else {
-                echo '<div class="message error">Es konnte keine Best&auml;tigungsanfrage an &quot;' . $drawing->getParticipant()->getEmail()  .  '&quot; gesendet werden!</div>';
+                echo '<div class="message error">Es konnte keine Best&auml;tigungsanfrage an &quot;' . $participation->getParticipant()->getEmail()  .  '&quot; gesendet werden!</div>';
             }
         }
 
