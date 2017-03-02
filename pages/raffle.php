@@ -53,10 +53,13 @@ if ($raffle->getState()=="OPEN" && isset($_REQUEST['ACTION']) && $_REQUEST['ACTI
     }
 
     // get participation by Id
-    if ($participant != Null && $participation == Null && isset($_REQUEST['PARTICIPATION_ID'])) {
+    if ($participation == Null && isset($_REQUEST['PARTICIPATION_ID'])) {
         $id = intval($_REQUEST['PARTICIPATION_ID']);
         $participation = new Participation($id, $DB);
-        if ($participation->getId() <= 0) $participation = Null;
+        if ($participation->getId() <= 0)
+            $participation = Null;
+        else
+            $participant = $participation->getPArticipant();
     }
 
     // create new participation if not existent
