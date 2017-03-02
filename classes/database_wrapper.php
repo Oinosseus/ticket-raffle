@@ -204,7 +204,6 @@ class DatabaseWrapper {
 
         $query = "SELECT Id FROM Participants WHERE Email = '$email'";
         $results = $this->db->query($query);
-        $row = $results->fetchArray();
         while ($row = $results->fetchArray()) {
             return new Participant($row['Id'], $this);
         }
