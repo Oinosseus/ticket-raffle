@@ -147,19 +147,15 @@ class DatabaseWrapper {
         // escape values
         $table = $this->db->escapeString($table);
         $id    = $this->db->escapeString(intval($id));
-        $column_string = "";
-        $values_string = "";
+        $update_string = "";
         foreach (array_keys($column_value_array) as $colname) {
-            if (strlen($column_string) > 0) {
-                $column_string .= ", ";
-                $values_string .= ", ";
-            }
-            $column_string .= $this->db->escapeString($colname);
-            $values_string .= "'" . $this->db->escapeString($column_value_array[$colname]) . "'";
+            if (strlen($update_string) > 0)
+                $update_string .= ", ";
+            $update_string .= $this->db->escapeString($colname) . " = '" . $this->db->escapeString($column_value_array[$colname]) . "'";
         }
 
         // db request
-        $query = "UPDATE $table SET ($column_string) = ($values_string) WHERE Id = '$id'";
+        $query = "UPDATE $table SET $update_string WHERE Id = '$id';";
         if (!$this->db->exec($query)) {
             echo "[" . $this->db->lastErrorCode() . "] " . $this->db->lastErrorMsg() . "<br>";
         }
