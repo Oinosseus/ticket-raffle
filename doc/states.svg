@@ -214,7 +214,7 @@
     <tspan x="-145" y="40">Raffles Table</tspan>
   </text>
   <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="295" y="40">
-    <tspan x="295" y="40">Drawings Table</tspan>
+    <tspan x="295" y="40">Participations Table</tspan>
   </text>
   <g>
     <path style="fill: #bfbfbf" d="M 220 360 C 320,360 320,400 220,400 C 120,400 120,360 220,360z"/>
@@ -304,8 +304,8 @@
     <path style="fill: #bfbfbf" d="M -220 330 C -120,330 -120,370 -220,370 C -320,370 -320,330 -220,330z"/>
     <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M -220 330 C -120,330 -120,370 -220,370 C -320,370 -320,330 -220,330"/>
   </g>
-  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="-220" y="354.212">
-    <tspan x="-220" y="354.212">CLOSED</tspan>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="-220" y="354.4">
+    <tspan x="-220" y="354.4">CLOSED</tspan>
   </text>
   <g>
     <path style="fill: #7ffc32" d="M 420 200 C 520,200 520,240 420,240 C 320,240 320,200 420,200z"/>
