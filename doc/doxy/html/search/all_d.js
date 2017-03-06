@@ -4,7 +4,7 @@ var searchData=
   ['selecttablerow',['selectTableRow',['../d2/d82/classDatabaseWrapper.html#aa90e562f652ec96854a7d539f2976b35',1,'DatabaseWrapper']]],
   ['sendnotification',['sendNotification',['../db/d42/classParticipation.html#a9cf3a655861ad4b52feb5e69692066f3',1,'Participation']]],
   ['setclosetime',['setCloseTime',['../d6/daf/classRaffle.html#a2492e1ae538cc537cbb38546a11fecfc',1,'Raffle']]],
-  ['setdrawingtime',['setDrawingTime',['../d6/daf/classRaffle.html#a1f194d7422e0faf7fbf765291f8e08df',1,'Raffle']]],
+  ['setdrawingtime',['setDrawingTime',['../d6/daf/classRaffle.html#af351db4f57aa41622d6288701e934fee',1,'Raffle']]],
   ['setemail',['setEmail',['../d5/d0a/classParticipant.html#a5ef76eef42d2624386442eeb636d338c',1,'Participant']]],
   ['setname',['setName',['../d6/daf/classRaffle.html#a2fe666694997d047711d7653eca2f132',1,'Raffle']]],
   ['setopentime',['setOpenTime',['../d6/daf/classRaffle.html#a4a6777a4a96add41f7762bafcf42ed30',1,'Raffle']]],

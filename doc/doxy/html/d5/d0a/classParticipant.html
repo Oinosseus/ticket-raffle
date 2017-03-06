@@ -91,7 +91,7 @@ $(document).ready(function(){initNavTree('d5/d0a/classParticipant.html','../../'
 <div class="dynheader">
 Collaboration diagram for Participant:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/da9/classParticipant__coll__graph.svg" width="120" height="235"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/da9/classParticipant__coll__graph.svg" width="166" height="294"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
@@ -111,6 +111,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4dcaa8f72c8423d4de25a9e87fa6f3e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc8a3c62679cf00ade9f15fb2a6d6132"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d0a/classParticipant.html#afc8a3c62679cf00ade9f15fb2a6d6132">save</a> ()</td></tr>
 <tr class="separator:afc8a3c62679cf00ade9f15fb2a6d6132"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fe417d081a87697dffb21fcc38befe4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d0a/classParticipant.html#a7fe417d081a87697dffb21fcc38befe4">countParticipations</a> ()</td></tr>
+<tr class="separator:a7fe417d081a87697dffb21fcc38befe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a800d4ff2fa86d7a54e2b6ad5917c2d16"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d0a/classParticipant.html#a800d4ff2fa86d7a54e2b6ad5917c2d16">countWins</a> ()</td></tr>
+<tr class="separator:a800d4ff2fa86d7a54e2b6ad5917c2d16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class stores information about a participant of a drawing. </p>
@@ -162,6 +166,46 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7fe417d081a87697dffb21fcc38befe4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fe417d081a87697dffb21fcc38befe4">&#9670;&nbsp;</a></span>countParticipations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">countParticipations </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Count current participations. Only closed raffles where the participation is in VOTED, WIN_GRANTED or WIN_REJECTED state are counted. </p><dl class="section return"><dt>Returns</dt><dd>integer The amount of participations. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d1e/participant_8php_source.html#l00119">119</a> of file <a class="el" href="../../d5/d1e/participant_8php_source.html">participant.php</a>.</p>
+
+</div>
+</div>
+<a id="a800d4ff2fa86d7a54e2b6ad5917c2d16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a800d4ff2fa86d7a54e2b6ad5917c2d16">&#9670;&nbsp;</a></span>countWins()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">countWins </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Count won participations. Only closed raffles where the participation is in WIN_GRANTED state are counted. </p><dl class="section return"><dt>Returns</dt><dd>integer The amount of wins. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d1e/participant_8php_source.html#l00145">145</a> of file <a class="el" href="../../d5/d1e/participant_8php_source.html">participant.php</a>.</p>
+
+</div>
+</div>
 <a id="a02a01849f28e2535e888ae4ec87b20f2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a02a01849f28e2535e888ae4ec87b20f2">&#9670;&nbsp;</a></span>getEmail()</h2>
 

@@ -127,8 +127,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a06d92dd8efe7e8f90627f66258e2befd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a469fd89211ba3d6c43dd4d376fd6a3b2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/daf/classRaffle.html#a469fd89211ba3d6c43dd4d376fd6a3b2">getDrawingTimeHuman</a> ()</td></tr>
 <tr class="separator:a469fd89211ba3d6c43dd4d376fd6a3b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f194d7422e0faf7fbf765291f8e08df"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/daf/classRaffle.html#a1f194d7422e0faf7fbf765291f8e08df">setDrawingTime</a> ($dateTime)</td></tr>
-<tr class="separator:a1f194d7422e0faf7fbf765291f8e08df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af351db4f57aa41622d6288701e934fee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/daf/classRaffle.html#af351db4f57aa41622d6288701e934fee">setDrawingTime</a> ($dateTime=Null)</td></tr>
+<tr class="separator:af351db4f57aa41622d6288701e934fee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afbf787ced76807989fb3093e1772c5a1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/daf/classRaffle.html#afbf787ced76807989fb3093e1772c5a1">getState</a> ()</td></tr>
 <tr class="separator:afbf787ced76807989fb3093e1772c5a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94042b70768a686decc42594ef36bbd6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/daf/classRaffle.html#a94042b70768a686decc42594ef36bbd6">setState</a> ($state)</td></tr>
@@ -391,7 +391,7 @@ Here is the call graph for this function:</div>
 <p>Get all participations for this raffle</p>
 <dl class="section return"><dt>Returns</dt><dd>[<a class="el" href="../../db/d42/classParticipation.html" title="This class stores information about a participation. ">Participation</a>] An array of <a class="el" href="../../db/d42/classParticipation.html" title="This class stores information about a participation. ">Participation</a> objects </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dab/classes_2raffle_8php_source.html#l00240">240</a> of file <a class="el" href="../../d9/dab/classes_2raffle_8php_source.html">raffle.php</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/dab/classes_2raffle_8php_source.html#l00249">249</a> of file <a class="el" href="../../d9/dab/classes_2raffle_8php_source.html">raffle.php</a>.</p>
 
 </div>
 </div>
@@ -411,7 +411,7 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>string The current state of the raffle. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dab/classes_2raffle_8php_source.html#l00149">149</a> of file <a class="el" href="../../d9/dab/classes_2raffle_8php_source.html">raffle.php</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/dab/classes_2raffle_8php_source.html#l00158">158</a> of file <a class="el" href="../../d9/dab/classes_2raffle_8php_source.html">raffle.php</a>.</p>
 
 </div>
 </div>
@@ -452,7 +452,7 @@ Here is the call graph for this function:</div>
 <p>Load the current settings from the database.</p>
 <p>If $db was not set in the <a class="el" href="../../d6/daf/classRaffle.html#a243272172685049c12f7df66416c3d5c">__construct()</a> this will ignore the load (no error is returned). If the database row id is unknown (not set in the constructor and raffle not saved) this will also do nothing. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dab/classes_2raffle_8php_source.html#l00180">180</a> of file <a class="el" href="../../d9/dab/classes_2raffle_8php_source.html">raffle.php</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/dab/classes_2raffle_8php_source.html#l00189">189</a> of file <a class="el" href="../../d9/dab/classes_2raffle_8php_source.html">raffle.php</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -485,7 +485,7 @@ Here is the caller graph for this function:</div>
 <p>Saving the actual values to the database.</p>
 <p>If no $db was given at <a class="el" href="../../d6/daf/classRaffle.html#a243272172685049c12f7df66416c3d5c">__construct()</a> this operation will fail. If the database row id is already set (!=0) this operation will update the database row. If the database row id is not set (==0) this will create a new database row and update the id. </p><dl class="section return"><dt>Returns</dt><dd>bool True if raffle was saved successfully. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dab/classes_2raffle_8php_source.html#l00206">206</a> of file <a class="el" href="../../d9/dab/classes_2raffle_8php_source.html">raffle.php</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/dab/classes_2raffle_8php_source.html#l00215">215</a> of file <a class="el" href="../../d9/dab/classes_2raffle_8php_source.html">raffle.php</a>.</p>
 
 </div>
 </div>
@@ -521,8 +521,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a1f194d7422e0faf7fbf765291f8e08df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f194d7422e0faf7fbf765291f8e08df">&#9670;&nbsp;</a></span>setDrawingTime()</h2>
+<a id="af351db4f57aa41622d6288701e934fee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af351db4f57aa41622d6288701e934fee">&#9670;&nbsp;</a></span>setDrawingTime()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -531,23 +531,23 @@ Here is the caller graph for this function:</div>
           <td class="memname">setDrawingTime </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>$dateTime</em></td><td>)</td>
+          <td class="paramname"><em>$dateTime</em> = <code>Null</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Setting the drawing time of the raffle. If the parameter is Null, the current time is used. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">$dateTime</td><td>DateTime Setting a new drawing time of the raffle. </td></tr>
+    <tr><td class="paramname">$dateTime|Null</td><td>DateTime Setting a new drawing time of the raffle. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dab/classes_2raffle_8php_source.html#l00137">137</a> of file <a class="el" href="../../d9/dab/classes_2raffle_8php_source.html">raffle.php</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/dab/classes_2raffle_8php_source.html#l00140">140</a> of file <a class="el" href="../../d9/dab/classes_2raffle_8php_source.html">raffle.php</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d6/daf/classRaffle_a1f194d7422e0faf7fbf765291f8e08df_icgraph.svg" width="368" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d6/daf/classRaffle_af351db4f57aa41622d6288701e934fee_icgraph.svg" width="368" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -639,7 +639,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dab/classes_2raffle_8php_source.html#l00154">154</a> of file <a class="el" href="../../d9/dab/classes_2raffle_8php_source.html">raffle.php</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/dab/classes_2raffle_8php_source.html#l00163">163</a> of file <a class="el" href="../../d9/dab/classes_2raffle_8php_source.html">raffle.php</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

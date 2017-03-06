@@ -15,7 +15,7 @@ var classRaffle =
     [ "load", "d6/daf/classRaffle.html#a4dcaa8f72c8423d4de25a9e87fa6f3e4", null ],
     [ "save", "d6/daf/classRaffle.html#afc8a3c62679cf00ade9f15fb2a6d6132", null ],
     [ "setCloseTime", "d6/daf/classRaffle.html#a2492e1ae538cc537cbb38546a11fecfc", null ],
-    [ "setDrawingTime", "d6/daf/classRaffle.html#a1f194d7422e0faf7fbf765291f8e08df", null ],
+    [ "setDrawingTime", "d6/daf/classRaffle.html#af351db4f57aa41622d6288701e934fee", null ],
     [ "setName", "d6/daf/classRaffle.html#a2fe666694997d047711d7653eca2f132", null ],
     [ "setOpenTime", "d6/daf/classRaffle.html#a4a6777a4a96add41f7762bafcf42ed30", null ],
     [ "setState", "d6/daf/classRaffle.html#a94042b70768a686decc42594ef36bbd6", null ],
