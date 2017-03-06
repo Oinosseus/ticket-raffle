@@ -194,30 +194,30 @@ if ($raffle->getState()=="OPEN" && isset($_REQUEST['ACTION']) && $_REQUEST['ACTI
         <th>Random</th>
         <th>Score</th>
     </tr>
-    <?php foreach ($raffle->getParticipations() as $d) : ?>
-        <tr class="<?php echo $d->getState() ?>">
-            <td><?php echo $d->getParticipant()->getEmail() ?></td>
-            <td><?php echo $d->getState() ?></td>
-            <td><?php $d->getResultingParticipations() ?></td>
-            <td><?php $d->getResultingWins() ?></td>
-            <td><?php $d->getResultingRandom() ?></td>
-            <td><?php $d->getResultingScore() ?></td>
+    <?php foreach ($raffle->getParticipations() as $pn) : ?>
+        <tr class="<?php echo $pn->getState() ?>">
+            <td><?php echo $pn->getParticipant()->getEmail() ?></td>
+            <td><?php echo $pn->getState() ?></td>
+            <td><?php echo $pn->getResultingParticipations() ?></td>
+            <td><?php echo $pn->getResultingWins() ?></td>
+            <td><?php echo $pn->getResultingRandom() ?></td>
+            <td><?php echo $pn->getResultingScore() ?></td>
             <?php
 
                 // admin can directly allow or forbid user
                 if (USER_IS_ADMIN) {
-                    if (in_array($d->getState(), array(Participation::STATE_FORBIDDEN, Participation::STATE_ENTRY_REQUESTED, Participation::STATE_DECLINE_ACCEPTED))) {
-                        echo '<td><a href="?ACTION=PARTICIPATE&PARTICIPATION_ID=' . $d->getId() . '&RAFFLE_ID=' . $raffle->getId() . '"><img src="template/icon_user_allow.svg" width="16" title="Teilnehmer Erlauben"></a></td>';
+                    if (in_array($pn->getState(), array(Participation::STATE_FORBIDDEN, Participation::STATE_ENTRY_REQUESTED, Participation::STATE_DECLINE_ACCEPTED))) {
+                        echo '<td><a href="?ACTION=PARTICIPATE&PARTICIPATION_ID=' . $pn->getId() . '&RAFFLE_ID=' . $raffle->getId() . '"><img src="template/icon_user_allow.svg" width="16" title="Teilnehmer Erlauben"></a></td>';
                     } else {
-                        echo '<td><a href="?ACTION=SIGNOUT&PARTICIPATION_ID=' . $d->getId() . '&RAFFLE_ID=' . $raffle->getId() . '"><img src="template/icon_user_forbid.svg" width="16" title="Teilnehmer Ausschlie&szlig;en"></a></td>';
+                        echo '<td><a href="?ACTION=SIGNOUT&PARTICIPATION_ID=' . $pn->getId() . '&RAFFLE_ID=' . $raffle->getId() . '"><img src="template/icon_user_forbid.svg" width="16" title="Teilnehmer Ausschlie&szlig;en"></a></td>';
                     }
 
                 // user can sign in or sign out
                 } else if ($raffle->getState() == Raffle::STATE_OPEN) {
-                    if (in_array($d->getState(), array(Participation::STATE_ENTRY_ACCEPTED, Participation::STATE_DECLINE_REQUESTED))) {
-                        echo '<td><a href="?ACTION=SIGNOUT&PARTICIPATION_ID=' . $d->getId() . '&RAFFLE_ID=' . $raffle->getId() . '"><img src="template/icon_user_forbid.svg" width="16" title="Austritt beantragen."></a></td>';
-                    } else if (in_array($d->getState(), array(Participation::STATE_DECLINE_ACCEPTED, Participation::STATE_ENTRY_REQUESTED))) {
-                        echo '<td><a href="?ACTION=PARTICIPATE&PARTICIPATION_ID=' . $d->getId() . '&RAFFLE_ID=' . $raffle->getId() . '"><img src="template/icon_user_allow.svg" width="16" title="Wiedereintrit beantragen."></a></td>';
+                    if (in_array($pn->getState(), array(Participation::STATE_ENTRY_ACCEPTED, Participation::STATE_DECLINE_REQUESTED))) {
+                        echo '<td><a href="?ACTION=SIGNOUT&PARTICIPATION_ID=' . $pn->getId() . '&RAFFLE_ID=' . $raffle->getId() . '"><img src="template/icon_user_forbid.svg" width="16" title="Austritt beantragen."></a></td>';
+                    } else if (in_array($pn->getState(), array(Participation::STATE_DECLINE_ACCEPTED, Participation::STATE_ENTRY_REQUESTED))) {
+                        echo '<td><a href="?ACTION=PARTICIPATE&PARTICIPATION_ID=' . $pn->getId() . '&RAFFLE_ID=' . $raffle->getId() . '"><img src="template/icon_user_allow.svg" width="16" title="Wiedereintrit beantragen."></a></td>';
                     } else {
                         echo '<td></td>';
                     }
