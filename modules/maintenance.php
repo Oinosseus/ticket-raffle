@@ -82,6 +82,7 @@ foreach ($DB->getRaffles() as $raffle) {
 
             // set state to closed
             $raffle->setState(Raffle::STATE_CLOSED);
+            $raffle->setDrawingTime();
             $raffle->save();
 
             // vote participations

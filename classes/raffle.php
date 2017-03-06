@@ -133,8 +133,17 @@ class Raffle {
 
     }
 
-    //! @param $dateTime DateTime Setting a new drawing time of the raffle.
-    function setDrawingTime($dateTime) {
+    /** Setting the drawing time of the raffle.
+     * If the parameter is Null, the current time is used.
+     * @param $dateTime|Null DateTime Setting a new drawing time of the raffle.
+     */
+    function setDrawingTime($dateTime = Null) {
+
+        // set to now
+        if ($dateTime == Null) {
+        $dateTime = new DateTime();
+        $dateTime->setTimezone(new DateTimeZone(CONFIG_TIMEZONE));
+        }
 
         // get tim in string format
         $string_time = "";
