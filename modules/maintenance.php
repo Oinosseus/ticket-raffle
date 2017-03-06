@@ -90,32 +90,9 @@ foreach ($DB->getRaffles() as $raffle) {
                 // only if participation valid for voting
                 if (in_array($pn->getState(), array(Participation::STATE_ENTRY_ACCEPTED, Participation::STATE_DECLINE_REQUESTED))) {
 
-                    // count participations
-                    $previous_participations = 0;
-                    $previous_wins           = 0;
-                    foreach  ($DB->getParticipations() as $pn_previous) {
-                        // only count participations of the same participant
-                        if ($pn_previous->getParticipant() == $pn->getParticipant()) {
-                            // only count raffles that are in closed state
-                            if ($pn_previous->getRaffle()->getState() == Raffle::STATE_CLOSED) {
-                                // count when voted
-                                if  ($pn_previous->getState() == Participation::STATE_VOTED) {
-                                    $previous_participations += 1;
-                                // count when rejected
-                                } else if ($pn_previous->getState() == Participation::STATE_WIN_REJECTED) {
-                                    $previous_participations += 1;
-                                // count wind
-                                } else if ($pn_previous->getState() == Participation::STATE_WIN_GRANTED) {
-                                    $previous_participations += 1;
-                                    $previous_wins += 1;
-                                }
-                            }
-                        }
-                    }
-
-                    // write
-                    $pn->setResultingParticipations($previous_participations + 1);
-                    $pn->setResultingWins($previous_wins);
+                    // vote
+                    $pn->setResultingParticipations($pn->getParticipant()->countParticipations() + 1);
+                    $pn->setResultingWins($pn->getParticipant()->countWins());
                     $pn->setResultingRandom(rand(0,10000));
                     $pn->setResultingScore($pn->getResultingRandom() * ($pn->getResultingParticipations() - $pn->getResultingWins()) / $pn->getResultingParticipations());
                     $pn->setState(Participation::STATE_VOTED);

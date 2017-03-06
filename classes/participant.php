@@ -111,6 +111,58 @@ class Participant {
     }
 
 
+    /** Count current participations.
+     * Only closed raffles where the participation is in
+     * VOTED, WIN_GRANTED or WIN_REJECTED state are counted.
+     * @return integer The amount of participations.
+     */
+    function countParticipations() {
+        $ret = 0;
+
+        // walk through all participations
+        foreach  ($this->_Db->getParticipations() as $pn) {
+            // only count participations of the same participant
+            if ($pn->getParticipant() == $this) {
+                // only count raffles that are in closed state
+                if ($pn->getRaffle()->getState() == Raffle::STATE_CLOSED) {
+                    // count when voted
+                    if  (in_array($pn->getState(), array(Participation::STATE_VOTED, Participation::STATE_WIN_REJECTED, Participation::STATE_WIN_GRANTED))) {
+                        $ret += 1;
+                    }
+                }
+            }
+        }
+
+        return $ret;
+    }
+
+
+    /** Count won participations.
+     * Only closed raffles where the participation is in
+     * WIN_GRANTED state are counted.
+     * @return integer The amount of wins.
+     */
+    function countWins() {
+        $ret = 0;
+
+        // walk through all participations
+        foreach  ($this->_Db->getParticipations() as $pn) {
+            // only count participations of the same participant
+            if ($pn->getParticipant() == $this) {
+                // only count raffles that are in closed state
+                if ($pn->getRaffle()->getState() == Raffle::STATE_CLOSED) {
+                    // count when voted
+                    if  ($pn->getState() == Participation::STATE_WIN_GRANTED) {
+                        $ret += 1;
+                    }
+                }
+            }
+        }
+
+        return $ret;
+    }
+
+
     // end group Methods
     //! q}
 
