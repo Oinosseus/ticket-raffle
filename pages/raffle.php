@@ -211,7 +211,7 @@ if ($raffle->getState()=="OPEN" && isset($_REQUEST['ACTION']) && $_REQUEST['ACTI
                 if (USER_IS_ADMIN) {
                     if (in_array($pn->getState(), array(Participation::STATE_FORBIDDEN, Participation::STATE_ENTRY_REQUESTED, Participation::STATE_DECLINE_ACCEPTED))) {
                         echo '<td><a href="?ACTION=PARTICIPATE&PARTICIPATION_ID=' . $pn->getId() . '&RAFFLE_ID=' . $raffle->getId() . '"><img src="template/icon_user_allow.svg" width="16" title="Teilnehmer Erlauben"></a></td>';
-                    } else {
+                    } else if (in_array($pn->getState(), array(Participation::STATE_ENTRY_ACCEPTED, Participation::STATE_DECLINE_REQUESTED))) {
                         echo '<td><a href="?ACTION=SIGNOUT&PARTICIPATION_ID=' . $pn->getId() . '&RAFFLE_ID=' . $raffle->getId() . '"><img src="template/icon_user_forbid.svg" width="16" title="Teilnehmer Ausschlie&szlig;en"></a></td>';
                     }
 
