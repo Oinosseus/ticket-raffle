@@ -1,7 +1,7 @@
 var searchData=
 [
   ['checkstructure',['checkStructure',['../d2/d82/classDatabaseWrapper.html#aca24801eee78a558644738a3ade69609',1,'DatabaseWrapper']]],
-  ['cmp',['cmp',['../d6/d94/participants_8php.html#ab8443a12cf8f2fb1fdd1d06480d19ad0',1,'cmp($r1, $r2):&#160;participants.php'],['../db/de6/raffles_8php.html#ab8443a12cf8f2fb1fdd1d06480d19ad0',1,'cmp($r1, $r2):&#160;raffles.php']]],
+  ['cmp',['cmp',['../db/de6/raffles_8php.html#a35d21d48e524096f9cbdbc0b83712b28',1,'cmp():&#160;raffles.php'],['../d6/d94/participants_8php.html#ab8443a12cf8f2fb1fdd1d06480d19ad0',1,'cmp($r1, $r2):&#160;participants.php']]],
   ['config_2ephp',['config.php',['../d0/d45/config_8php.html',1,'']]],
   ['config_2esample_2ephp',['config.sample.php',['../de/da0/config_8sample_8php.html',1,'']]],
   ['config_5fadmin_5fpassword',['CONFIG_ADMIN_PASSWORD',['../d0/d45/config_8php.html#a1f8b726dfd0d0db3d61fe867321026c9',1,'CONFIG_ADMIN_PASSWORD():&#160;config.php'],['../de/da0/config_8sample_8php.html#a1f8b726dfd0d0db3d61fe867321026c9',1,'CONFIG_ADMIN_PASSWORD():&#160;config.sample.php']]],
