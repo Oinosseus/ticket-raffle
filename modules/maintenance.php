@@ -88,31 +88,24 @@ foreach ($DB->getRaffles() as $raffle) {
             // vote participations
             foreach ($DB->getParticipations($raffle) as $pn) {
 
-                // only if participation valid for voting
-                if (in_array($pn->getState(), array(Participation::STATE_ENTRY_ACCEPTED, Participation::STATE_DECLINE_REQUESTED))) {
+                // vote, if possible
+                if ($pn->vote()) {
 
-                    // vote
-                    $pn->setResultingParticipations($pn->getParticipant()->countParticipations() + 1);
-                    $pn->setResultingWins($pn->getParticipant()->countWins());
-                    $pn->setResultingRandom(rand(0,10000));
-                    $pn->setResultingScore($pn->getResultingRandom() * ($pn->getResultingParticipations() - $pn->getResultingWins()) / $pn->getResultingParticipations());
-                    $pn->setState(Participation::STATE_VOTED);
+                    // save vote
                     $pn->save();
 
-                    // log
+                    // log vote
                     $msg  = "    Voting Participation for " . $pn->getParticipant()->getEmail() . ":\n";
-                    $msg .= "        Previous Participations = " . $pn->getResultingParticipations() . "\n";
-                    $msg .= "        Previous Wins           = " . $pn->getResultingWins() . "\n";
-                    $msg .= "        Random                  = " . $pn->getResultingRandom() . "\n";
-                    $msg .= "        Score                   = " . $pn->getResultingScore();
+                    $msg .= "        Participations = " . $pn->getResultingParticipations() . "\n";
+                    $msg .= "        Wins           = " . $pn->getResultingWins() . "\n";
+                    $msg .= "        Random         = " . $pn->getResultingRandom() . "\n";
+                    $msg .= "        Score          = " . $pn->getResultingScore();
                     logaction($msg);
 
                 }
             }
         }
-
     }
-
 }
 
 

@@ -114,21 +114,9 @@ class Participation {
         return $this->_ResultingParticipations;
     }
 
-    //! @param $rp int Setting the amount of participations at drawing time.
-    //! @warning This should only be done by the maintenance script, when a drawing is performed.
-    function setResultingParticipations($rp) {
-        $this->_ResultingParticipations = intval($rp);
-    }
-
     //! @return int The number of wins that were determined at a drawing
     function getResultingWins () {
         return $this->_ResultingWins;
-    }
-
-    //! @param $rw int Setting the amount of wins at drawing time.
-    //! @warning This should only be done by the maintenance script, when a drawing is performed.
-    function setResultingWins($rw) {
-        $this->_ResultingWins = intval($rw);
     }
 
     //! @return int The random number that was diced at a drawing
@@ -136,21 +124,9 @@ class Participation {
         return $this->_ResultingRandom;
     }
 
-    //! @param $rr int Setting the dicing result at drawing time.
-    //! @warning This should only be done by the maintenance script, when a drawing is performed.
-    function setResultingRandom($rr) {
-        $this->_ResultingRandom = intval($rr);
-    }
-
     //! @return int The final score of a drawing
     function getResultingScore () {
         return $this->_ResultingScore;
-    }
-
-    //! @param $rs int Setting the final score at drawing time.
-    //! @warning This should only be done by the maintenance script, when a drawing is performed.
-    function setResultingScore($rr) {
-        $this->_ResultingScore = intval($rr);
     }
 
 
@@ -196,12 +172,12 @@ class Participation {
         // set properties
         $this->setRaffle(new Raffle($db_fields['Raffle'], $this->_Db));
         $this->setParticipant(new Participant($db_fields['Participant'], $this->_Db));
-        $this->_UserVerifKey = $db_fields['UserVerificationKey'];
+        $this->_UserVerifKey            = $db_fields['UserVerificationKey'];
         $this->setState($db_fields['State']);
-        $this->setResultingParticipations($db_fields['ResultingParticipations']);
-        $this->setResultingWins($db_fields['ResultingWins']);
-        $this->setResultingRandom($db_fields['ResultingRandom']);
-        $this->setResultingScore($db_fields['ResultingScore']);
+        $this->_ResultingParticipations = intval($db_fields['ResultingParticipations']);
+        $this->_ResultingWins           = intval($db_fields['ResultingWins']);
+        $this->_ResultingRandom         = intval($db_fields['ResultingRandom']);
+        $this->_ResultingScore          = intval($db_fields['ResultingScore']);
     }
 
 
@@ -294,6 +270,31 @@ class Participation {
         }
 
         return mail($mail_to, $mail_subject, $mail_message, $mail_header);
+    }
+
+
+    /** Calculates a weighted random score.
+     * This function only operates if the current state is ENTRY_ACCEPTED or DECLINE_REQUESTED.
+     * Afterwards the state changes to VOTED.
+     * The vote is not saved automatically (call save() afterwards).
+     * @return bool True if voted, else False
+     */
+    function vote() {
+
+        // only operate in correct state
+        if (!in_array($this->_State, array(Participation::STATE_ENTRY_ACCEPTED, Participation::STATE_DECLINE_REQUESTED))) return False;
+
+        // only if participant is valid
+        if ($this->_Participant == Null) return False;
+
+        // calculate scores
+        $this->_ResultingParticipations = $this->_Participant->countParticipations() + 1;
+        $this->_ResultingWins           = $this->_Participant->countWins();
+        $this->_ResultingRandom         = rand(0,10000);
+        $this->_ResultingScore          = $this->_ResultingRandom * ($this->_ResultingParticipations - $this->_ResultingWins) / $this->_ResultingParticipations;
+        $this->_State                   = Participation::STATE_VOTED;
+
+        return True;
     }
 
 
