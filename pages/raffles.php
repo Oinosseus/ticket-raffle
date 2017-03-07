@@ -1,5 +1,32 @@
 <?php
 
+    // ------------------------------------------------------------------------
+    //                          (In-) Validate Raffle
+    // ------------------------------------------------------------------------
+
+    if (USER_IS_ADMIN && isset($_REQUEST['RAFFLE_ID']) && isset($_REQUEST['ACTION']) && $_REQUEST['ACTION'] == 'IN-VALIDATE') {
+
+        $raffle = new Raffle($_REQUEST['RAFFLE_ID'], $DB);
+
+        if ($raffle->getState() == Raffle::STATE_CLOSED) {
+            $raffle->setState(Raffle::STATE_INVALID);
+            $raffle->save();
+            echo '<div class="message success">Verlosung #' . $raffle->getId()  .  ' wurde invalidiert.</div>';
+
+        } else if ($raffle->getState() == Raffle::STATE_INVALID) {
+            $raffle->setState(Raffle::STATE_CLOSED);
+            $raffle->save();
+            echo '<div class="message success">Verlosung #' . $raffle->getId()  .  ' wurde revalidiert.</div>';
+        }
+
+    }
+
+
+
+    // ------------------------------------------------------------------------
+    //                        Sorted Raffle List
+    // ------------------------------------------------------------------------
+
     function cmp($r1, $r2) {
         return $r2->getCloseTime() > $r1->getCloseTime();
     }
@@ -42,12 +69,12 @@
 
                 // invalidate
                 if ($raffle->getState() == Raffle::STATE_CLOSED) {
-                    echo '<a href="" ><img src="template/icon_raffle_invalid.svg" title="invalidate raffle" width="16"></a>';
+                    echo '<a href="?ACTION=IN-VALIDATE&RAFFLE_ID=' . $raffle->getId() . '" ><img src="template/icon_raffle_invalid.svg" title="invalidate raffle" width="16"></a>';
                 }
 
                 // validate
                 if ($raffle->getState() == Raffle::STATE_INVALID) {
-                    echo '<a href="" ><img src="template/icon_raffle_valid.svg" title="validate raffle" width="16"></a>';
+                    echo '<a href="?ACTION=IN-VALIDATE&RAFFLE_ID=' . $raffle->getId() . '" ><img src="template/icon_raffle_valid.svg" title="validate raffle" width="16"></a>';
                 }
 
                 echo '</td>';
