@@ -3,6 +3,9 @@
 // get raffle
 if (isset($_REQUEST['RAFFLE_ID'])) {
     $raffle = new Raffle(intval($_REQUEST['RAFFLE_ID']), $DB);
+    $_SESSION['RAFFLE_ID'] = $raffle->getId();
+} else if (isset($_SESSION['RAFFLE_ID'])) {
+    $raffle = new Raffle($_SESSION['RAFFLE_ID'], $DB);
 } else {
     $raffle = new Raffle();
 }
