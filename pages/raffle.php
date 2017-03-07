@@ -197,8 +197,27 @@ if ($raffle->getState()=="OPEN" && isset($_REQUEST['ACTION']) && $_REQUEST['ACTI
         <th>Random</th>
         <th>Score</th>
     </tr>
-    <?php foreach ($raffle->getParticipations() as $pn) : ?>
-        <tr class="<?php echo $pn->getState() ?>">
+
+    <?php
+
+        // participation sort function
+        function cmp($pn1, $pn2) {
+            global $raffle;
+            if (in_array($raffle->getState(), array(Raffle::STATE_CLOSED, Raffle::STATE_INVALID)))
+                return $pn1->getResultingScore() < $pn2->getResultingScore();
+            else
+                return $pn1->getId() > $pn2->getId();
+        }
+
+        // sort participations
+        $sorted_participations = $raffle->getParticipations();
+        usort($sorted_participations, "cmp");
+
+        // iterate through participation
+        foreach ($sorted_participations as $pn) :
+    ?>
+
+    <tr class="<?php echo $pn->getState() ?>">
             <td><?php echo $pn->getParticipant()->getEmail() ?></td>
             <td><?php echo $pn->getState() ?></td>
             <td><?php echo $pn->getResultingParticipations() ?></td>
