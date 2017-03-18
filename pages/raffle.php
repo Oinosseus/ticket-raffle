@@ -201,10 +201,6 @@ if (USER_IS_ADMIN && isset($_REQUEST['ACTION']) && $_REQUEST['ACTION']=="WIN_REJ
             <td><?php echo $raffle->getName() ?></td>
         </tr>
         <tr>
-            <th>Winners</th>
-            <td><?php echo $raffle->getWinners() ?></td>
-        </tr>
-        <tr>
             <th>OpenTime</th>
             <td><?php echo $raffle->getOpenTimeHuman() ?></td>
         </tr>

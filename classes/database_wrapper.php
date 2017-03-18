@@ -46,7 +46,6 @@ class DatabaseWrapper {
         $this->db->exec("CREATE TABLE IF NOT EXISTS Raffles ("
             . "Id INTEGER PRIMARY KEY AUTOINCREMENT,  "
             . "Name TEXT NOT NULL DEFAULT '', "
-            . "Winners INTEGER NOT NULL DEFAULT 1, "
             . "OpenTime TEXT, "
             . "CloseTime TEXT, "
             . "DrawingTime TEXT, "

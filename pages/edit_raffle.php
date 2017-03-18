@@ -25,7 +25,6 @@
     } else if (isset($_REQUEST['ACTION']) && $_REQUEST['ACTION']=="SAVE_RAFFLE") {
 
         $raffle->setName($_POST['RAFFLE_NAME']);
-        $raffle->setWinners($_POST['RAFFLE_WINNERS']);
         $raffle->setOpenTime(new DateTime($_POST['RAFFLE_OPENTIME']));
         $raffle->setCloseTime(new DateTime($_POST['RAFFLE_CLOSETIME']));
         $raffle->setState(Raffle::STATE_COMMITTED);
@@ -58,10 +57,6 @@ if ($raffle->getId() == 0) {
 
     Name der Verlosung<br>
     <input type="text" name="RAFFLE_NAME" value="<?php echo $raffle->getName() ?>"><br>
-    <br>
-
-    Anzahl der Gewinner pro Ziehung<br>
-    <input type="number" name="RAFFLE_WINNERS" min="1" value="<?php echo $raffle->getWinners() ?>"><br>
     <br>
 
     Zeitpunkt der Er&ouml;ffnung der Eintragungen (z.B. in einer Woche: <?php echo $example_date_1week->format('Y-m-d H:i:s'); ?>)<br>

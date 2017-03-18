@@ -26,7 +26,6 @@ class Raffle {
 
         // default properties
         $this->_Name        = "";
-        $this->_Winners     = 0;
         $this->_OpenTime    = new DateTime();
         $this->_OpenTime->setTimezone(new DateTimeZone(CONFIG_TIMEZONE));
         $this->_CloseTime   = new DateTime();
@@ -61,17 +60,6 @@ class Raffle {
     //! @param $name string Set new name for the raffle.
     function setName($name) {
         $this->_Name = "$name";
-    }
-
-
-    //! @return int Amount of possible winners for the raffle
-    function getWinners() {
-        return $this->_Winners;
-    }
-
-    //! @param int Set new amount of possible winners for the raffle
-    function setWinners($winners) {
-        $this->_Winners = intval($winners);
     }
 
 
@@ -193,12 +181,11 @@ class Raffle {
         if (!$this->_Db)     return False;
 
         // access database
-        $columns = array('Name', 'Winners', 'OpenTime' ,'CloseTime' ,'DrawingTime', 'State');
+        $columns = array('Name', 'OpenTime' ,'CloseTime' ,'DrawingTime', 'State');
         $db_fields = $this->_Db->selectTableRow("Raffles", $this->_Id, $columns);
 
         // set properties
         $this->setName($db_fields['Name']);
-        $this->setWinners($db_fields['Winners']);
         $this->setOpenTime($db_fields['OpenTime']);
         $this->setCloseTime($db_fields['CloseTime']);
         $this->setDrawingTime($db_fields['DrawingTime']);
@@ -220,7 +207,6 @@ class Raffle {
         // create columns array
         $columns = array();
         $columns['Name']        = $this->_Name;
-        $columns['Winners']     = intval($this->_Winners);
         $columns['OpenTime']    = $this->_OpenTime->format(DateTime::ATOM);
         $columns['CloseTime']   = $this->_CloseTime->format(DateTime::ATOM);
         if ($this->_DrawingTime) {

@@ -126,7 +126,7 @@ class Participant {
                 // only count raffles that are in closed state
                 if ($pn->getRaffle()->getState() == Raffle::STATE_CLOSED) {
                     // count when voted
-                    if  (in_array($pn->getState(), array(Participation::STATE_VOTED, Participation::STATE_WIN_REJECTED, Participation::STATE_WIN_GRANTED))) {
+                    if  (in_array($pn->getState(), array(Participation::STATE_VOTED, Participation::STATE_WIN_GRANTED))) {
                         $ret += 1;
                     }
                 }
