@@ -1,7 +1,7 @@
 <?php
 
 //! Database Wrapper
-// This class wraps all database accesses.
+//! This class wraps all database accesses.
 class DatabaseWrapper {
 
 
@@ -76,10 +76,10 @@ class DatabaseWrapper {
 
 
     //! A database request for a certain row.
-    // @return [string -> string] associative array
-    // @param $tbale string Name of the table
-    // @param $id int The row id number.
-    // @param $column_array [string] An array of column names that are in the keys in the returned array.
+    //! @return [string -> string] associative array
+    //! @param $tbale string Name of the table
+    //! @param $id int The row id number.
+    //! @param $column_array [string] An array of column names that are in the keys in the returned array.
     function selectTableRow($table, $id, $column_array) {
 
         // escape values
@@ -102,9 +102,9 @@ class DatabaseWrapper {
 
 
     //! Queries the database for all rows that matches the search values.
-    // @return [integer] an array of all matching row Ids
-    // @param $tbale string Name of the table
-    // @param $column_search_array [string -> string] Associative array where column names are mapped to their requested content values
+    //! @return [integer] an array of all matching row Ids
+    //! @param $tbale string Name of the table
+    //! @param $column_search_array [string -> string] Associative array where column names are mapped to their requested content values
     function findTableRows($table, $column_search_array) {
 
         // escape table
@@ -138,9 +138,9 @@ class DatabaseWrapper {
 
 
     //! An update request for an existing row.
-    // @param $tbale string Name of the table
-    // @param $id int The row id number.
-    // @param $column_value_array [string -> string] An associative array where the keys are table columns and the values are the updated column values.
+    //! @param $tbale string Name of the table
+    //! @param $id int The row id number.
+    //! @param $column_value_array [string -> string] An associative array where the keys are table columns and the values are the updated column values.
     function updateTableRow($table, $id, $column_value_array) {
 
         // escape values
@@ -163,9 +163,9 @@ class DatabaseWrapper {
 
 
     //! Adding a row into a table.
-    // @param $tbale string Name of the table
-    // @param $column_value_array [string -> string] An associative array where the keys are table columns and the values are the updated column values.
-    // @return int The row id of the newly added table row.
+    //! @param $tbale string Name of the table
+    //! @param $column_value_array [string -> string] An associative array where the keys are table columns and the values are the updated column values.
+    //! @return int The row id of the newly added table row.
     function insertTableRow($table, $column_value_array) {
 
         // escape values
@@ -194,7 +194,7 @@ class DatabaseWrapper {
 
 
     //! Request all existing raffles from the database.
-    // @return [Raffle] An array of Raffle objects
+    //! @return [Raffle] An array of Raffle objects
     function getRaffles() {
 
         $ret = array();
@@ -211,7 +211,7 @@ class DatabaseWrapper {
 
 
     //! Request all existing participants from the database
-    // @return [Participant] An array of Participant objects
+    //! @return [Participant] An array of Participant objects
     function getParticipants() {
         $ret = array();
 
@@ -226,9 +226,9 @@ class DatabaseWrapper {
 
 
     //! Get a Participant object identified by email.
-    // This functions returns the first Participant in the database with matching email.
-    // If no matching email excist, Null is returned.
-    // @return Participant|Null The requested Participant or Null.
+    //! This functions returns the first Participant in the database with matching email.
+    //! If no matching email excist, Null is returned.
+    //! @return Participant|Null The requested Participant or Null.
     function getParticipant($email) {
 
         $email = $this->db->escapeString($email);
@@ -244,8 +244,8 @@ class DatabaseWrapper {
 
 
     //! Request all existing participations from the database
-    // @param $raffle Raffle|Null If set, only the participation for a certain raffle are returned.
-    // @return [Participation] An array of Participation objects
+    //! @param $raffle Raffle|Null If set, only the participation for a certain raffle are returned.
+    //! @return [Participation] An array of Participation objects
     function getParticipations($raffle = Null) {
         $ret = array();
 
