@@ -152,6 +152,42 @@ if ($raffle->getState()=="OPEN" && isset($_REQUEST['ACTION']) && $_REQUEST['ACTI
     }
 }
 
+
+
+// ----------------------------------------------------------------------------
+//                                   Grant / Reject Win
+// ----------------------------------------------------------------------------
+
+// grant win
+if (USER_IS_ADMIN && isset($_REQUEST['ACTION']) && $_REQUEST['ACTION']=="WIN_GRANT" && isset($_REQUEST['PARTICIPATION_ID'])) {
+
+    // get participation
+    $pn_id = intval($_REQUEST['PARTICIPATION_ID']);
+    $pn = new Participation($pn_id, $DB);
+
+    // set new state
+    if ($pn->getState() == Participation::STATE_VOTED) {
+        $pn->setState(Participation::STATE_WIN_GRANTED);
+        $pn->save();
+    }
+}
+
+
+// reject win
+if (USER_IS_ADMIN && isset($_REQUEST['ACTION']) && $_REQUEST['ACTION']=="WIN_REJECT" && isset($_REQUEST['PARTICIPATION_ID'])) {
+
+    // get participation
+    $pn_id = intval($_REQUEST['PARTICIPATION_ID']);
+    $pn = new Participation($pn_id, $DB);
+
+    // set new state
+    if ($pn->getState() == Participation::STATE_WIN_GRANTED) {
+        $pn->setState(Participation::STATE_VOTED);
+        $pn->save();
+    }
+}
+
+
 ?>
 
 
@@ -226,13 +262,24 @@ if ($raffle->getState()=="OPEN" && isset($_REQUEST['ACTION']) && $_REQUEST['ACTI
             <td><?php echo $pn->getResultingScore() ?></td>
             <?php
 
-                // admin can directly allow or forbid user
                 if (USER_IS_ADMIN) {
+
+                    // admin can directly allow or forbid user
                     if (in_array($pn->getState(), array(Participation::STATE_FORBIDDEN, Participation::STATE_ENTRY_REQUESTED, Participation::STATE_DECLINE_ACCEPTED))) {
                         echo '<td><a href="?ACTION=PARTICIPATE&PARTICIPATION_ID=' . $pn->getId() . '&RAFFLE_ID=' . $raffle->getId() . '"><img src="template/icon_user_allow.svg" width="16" title="Teilnehmer Erlauben"></a></td>';
                     } else if (in_array($pn->getState(), array(Participation::STATE_ENTRY_ACCEPTED, Participation::STATE_DECLINE_REQUESTED))) {
                         echo '<td><a href="?ACTION=SIGNOUT&PARTICIPATION_ID=' . $pn->getId() . '&RAFFLE_ID=' . $raffle->getId() . '"><img src="template/icon_user_forbid.svg" width="16" title="Teilnehmer Ausschlie&szlig;en"></a></td>';
                     }
+
+                    // admin can grant and reject winners
+                    if ($raffle->getState() == Raffle::STATE_CLOSED) {
+                        if ($pn->getState() == Participation::STATE_VOTED) {
+                            echo '<td><a href="?ACTION=WIN_GRANT&PARTICIPATION_ID=' . $pn->getId() . '&RAFFLE_ID=' . $raffle->getId() . '"><img src="template/icon_win_grant.svg" width="16" title="Teilnehmer als Gewinner setzen."></a></td>';
+                        } else if ($pn->getState() == Participation::STATE_WIN_GRANTED) {
+                            echo '<td><a href="?ACTION=WIN_REJECT&PARTICIPATION_ID=' . $pn->getId() . '&RAFFLE_ID=' . $raffle->getId() . '"><img src="template/icon_win_reject.svg" width="16" title="Gewinn entziehen."></a></td>';
+                        }
+                    }
+
 
                 // user can sign in or sign out
                 } else if ($raffle->getState() == Raffle::STATE_OPEN) {
