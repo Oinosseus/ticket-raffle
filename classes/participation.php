@@ -13,7 +13,6 @@ class Participation {
     const STATE_FORBIDDEN         = 'FORBIDDEN';
     const STATE_VOTED             = 'VOTED';
     const STATE_WIN_GRANTED       = 'WIN_GRANTED';
-    const STATE_WIN_REJECTED      = 'WIN_REJECTED';
 
 
 

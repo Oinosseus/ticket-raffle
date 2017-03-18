@@ -239,24 +239,12 @@
   <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="225" y="450">
     <tspan x="225" y="450"></tspan>
   </text>
-  <g>
-    <path style="fill: #ef00ff" d="M 320 460 C 420,460 420,500 320,500 C 220,500 220,460 320,460z"/>
-    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 320 460 C 420,460 420,500 320,500 C 220,500 220,460 320,460"/>
-  </g>
-  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="320" y="484.4">
-    <tspan x="320" y="484.4">WIN_REJECTED</tspan>
-  </text>
   <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="320" y="480">
     <tspan x="320" y="480"></tspan>
   </text>
   <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="220" y="540">
     <tspan x="220" y="540"></tspan>
   </text>
-  <g>
-    <line style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #80bbff" x1="240.142" y1="400.142" x2="291.393" y2="451.393"/>
-    <polygon style="fill: #80bbff" points="296.696,456.696 286.09,453.161 291.393,451.393 293.161,446.09 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #80bbff" points="296.696,456.696 286.09,453.161 291.393,451.393 293.161,446.09 "/>
-  </g>
   <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="40" y="520">
     <tspan x="40" y="520"></tspan>
   </text>
@@ -264,26 +252,21 @@
     <tspan x="-220" y="460"></tspan>
   </text>
   <g>
-    <path style="fill: #7ffc32" d="M 120 460 C 220,460 220,500 120,500 C 20,500 20,460 120,460z"/>
-    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 120 460 C 220,460 220,500 120,500 C 20,500 20,460 120,460"/>
+    <path style="fill: #7ffc32" d="M 220 460 C 320,460 320,500 220,500 C 120,500 120,460 220,460z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 220 460 C 320,460 320,500 220,500 C 120,500 120,460 220,460"/>
   </g>
-  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="120" y="484.4">
-    <tspan x="120" y="484.4">WIN_GRANTED</tspan>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="220" y="484.4">
+    <tspan x="220" y="484.4">WIN_GRANTED</tspan>
   </text>
-  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="120" y="480">
-    <tspan x="120" y="480"></tspan>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="220" y="480">
+    <tspan x="220" y="480"></tspan>
   </text>
   <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="40" y="540">
     <tspan x="40" y="540"></tspan>
   </text>
-  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="120" y="480">
-    <tspan x="120" y="480"></tspan>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="220" y="480">
+    <tspan x="220" y="480"></tspan>
   </text>
-  <g>
-    <line style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #80bbff" x1="199.858" y1="400.142" x2="148.607" y2="451.393"/>
-    <polygon style="fill: #80bbff" points="143.304,456.696 146.839,446.09 148.607,451.393 153.91,453.161 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #80bbff" points="143.304,456.696 146.839,446.09 148.607,451.393 153.91,453.161 "/>
-  </g>
   <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="400" y="440">
     <tspan x="400" y="440">state changes:</tspan>
     <tspan x="400" y="456">green  - only when raffle is 'OPEN'</tspan>
@@ -321,4 +304,14 @@
   <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="220" y="224.4">
     <tspan x="220" y="224.4">FORBIDDEN</tspan>
   </text>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #80bbff" d="M 206.309,400.42 A 72.5,72.5 0 0 0 202.374,448.401"/>
+    <polygon style="fill: #80bbff" points="204.484,455.497 195.839,448.408 201.424,448.65 204.969,444.327 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #80bbff" points="204.484,455.497 195.839,448.408 201.424,448.65 204.969,444.327 "/>
+  </g>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #80bbff" d="M 233.691,459.58 A 72.5,72.5 0 0 0 237.626,411.599"/>
+    <polygon style="fill: #80bbff" points="235.516,404.503 244.161,411.592 238.576,411.35 235.031,415.673 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #80bbff" points="235.516,404.503 244.161,411.592 238.576,411.35 235.031,415.673 "/>
+  </g>
 </svg>
