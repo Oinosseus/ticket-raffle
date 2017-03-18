@@ -235,6 +235,14 @@ class Participation {
         $submit_url .= "&UserVerificationKey=" . $this->_UserVerifKey;
         $submit_url .= "&ParticipationId=" . $this->_Id;
 
+        // get url with link to raffle
+        $raffle_url = "";
+        $raffle_url .= $_SERVER["REQUEST_SCHEME"] . "://";
+        $raffle_url .= $_SERVER["SERVER_NAME"];
+        $raffle_url .= $_SERVER["PHP_SELF"];
+        $raffle_url .= "?USER_PAGE=RAFFLE";
+        $raffle_url .= "&RAFFLE_ID=" . $this->_Raffle->getId();
+
         // mail parameters
         $mail_to       = $this->_Participant->getEmail();
         $mail_subject  = "Ticket Raffle";
@@ -261,6 +269,23 @@ class Participation {
             $mail_message .= "<a href=\"" . $submit_url . "\">";
             $mail_message .= "Bitte klicken Sie diesen Link um den Ausschluss zu best&auml;tigen.</a><br><br>";
             $mail_message .= "MfG<br>";
+            $mail_message .= "</body></html>";
+
+        // send win notification
+        } else if ($this->_State == Participation::STATE_WIN_GRANTED) {
+            $mail_message  = "<html><body>";
+            $mail_message .= "Herzlichen Gl&uuml;ckwunsch,<br><br>";
+            $mail_message .= "sie haben bei der Verlosung \"<a href=\"" . $raffle_url . "\">" . $this->_Raffle->getName() . "</a>\" gewonnen.<br>";
+            $mail_message .= "<br>MfG<br>";
+            $mail_message .= "</body></html>";
+
+        // send not-win notification
+        } else if ($this->_State == Participation::STATE_VOTED) {
+            $mail_message  = "<html><body>";
+            $mail_message .= "Hallo,<br><br>";
+            $mail_message .= "die Verlosung \"<a href=\"" . $raffle_url . "\">" . $this->_Raffle->getName() . "</a>\" wurde druchgef&uuml;hrt.<br>";
+            $mail_message .= "Leider haben Sie diesmal nicht gewonnen.<br>";
+            $mail_message .= "<br>MfG<br>";
             $mail_message .= "</body></html>";
 
         // state does not allow to send a message

@@ -188,6 +188,34 @@ if (USER_IS_ADMIN && isset($_REQUEST['ACTION']) && $_REQUEST['ACTION']=="WIN_REJ
 }
 
 
+// ----------------------------------------------------------------------------
+//                                Send notification
+// ----------------------------------------------------------------------------
+
+if (USER_IS_ADMIN && $raffle->getState()=="CLOSED" && isset($_REQUEST['ACTION']) && $_REQUEST['ACTION']=="SEND_NOTIFICATION") {
+
+    // send notifications
+    $every_notification_could_be_sent = True;
+    $failed_emails = "";
+    foreach ($DB->getParticipations($raffle) as $pn) {
+        $success = $pn->sendNotification();
+        $every_notification_could_be_sent &= $success;
+
+        if (!$success) {
+            if (strlen($failed_emails) > 0) $failed_emails .= ", ";
+            $failed_emails .= $pn->getParticipant()->getEmail();
+        }
+    }
+
+    // check success
+    if ($every_notification_could_be_sent) {
+        echo '<div class="message success">Alle Teilnehmer wurden benachrichtigt.</div>';
+    } else {
+        echo '<div class="message error">Folgende Teilnehmer konnten nicht benachrichtigt werden:<br>' . $failed_emails . '</div>';
+    }
+}
+
+
 ?>
 
 
@@ -290,14 +318,27 @@ if (USER_IS_ADMIN && isset($_REQUEST['ACTION']) && $_REQUEST['ACTION']=="WIN_REJ
             ?>
         </tr>
     <?php endforeach; ?>
+
+    <?php if ($raffle->getState() == Raffle::STATE_OPEN) : ?>
     <tr>
-        <?php if ($raffle->getState() == Raffle::STATE_OPEN) : ?>
         <td colspan="4">
             <form action="?ACTION=PARTICIPATE" method="post">
                 <input type="hidden" name="RAFFLE_ID" value="<?php echo $raffle->getId() ?>" />
                 <input type="text" name="PARTICIPANT_EMAIL"><button type="submit">Teilnehmen</button>
             </form>
         </td>
-        <?php endif; ?>
     </tr>
+    <?php endif; ?>
+
+    <?php if (USER_IS_ADMIN && $raffle->getState() == Raffle::STATE_CLOSED) : ?>
+    <tr>
+        <td colspan="4">
+            <form action="?ACTION=SEND_NOTIFICATION" method="post">
+                <input type="hidden" name="RAFFLE_ID" value="<?php echo $raffle->getId() ?>" />
+                <button type="submit">Teilnehmer benachrichtigen</button>
+            </form>
+        </td>
+    </tr>
+    <?php endif; ?>
+
 </table>
