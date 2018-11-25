@@ -229,7 +229,7 @@ class Participation {
         // get email submit url
         $submit_url  = "";
         $submit_url .= $_SERVER["REQUEST_SCHEME"] . "://";
-        $submit_url .= $_SERVER["SERVER_NAME"];
+        $submit_url .= $_SERVER["HTTP_HOST"];
         $submit_url .= $_SERVER["PHP_SELF"];
         $submit_url .= "?USER_PAGE=EMAIL_SUBMISSION";
         $submit_url .= "&UserVerificationKey=" . $this->_UserVerifKey;
@@ -238,7 +238,7 @@ class Participation {
         // get url with link to raffle
         $raffle_url = "";
         $raffle_url .= $_SERVER["REQUEST_SCHEME"] . "://";
-        $raffle_url .= $_SERVER["SERVER_NAME"];
+        $raffle_url .= $_SERVER["HTTP_HOST"];
         $raffle_url .= $_SERVER["PHP_SELF"];
         $raffle_url .= "?USER_PAGE=RAFFLE";
         $raffle_url .= "&RAFFLE_ID=" . $this->_Raffle->getId();
