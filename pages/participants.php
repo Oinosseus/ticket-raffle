@@ -15,7 +15,7 @@
             <th>Email</th>
             <th>Particip.</th>
             <th>Wins</th>
-            <th>Next Weight</th>
+            <th title="= 100&percnt; * (participations - wins + 1) / (participations + 1)">Next Weight</th>
         </tr>
 
     <?php
