@@ -63,7 +63,7 @@ include("modules/maintenance.php");
                 <li>
                     <label>Hilfe</label>
                     <ul>
-                        <li><a href="index.php?USER_PAGE=DATABSE_CHART">Datenbakstruktur</a></li>
+                        <li><a href="index.php?USER_PAGE=DATABSE_CHART">Datenbankstruktur</a></li>
                         <li><a href="index.php?USER_PAGE=STATE_CHART">Zustandsdiagramm</a></li>
                         <li><a href="doc/doxy/html" target="_blank">Source Doku</a></li>
                         <li><a href="index.php?USER_PAGE=LICENSE">Lizenz</a></li>
