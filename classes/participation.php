@@ -62,7 +62,7 @@ class Participation {
         return $this->_Raffle;
     }
 
-    //! @param Raffle Setting the raffle of this Participation
+    //! @param $raffle Setting the raffle of this Participation
     // @warning This must be made with care! Can only be set if not set before.
     function setRaffle(Raffle $raffle) {
         if ($this->_Raffle == Null) {
@@ -93,7 +93,7 @@ class Participation {
         return $this->_State;
     }
 
-    //! @param state string The new state for the Participation
+    //! @param $state string The new state for the Participation
     function setState($state) {
         if ($state == Participation::STATE_ENTRY_REQUESTED or
             $state == Participation::STATE_ENTRY_ACCEPTED or

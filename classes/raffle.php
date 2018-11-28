@@ -63,12 +63,12 @@ class Raffle {
     }
 
 
-    //! @param DateTime The open time of the raffle
+    //! @return DateTime The open time of the raffle as
     function getOpenTime() {
         return $this->_OpenTime;
     }
 
-    //! @param string The open time of the raffle in human readable format
+    //! @return string The open time of the raffle in human readable format
     function getOpenTimeHuman() {
         return $this->_OpenTime->format('Y-m-d H:i:s');
     }
@@ -123,7 +123,7 @@ class Raffle {
 
     /** Setting the drawing time of the raffle.
      * If the parameter is Null, the current time is used.
-     * @param $dateTime|Null DateTime Setting a new drawing time of the raffle.
+     * @param $dateTime DateTime|Null Setting a new drawing time of the raffle.
      */
     function setDrawingTime($dateTime = Null) {
 
@@ -147,7 +147,7 @@ class Raffle {
         return $this->_State;
     }
 
-    //! @param string setting a new state for the raffle.
+    //! @param $state setting a new state for the raffle.
     function setState($state) {
         if ($state == Raffle::STATE_COMMITTED or
             $state == Raffle::STATE_OPEN or

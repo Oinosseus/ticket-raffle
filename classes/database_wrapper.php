@@ -77,7 +77,7 @@ class DatabaseWrapper {
 
     //! A database request for a certain row.
     //! @return [string -> string] associative array
-    //! @param $tbale string Name of the table
+    //! @param $table string Name of the table
     //! @param $id int The row id number.
     //! @param $column_array [string] An array of column names that are in the keys in the returned array.
     function selectTableRow($table, $id, $column_array) {
@@ -103,7 +103,7 @@ class DatabaseWrapper {
 
     //! Queries the database for all rows that matches the search values.
     //! @return [integer] an array of all matching row Ids
-    //! @param $tbale string Name of the table
+    //! @param $table string Name of the table
     //! @param $column_search_array [string -> string] Associative array where column names are mapped to their requested content values
     function findTableRows($table, $column_search_array) {
 
@@ -138,7 +138,7 @@ class DatabaseWrapper {
 
 
     //! An update request for an existing row.
-    //! @param $tbale string Name of the table
+    //! @param $table string Name of the table
     //! @param $id int The row id number.
     //! @param $column_value_array [string -> string] An associative array where the keys are table columns and the values are the updated column values.
     function updateTableRow($table, $id, $column_value_array) {
@@ -163,7 +163,7 @@ class DatabaseWrapper {
 
 
     //! Adding a row into a table.
-    //! @param $tbale string Name of the table
+    //! @param $table string Name of the table
     //! @param $column_value_array [string -> string] An associative array where the keys are table columns and the values are the updated column values.
     //! @return int The row id of the newly added table row.
     function insertTableRow($table, $column_value_array) {
