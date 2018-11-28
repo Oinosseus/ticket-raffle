@@ -6,3 +6,6 @@ database\.sqlite3
 maintenance\.log
 
 config\.php
+
+doc/doxy/html
+!doc/doxy/html/index.html
