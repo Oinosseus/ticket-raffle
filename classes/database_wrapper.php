@@ -227,13 +227,13 @@ class DatabaseWrapper {
 
     //! Get a Participant object identified by email.
     //! This functions returns the first Participant in the database with matching email.
-    //! If no matching email excist, Null is returned.
+    //! If no matching email exist, Null is returned.
     //! @return Participant|Null The requested Participant or Null.
     function getParticipant($email) {
 
-        $email = $this->db->escapeString($email);
+        $email = strtolower($this->db->escapeString($email));
 
-        $query = "SELECT Id FROM Participants WHERE Email = '$email'";
+        $query = "SELECT Id FROM Participants WHERE lower(Email) = '$email'";
         $results = $this->db->query($query);
         while ($row = $results->fetchArray()) {
             return new Participant($row['Id'], $this);
